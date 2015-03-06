@@ -13,6 +13,8 @@
 		17C4F1771AA9270500CAF74F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C4F1761AA9270500CAF74F /* Images.xcassets */; };
 		17C4F17A1AA9270600CAF74F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C4F1781AA9270600CAF74F /* LaunchScreen.xib */; };
 		17C4F1861AA9270600CAF74F /* Zone_inTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F1851AA9270600CAF74F /* Zone_inTests.swift */; };
+		17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F1911AA96B5B00CAF74F /* LockNotifierCallback.m */; };
+		17C4F1961AA97A3500CAF74F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F1951AA97A3500CAF74F /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		17C4F17F1AA9270600CAF74F /* Zone'inTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zone'inTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C4F1841AA9270600CAF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C4F1851AA9270600CAF74F /* Zone_inTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone_inTests.swift; sourceTree = "<group>"; };
+		17C4F18F1AA96B5B00CAF74F /* Zone'in-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zone'in-Bridging-Header.h"; sourceTree = "<group>"; };
+		17C4F1901AA96B5B00CAF74F /* LockNotifierCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockNotifierCallback.h; sourceTree = "<group>"; };
+		17C4F1911AA96B5B00CAF74F /* LockNotifierCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockNotifierCallback.m; sourceTree = "<group>"; };
+		17C4F1951AA97A3500CAF74F /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Singleton.swift; path = ../Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +86,13 @@
 				17C4F16F1AA9270500CAF74F /* AppDelegate.swift */,
 				17C4F1711AA9270500CAF74F /* ViewController.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
+				17C4F1951AA97A3500CAF74F /* Singleton.swift */,
+				17C4F1901AA96B5B00CAF74F /* LockNotifierCallback.h */,
+				17C4F1911AA96B5B00CAF74F /* LockNotifierCallback.m */,
 				17C4F1761AA9270500CAF74F /* Images.xcassets */,
 				17C4F1781AA9270600CAF74F /* LaunchScreen.xib */,
 				17C4F16D1AA9270500CAF74F /* Supporting Files */,
+				17C4F18F1AA96B5B00CAF74F /* Zone'in-Bridging-Header.h */,
 			);
 			path = "Zone'in";
 			sourceTree = "<group>";
@@ -212,6 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */,
+				17C4F1961AA97A3500CAF74F /* Singleton.swift in Sources */,
 				17C4F1721AA9270500CAF74F /* ViewController.swift in Sources */,
 				17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */,
 			);
@@ -336,9 +348,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Zone'in/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Zone'in/Zone'in-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Zone'in/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Zone'in/Zone'in-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -7,6 +7,9 @@
 //
 
 #import "LockNotifierCallback.h"
+#import "Zone_in-Swift.h"
+
+
 
 static void displayStatusChanged(CFNotificationCenterRef center,
                                  void *observer,
@@ -14,7 +17,10 @@ static void displayStatusChanged(CFNotificationCenterRef center,
                                  const void *object,
                                  CFDictionaryRef userInfo) {
     if ([(__bridge NSString *)name  isEqual: @"com.apple.springboard.lockcomplete"]) {
-        NSLog(@"Screen Locked");
+        static AppDelegate *shareData;
+        shareData = [[AppDelegate alloc]init];
+        [shareData updateLockState];
+//        NSLog(@"Screen Locked");
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kDisplayStatusLocked"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }

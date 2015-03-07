@@ -9,11 +9,9 @@
 import Foundation
 
 @objc(Singleton)
-class Singleton {
+class Singleton: NSObject {
     
     var lockState: Int = 0
-    
-    //    var player:Player = Player(name:"Tom")
     
     class var sharedInstance: Singleton {
         struct Static {

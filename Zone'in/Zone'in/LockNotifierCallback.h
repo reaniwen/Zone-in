@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface LockNotifierCallback : NSObject
-{
-    int lockState;
-}
+
 
 + (void(*)(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo))notifierProc;
 

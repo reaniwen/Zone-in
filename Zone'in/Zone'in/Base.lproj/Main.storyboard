@@ -70,6 +70,15 @@
                                     <action selector="startCountingAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mGZ-SG-7j0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="States Change" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFZ-RZ-3Ul">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="158" width="114" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -79,6 +88,7 @@
                                 <exclude reference="fOx-JX-v3Q"/>
                                 <exclude reference="Nmk-dA-dnr"/>
                                 <exclude reference="Laa-0M-mTu"/>
+                                <exclude reference="aFZ-RZ-3Ul"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -88,6 +98,7 @@
                                 <include reference="fOx-JX-v3Q"/>
                                 <include reference="Nmk-dA-dnr"/>
                                 <include reference="Laa-0M-mTu"/>
+                                <include reference="aFZ-RZ-3Ul"/>
                             </mask>
                         </variation>
                     </view>
@@ -97,6 +108,7 @@
                         <outlet property="lessTimeBtn" destination="vBw-Zj-c32" id="Dcd-Lv-Q2a"/>
                         <outlet property="moreTimeBtn" destination="USY-TY-JQF" id="mzE-UV-fy9"/>
                         <outlet property="startBtn" destination="Laa-0M-mTu" id="HHE-YT-JUS"/>
+                        <outlet property="stateLabel" destination="aFZ-RZ-3Ul" id="Rtm-0g-fba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

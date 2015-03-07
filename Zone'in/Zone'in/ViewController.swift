@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var stateLabel: UILabel!
+    
     @IBOutlet weak var moreTimeBtn: UIButton!
     @IBOutlet weak var lessTimeBtn: UIButton!
     @IBOutlet weak var startBtn: UIButton!
@@ -19,11 +21,13 @@ class ViewController: UIViewController {
     var timer = NSTimer()
     var counter: Int = 0
     var estTimeVar: Int = 30
+    let sharedData:Singleton = Singleton.sharedInstance
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        stateLabel.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,5 +89,9 @@ class ViewController: UIViewController {
         counter--
     }
     
+    func updateStateLabel(str:String){
+        stateLabel.text = str
+        stateLabel.hidden = false
+    }
 }
 

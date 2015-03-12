@@ -15,8 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var moreTimeBtn: UIButton!
     @IBOutlet weak var lessTimeBtn: UIButton!
     @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var estTimeLabel: UILabel!
-    @IBOutlet weak var CountingLabel: UILabel!
+    @IBOutlet weak var countingLabel: UILabel!
     
     var timer = NSTimer()
     var counter: Int = 0
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        stateLabel.hidden = true
+        initTimer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,8 +51,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startCountingAction(sender: AnyObject) {
+        startCounting()
+
+    }
+    func startCounting(){
         moreTimeBtn.hidden = true
         lessTimeBtn.hidden = true
+        countingLabel.hidden = false
+        startBtn.hidden = true
+        stopBtn.hidden = false
+        stateLabel.hidden = true
+        
+        sharedData.appFailState = false
         
         counter = estTimeVar * 60
         
@@ -60,6 +71,16 @@ class ViewController: UIViewController {
             
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
         }
+    }
+    
+    @IBAction func stopCountingAction(sender: AnyObject) {
+        let alert = UIAlertController(title: "Hey!",
+            message: "Do you really want to stop this time?", preferredStyle: .Alert)
+        let actionYES = UIAlertAction(title: "Yes", style: .Default, handler: {action in self.failCounting()})
+        let actionNO = UIAlertAction(title: "No", style: .Default, handler: nil)
+        alert.addAction(actionYES)
+        alert.addAction(actionNO)
+        presentViewController(alert, animated: true, completion: nil)
     }
     
     func updateTime(){
@@ -84,14 +105,55 @@ class ViewController: UIViewController {
             strSeconds = "0" + String(seconds)
         }
         
-        CountingLabel.text = "\(strMinutes):\(strSeconds)"
+        countingLabel.text = "\(strMinutes):\(strSeconds)"
         
         counter--
+        
+        if counter == 0{
+            initTimer()
+            updateStateLabel("success this time")
+        }
+        
+        if sharedData.appFailState == true{
+            println("here")
+            failCounting()
+        }
+    }
+
+    func initTimer(){
+        
+        counter = 0
+        estTimeVar = 30
+        timer.invalidate()
+        
+        countingLabel.hidden = true
+        stateLabel.hidden = true
+        startBtn.hidden = false
+        stopBtn.hidden = true
+        moreTimeBtn.hidden = false
+        lessTimeBtn.hidden = false
+        
+        estTimeLabel.text = String(estTimeVar)+" Mins"
+        
     }
     
     func updateStateLabel(str:String){
         stateLabel.text = str
         stateLabel.hidden = false
+
     }
+    
+    @IBAction func test1Min(sender: AnyObject) {
+        estTimeVar = 1
+        estTimeLabel.text = String(estTimeVar)+" Mins"
+        startCounting()
+    }
+    
+    func failCounting() -> Void{
+        sharedData.appFailState = false
+        initTimer()
+        updateStateLabel("fail this time!")
+    }
+
 }
 

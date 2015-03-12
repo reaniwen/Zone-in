@@ -38,10 +38,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
         let state: UIApplicationState = UIApplication.sharedApplication().applicationState
-        if sharedData.lockState == 1 && state.rawValue == 2{
+        if sharedData.lockState == true && state == UIApplicationState.Background{
             println("screen is locked")
-        }else if sharedData.lockState == 0 && state.rawValue == 2{
+            
+        }else if sharedData.lockState == false && state == UIApplicationState.Background{
             println("home button is pressed")
+            sharedData.appFailState = true
         }
         println("DidEnterBackground",state.rawValue)
         //useful here
@@ -53,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let state: UIApplicationState = UIApplication.sharedApplication().applicationState
 //        println("WillEnterForeground",state.rawValue)
         
-        sharedData.lockState = 0
+        sharedData.lockState = false
         //also maybe useful here
     }
 
@@ -72,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func updateLockState(){
-        sharedData.lockState = 1
+        sharedData.lockState = true
     }
 }
 

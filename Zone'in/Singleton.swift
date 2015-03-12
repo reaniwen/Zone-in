@@ -11,7 +11,9 @@ import Foundation
 @objc(Singleton)
 class Singleton: NSObject {
     
-    var lockState: Int = 0
+    var lockState: Bool = false
+    
+    var appFailState: Bool = false
     
     class var sharedInstance: Singleton {
         struct Static {

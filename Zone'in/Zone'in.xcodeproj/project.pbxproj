@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177145F61AC0CB380052809F /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177145F51AC0CB380052809F /* StoreViewController.swift */; };
 		17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F16F1AA9270500CAF74F /* AppDelegate.swift */; };
 		17C4F1721AA9270500CAF74F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F1711AA9270500CAF74F /* ViewController.swift */; };
 		17C4F1751AA9270500CAF74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C4F1731AA9270500CAF74F /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		177145F51AC0CB380052809F /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		17C4F16A1AA9270400CAF74F /* Zone'in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zone'in.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C4F16E1AA9270500CAF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C4F16F1AA9270500CAF74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				17C4F16F1AA9270500CAF74F /* AppDelegate.swift */,
 				17C4F1711AA9270500CAF74F /* ViewController.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
+				177145F51AC0CB380052809F /* StoreViewController.swift */,
 				17C4F1951AA97A3500CAF74F /* Singleton.swift */,
 				17C4F1901AA96B5B00CAF74F /* LockNotifierCallback.h */,
 				17C4F1911AA96B5B00CAF74F /* LockNotifierCallback.m */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177145F61AC0CB380052809F /* StoreViewController.swift in Sources */,
 				17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */,
 				17C4F1961AA97A3500CAF74F /* Singleton.swift in Sources */,
 				17C4F1721AA9270500CAF74F /* ViewController.swift in Sources */,
@@ -424,6 +428,7 @@
 				17C4F18B1AA9270600CAF74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17C4F18C1AA9270600CAF74F /* Build configuration list for PBXNativeTarget "Zone'inTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +437,7 @@
 				17C4F18E1AA9270600CAF74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

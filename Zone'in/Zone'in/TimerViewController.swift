@@ -12,6 +12,7 @@ class TimerViewController: UIViewController {
 
     @IBOutlet weak var minsLabel: UILabel!
     @IBOutlet weak var secsLabel: UILabel!
+    @IBOutlet weak var fishTankImage: UIImageView!
     
 //    var minsVal: Int = 0
 //    var secsVal: Int = 0
@@ -24,6 +25,8 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startCounting(counter)
+        var image = UIImage(named: "3.1")
+        fishTankImage.image = image
     }
     
     func startCounting(counter: Int){
@@ -70,6 +73,19 @@ class TimerViewController: UIViewController {
             //failed
             self.performSegueWithIdentifier("LoseSegue", sender: self)
             timer.invalidate()
+        }
+        
+        if counter <= 15 {
+            let image = UIImage(named: "3.2")
+            fishTankImage.image = image
+        }
+        if counter <= 10 {
+            let image = UIImage(named: "3.3")
+            fishTankImage.image = image
+        }
+        if counter <= 5 {
+            let image = UIImage(named: "3.4")
+            fishTankImage.image = image
         }
     }
     

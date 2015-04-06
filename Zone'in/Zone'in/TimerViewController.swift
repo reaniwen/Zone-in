@@ -63,10 +63,12 @@ class TimerViewController: UIViewController {
         
         if counter == 0{
             //success
+            self.performSegueWithIdentifier("SucceedSegue", sender: self)
         }
         
         if sharedData.isFailed == true{
             //failed
+            self.performSegueWithIdentifier("LoseSegue", sender: self)
         }
     }
     

@@ -50,6 +50,8 @@ class SelectTimeViewController: UIViewController {
                 //only could change vark, not UI element
                 destinationVC.counter = 20
                 destinationVC.prize = Prize.Fish
+                destinationVC.sharedData.isFailed = false
+                destinationVC.sharedData.isLocked = false
             }
         }
     }

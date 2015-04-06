@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		177145F61AC0CB380052809F /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177145F51AC0CB380052809F /* StoreViewController.swift */; };
+		1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775F2A31AD31E0500D2913A /* QuitViewController.swift */; };
 		17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F16F1AA9270500CAF74F /* AppDelegate.swift */; };
 		17C4F1721AA9270500CAF74F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F1711AA9270500CAF74F /* ViewController.swift */; };
 		17C4F1751AA9270500CAF74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C4F1731AA9270500CAF74F /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		177145F51AC0CB380052809F /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		1775F2A31AD31E0500D2913A /* QuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
 		17C4F16A1AA9270400CAF74F /* Zone'in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zone'in.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C4F16E1AA9270500CAF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C4F16F1AA9270500CAF74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				17C4F16F1AA9270500CAF74F /* AppDelegate.swift */,
 				17C4F1711AA9270500CAF74F /* ViewController.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
+				1775F2A31AD31E0500D2913A /* QuitViewController.swift */,
 				17C75FC31AC5175300A3586E /* TimerViewController.swift */,
 				17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */,
 				17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */,
@@ -240,6 +243,7 @@
 				17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */,
 				17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */,
 				17C4F1961AA97A3500CAF74F /* Singleton.swift in Sources */,
+				1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */,
 				17C4F1721AA9270500CAF74F /* ViewController.swift in Sources */,
 				17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */,
 			);

@@ -69,6 +69,7 @@ class TimerViewController: UIViewController {
         if sharedData.isFailed == true{
             //failed
             self.performSegueWithIdentifier("LoseSegue", sender: self)
+            timer.invalidate()
         }
     }
     

@@ -69,6 +69,8 @@ class SelectPrizeViewController: UIViewController {
                         //only could change vark, not UI element
                     destinationVC.counter = sharedData.time * 60
                     destinationVC.prize = prize
+                    destinationVC.sharedData.isFailed = false
+                    destinationVC.sharedData.isLocked = false
             }
         }
     }

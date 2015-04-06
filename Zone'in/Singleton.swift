@@ -11,15 +11,20 @@ import Foundation
 @objc(Singleton)
 class Singleton: NSObject {
     
-    var lockState: Bool = false
+    var isLocked: Bool = false
+    var isFailed: Bool = false
     
-    var appFailState: Bool = false
+    var time: Int = 0
     
     class var sharedInstance: Singleton {
         struct Static {
             static let instance: Singleton = Singleton()
         }
         return Static.instance
+    }
+    
+    func updateLockStatus(state: Bool){
+        isLocked = state
     }
     
 }

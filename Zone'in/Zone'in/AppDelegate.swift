@@ -28,9 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
         
-//        let state: UIApplicationState = UIApplication.sharedApplication().applicationState
-//        println("WillResignActive",state.rawValue)
-        
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -38,12 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
         let state: UIApplicationState = UIApplication.sharedApplication().applicationState
-        if sharedData.lockState == true && state == UIApplicationState.Background{
+        if sharedData.isLocked == true && state == UIApplicationState.Background{
             println("screen is locked")
             
-        }else if sharedData.lockState == false && state == UIApplicationState.Background{
+        }else if sharedData.isLocked == false && state == UIApplicationState.Background{
             println("home button is pressed")
-            sharedData.appFailState = true
+            sharedData.isFailed = true
         }
         println("DidEnterBackground",state.rawValue)
         //useful here
@@ -52,29 +49,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         
-//        let state: UIApplicationState = UIApplication.sharedApplication().applicationState
-//        println("WillEnterForeground",state.rawValue)
-        
-        sharedData.lockState = false
+        sharedData.isLocked = false
         //also maybe useful here
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         
-//        let state: UIApplicationState = UIApplication.sharedApplication().applicationState
-//        println("DidBecomeActive",state.rawValue)
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         
-//        let state: UIApplicationState = UIApplication.sharedApplication().applicationState
-//        println("WillTerminate",state.rawValue)
+        let state: UIApplicationState = UIApplication.sharedApplication().applicationState
+        if sharedData.isLocked == true && state == UIApplicationState.Background{
+            println("screen is locked")
+            
+        }else if sharedData.isLocked == false && state == UIApplicationState.Background{
+            println("home button is pressed")
+            sharedData.isFailed = true
+        }
+        println("DidEnterBackground",state.rawValue)
     }
 
-    func updateLockState(){
-        sharedData.lockState = true
-    }
 }
 

@@ -17,10 +17,10 @@ static void displayStatusChanged(CFNotificationCenterRef center,
                                  const void *object,
                                  CFDictionaryRef userInfo) {
     if ([(__bridge NSString *)name  isEqual: @"com.apple.springboard.lockcomplete"]) {
-        static AppDelegate *shareData;
-        shareData = [[AppDelegate alloc]init];
-        [shareData updateLockState];
-//        NSLog(@"Screen Locked");
+        static Singleton *shareData;
+        shareData = [Singleton sharedInstance];
+        [shareData updateLockStatus:true];
+        NSLog(@"Screen Locked");
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"kDisplayStatusLocked"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }

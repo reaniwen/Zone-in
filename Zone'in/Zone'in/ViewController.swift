@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         stopBtn.hidden = false
         stateLabel.hidden = true
         
-        sharedData.appFailState = false
+        sharedData.isFailed = false
         
         counter = estTimeVar * 60
         
@@ -73,6 +73,8 @@ class ViewController: UIViewController {
         }
     }
     
+    
+
     @IBAction func stopCountingAction(sender: AnyObject) {
         let alert = UIAlertController(title: "Hey!",
             message: "Do you really want to stop this time?", preferredStyle: .Alert)
@@ -114,7 +116,7 @@ class ViewController: UIViewController {
             updateStateLabel("success this time")
         }
         
-        if sharedData.appFailState == true{
+        if sharedData.isFailed == true{
             println("here")
             failCounting()
         }
@@ -150,7 +152,7 @@ class ViewController: UIViewController {
     }
     
     func failCounting() -> Void{
-        sharedData.appFailState = false
+        sharedData.isFailed = false
         initTimer()
         updateStateLabel("fail this time!")
     }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		177145F61AC0CB380052809F /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177145F51AC0CB380052809F /* StoreViewController.swift */; };
 		1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775F2A31AD31E0500D2913A /* QuitViewController.swift */; };
+		17B4791D1AD6266F002DAB65 /* Bauhaus93.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */; };
+		17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */; };
 		17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F16F1AA9270500CAF74F /* AppDelegate.swift */; };
 		17C4F1721AA9270500CAF74F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F1711AA9270500CAF74F /* ViewController.swift */; };
 		17C4F1751AA9270500CAF74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C4F1731AA9270500CAF74F /* Main.storyboard */; };
@@ -35,6 +37,7 @@
 /* Begin PBXFileReference section */
 		177145F51AC0CB380052809F /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		1775F2A31AD31E0500D2913A /* QuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
+		17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bauhaus93.ttf; sourceTree = "<group>"; };
 		17C4F16A1AA9270400CAF74F /* Zone'in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zone'in.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C4F16E1AA9270500CAF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C4F16F1AA9270500CAF74F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B479151AD623F4002DAB65 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		17C4F1611AA9270400CAF74F = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +104,7 @@
 		17C4F16C1AA9270400CAF74F /* Zone'in */ = {
 			isa = PBXGroup;
 			children = (
+				17B479151AD623F4002DAB65 /* res */,
 				17C4F16F1AA9270500CAF74F /* AppDelegate.swift */,
 				17C4F1711AA9270500CAF74F /* ViewController.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
@@ -219,6 +231,7 @@
 			files = (
 				17C4F1751AA9270500CAF74F /* Main.storyboard in Resources */,
 				17C4F17A1AA9270600CAF74F /* LaunchScreen.xib in Resources */,
+				17B4791D1AD6266F002DAB65 /* Bauhaus93.ttf in Resources */,
 				17C4F1771AA9270500CAF74F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */,
 				177145F61AC0CB380052809F /* StoreViewController.swift in Sources */,
 				17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */,
 				17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */,

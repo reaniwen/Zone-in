@@ -21,6 +21,7 @@
 		17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */; };
 		17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */; };
 		17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC31AC5175300A3586E /* TimerViewController.swift */; };
+		17F379641ADCBFE500B81CDE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F379631ADCBFE500B81CDE /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPrizeViewController.swift; sourceTree = "<group>"; };
 		17C75FC31AC5175300A3586E /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		17F379631ADCBFE500B81CDE /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */,
 				17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */,
 				177145F51AC0CB380052809F /* StoreViewController.swift */,
+				17F379631ADCBFE500B81CDE /* TestViewController.swift */,
 				17C4F1951AA97A3500CAF74F /* Singleton.swift */,
 				17C4F1901AA96B5B00CAF74F /* LockNotifierCallback.h */,
 				17C4F1911AA96B5B00CAF74F /* LockNotifierCallback.m */,
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F379641ADCBFE500B81CDE /* TestViewController.swift in Sources */,
 				17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */,
 				177145F61AC0CB380052809F /* StoreViewController.swift in Sources */,
 				17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */,

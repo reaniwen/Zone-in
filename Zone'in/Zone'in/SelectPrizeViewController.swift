@@ -26,7 +26,7 @@ class SelectPrizeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        loadImage()
 //        updateTestLabel(testText)
         testLabel.hidden = true
         
@@ -73,6 +73,11 @@ class SelectPrizeViewController: UIViewController {
                     destinationVC.sharedData.isLocked = false
             }
         }
+    }
+    
+    func loadImage() {
+        fishBtn.setImage(UIImage(named: "2.fishIcon"), forState: .Normal)
+        seaweedBtn.setImage(UIImage(named: "2.seaweedIcon"), forState: .Normal)
     }
     
     

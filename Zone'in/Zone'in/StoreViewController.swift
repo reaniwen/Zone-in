@@ -28,7 +28,9 @@ class StoreViewController: UIViewController {
 //        let options = UIViewAnimationOptions.CurveLinear | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.Autoreverse
 //        
 //        // set up some constants for the fish
-        let size : CGFloat = CGFloat(122)
+        let length: CGFloat = CGFloat(107)
+        let height: CGFloat = CGFloat(68)
+//        let size : CGFloat = CGFloat(122)
         let yPosition : CGFloat = CGFloat(84)
 //
 //        // create the fish and add it to the screen
@@ -53,7 +55,7 @@ class StoreViewController: UIViewController {
         
         let fish1 = UIImageView()
         fish1.image = UIImage(named: "testFishWithHat")
-        fish1.frame = CGRectMake(0, yPosition, size, size)
+        fish1.frame = CGRectMake(0, yPosition, length, height)
         
         // add the square to the screen
         self.view.addSubview(fish1)
@@ -77,5 +79,7 @@ class StoreViewController: UIViewController {
         fish1.layer.addAnimation(anim, forKey: "animate position along path")
     }
 
-
+    @IBAction func cancelToStoreViewController(segue:UIStoryboardSegue) {
+        
+    }
 }

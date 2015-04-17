@@ -9,6 +9,7 @@
 import UIKit
 
 class SelectTimeViewController: UIViewController {
+    @IBOutlet weak var backTimerImage: UIImageView!
     
     let sharedData:Singleton = Singleton.sharedInstance
 
@@ -22,7 +23,9 @@ class SelectTimeViewController: UIViewController {
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
+        loadImage()
         updateTime(time)
+        
     }
 
     @IBAction func moreTimeAction(sender: AnyObject) {
@@ -55,6 +58,16 @@ class SelectTimeViewController: UIViewController {
             }
         }
     }
+    
+    func loadImage() {
+        backTimerImage.image = UIImage(named: "1.BackgroundofTimer")
+//        moreTimeBtn.imageView?.image = UIImage(named: "1.more")
+        moreTimeBtn.setImage(UIImage(named: "1.more"), forState: UIControlState.Normal)
+//        lessTimeBtn.imageView?.image = UIImage(named: "1.less")
+        lessTimeBtn.setImage(UIImage(named: "1.less"), forState: .Normal)
+    
+    }
+    
     
     //this is the demo for prepareForSegue
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

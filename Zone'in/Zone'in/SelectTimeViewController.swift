@@ -68,6 +68,9 @@ class SelectTimeViewController: UIViewController {
     
     }
     
+    @IBAction func toSelectTimeViewController(segue:UIStoryboardSegue) {
+        
+    }
     
     //this is the demo for prepareForSegue
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

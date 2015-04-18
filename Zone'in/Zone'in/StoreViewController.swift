@@ -83,7 +83,7 @@ class StoreViewController: UIViewController {
         fish1.layer.addAnimation(anim, forKey: "animate position along path")
     }
 
-    @IBAction func cancelToStoreViewController(segue:UIStoryboardSegue) {
+    @IBAction func toStoreViewController(segue:UIStoryboardSegue) {
         
     }
 }

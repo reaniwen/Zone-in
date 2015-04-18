@@ -9,6 +9,8 @@
 import UIKit
 
 class BuyOneViewController: UIViewController {
+    
+    var prize: Prizes = .Others
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,24 +26,29 @@ class BuyOneViewController: UIViewController {
 
     @IBAction func seaweedAct(sender: AnyObject) {
         prize = Prizes.Seaweed
-        self.performSegueWithIdentifier("selPage1Segue", sender: self)
+        self.performSegueWithIdentifier("buyPage1Segue", sender: self)
     }
     @IBAction func cleaningSetAct(sender: AnyObject) {
         prize = Prizes.CleaningSet
-        self.performSegueWithIdentifier("selPage1Segue", sender: self)
+        self.performSegueWithIdentifier("buyPage1Segue", sender: self)
     }
     @IBAction func funnyCatAct(sender: AnyObject) {
         prize = Prizes.FunnyHat
-        self.performSegueWithIdentifier("selPage1Segue", sender: self)
+        self.performSegueWithIdentifier("buyPage1Segue", sender: self)
     }
     @IBAction func pipeAct(sender: AnyObject) {
         prize = Prizes.Pipe
-        self.performSegueWithIdentifier("selPage1Segue", sender: self)
+        self.performSegueWithIdentifier("buyPage1Segue", sender: self)
+    }
+    @IBAction func pillAct(sender: AnyObject) {
+        prize = Prizes.Pill
+        self.performSegueWithIdentifier("buyPage1Segue", sender: self)
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "selPage1Segue" {
-            if let destinationVC = segue.destinationViewController as? ConfirmPropViewController {
+        if segue.identifier == "buyPage1Segue" {
+            if let destinationVC = segue.destinationViewController as? ConfirmPurchaseViewController {
                 destinationVC.testText = prize.simpleDescription()
                 destinationVC.prize = prize
             }

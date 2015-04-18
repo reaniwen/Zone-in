@@ -9,27 +9,44 @@
 import UIKit
 
 class ConfirmPurchaseViewController: UIViewController {
-
+    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var prizeImage: UIImageView!
+    
+    var testText: String = ""
+    var prize: Prizes = .Others
+    
+    var prizeImageSet: [UIImage] = []
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let seaWeed:UIImage = UIImage()
+        let cleaningSet:UIImage = UIImage(named: "23.1cleaningSet2")!
+        let funnyHat:UIImage = UIImage(named: "23.3funnyHat2")!
+        let pipe:UIImage = UIImage(named: "23.4pipe2")!
+        let pill:UIImage = UIImage(named: "23.2pill2")!
+        prizeImageSet = [seaWeed, cleaningSet, funnyHat, pipe, pill]
+        
+        updateTestLabel()
+        updateImage()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateTestLabel(){
+        testLabel.text = testText
     }
-    */
-
+    
+    func updateImage(){
+        prizeImage.image = prizeImageSet[prize.rawValue]
+    }
+    
+    @IBAction func close(){
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

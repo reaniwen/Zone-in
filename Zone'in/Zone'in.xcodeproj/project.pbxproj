@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		174449B51AE027170012D881 /* PageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B41AE027170012D881 /* PageOneViewController.swift */; };
+		174449B51AE027170012D881 /* HaveOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B41AE027170012D881 /* HaveOneViewController.swift */; };
 		174449B71AE0840A0012D881 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B61AE0840A0012D881 /* Prize.swift */; };
-		174449B91AE0AA390012D881 /* ConfirmPrizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B81AE0AA390012D881 /* ConfirmPrizeViewController.swift */; };
+		174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */; };
 		177145F61AC0CB380052809F /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177145F51AC0CB380052809F /* StoreViewController.swift */; };
 		1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775F2A31AD31E0500D2913A /* QuitViewController.swift */; };
-		1789BB621AE0BEC500BAE753 /* PageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB611AE0BEC500BAE753 /* PageTwoViewController.swift */; };
+		1789BB621AE0BEC500BAE753 /* HaveTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */; };
+		1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */; };
+		1789BB661AE1C68600BAE753 /* BuyTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */; };
+		1789BB681AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB671AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift */; };
 		17B4791D1AD6266F002DAB65 /* Bauhaus93.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */; };
 		17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */; };
 		17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4F16F1AA9270500CAF74F /* AppDelegate.swift */; };
@@ -38,12 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		174449B41AE027170012D881 /* PageOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageOneViewController.swift; sourceTree = "<group>"; };
+		174449B41AE027170012D881 /* HaveOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaveOneViewController.swift; sourceTree = "<group>"; };
 		174449B61AE0840A0012D881 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
-		174449B81AE0AA390012D881 /* ConfirmPrizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPrizeViewController.swift; sourceTree = "<group>"; };
+		174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPropViewController.swift; sourceTree = "<group>"; };
 		177145F51AC0CB380052809F /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		1775F2A31AD31E0500D2913A /* QuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
-		1789BB611AE0BEC500BAE753 /* PageTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTwoViewController.swift; sourceTree = "<group>"; };
+		1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaveTwoViewController.swift; sourceTree = "<group>"; };
+		1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyOneViewController.swift; sourceTree = "<group>"; };
+		1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyTwoViewController.swift; sourceTree = "<group>"; };
+		1789BB671AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPurchaseViewController.swift; sourceTree = "<group>"; };
 		17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bauhaus93.ttf; sourceTree = "<group>"; };
 		17C4F16A1AA9270400CAF74F /* Zone'in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zone'in.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C4F16E1AA9270500CAF74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,17 +118,20 @@
 			children = (
 				17B479151AD623F4002DAB65 /* res */,
 				17C4F16F1AA9270500CAF74F /* AppDelegate.swift */,
-				17C4F1731AA9270500CAF74F /* Main.storyboard */,
-				1775F2A31AD31E0500D2913A /* QuitViewController.swift */,
-				17C75FC31AC5175300A3586E /* TimerViewController.swift */,
-				17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */,
-				17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */,
-				177145F51AC0CB380052809F /* StoreViewController.swift */,
 				17C4F1951AA97A3500CAF74F /* Singleton.swift */,
-				174449B41AE027170012D881 /* PageOneViewController.swift */,
-				1789BB611AE0BEC500BAE753 /* PageTwoViewController.swift */,
-				174449B81AE0AA390012D881 /* ConfirmPrizeViewController.swift */,
 				174449B61AE0840A0012D881 /* Prize.swift */,
+				17C4F1731AA9270500CAF74F /* Main.storyboard */,
+				17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */,
+				17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */,
+				17C75FC31AC5175300A3586E /* TimerViewController.swift */,
+				1775F2A31AD31E0500D2913A /* QuitViewController.swift */,
+				177145F51AC0CB380052809F /* StoreViewController.swift */,
+				174449B41AE027170012D881 /* HaveOneViewController.swift */,
+				1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */,
+				174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */,
+				1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */,
+				1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */,
+				1789BB671AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift */,
 				17C4F1901AA96B5B00CAF74F /* LockNotifierCallback.h */,
 				17C4F1911AA96B5B00CAF74F /* LockNotifierCallback.m */,
 				17C4F1761AA9270500CAF74F /* Images.xcassets */,
@@ -259,12 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1789BB621AE0BEC500BAE753 /* PageTwoViewController.swift in Sources */,
+				1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */,
+				1789BB621AE0BEC500BAE753 /* HaveTwoViewController.swift in Sources */,
 				17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */,
-				174449B51AE027170012D881 /* PageOneViewController.swift in Sources */,
+				174449B51AE027170012D881 /* HaveOneViewController.swift in Sources */,
+				1789BB661AE1C68600BAE753 /* BuyTwoViewController.swift in Sources */,
 				177145F61AC0CB380052809F /* StoreViewController.swift in Sources */,
+				1789BB681AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift in Sources */,
 				17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */,
-				174449B91AE0AA390012D881 /* ConfirmPrizeViewController.swift in Sources */,
+				174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */,
 				174449B71AE0840A0012D881 /* Prize.swift in Sources */,
 				17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */,
 				17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */,

@@ -13,7 +13,7 @@ class StoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        showOneFish()
     }
 
     
@@ -22,35 +22,39 @@ class StoreViewController: UIViewController {
     }
     
     @IBAction func testFish(sender: AnyObject) {
-//        // set up some constants for the animation
-//        let duration : NSTimeInterval = 1.0
-//        let delay : NSTimeInterval = 0.0
-//        let options = UIViewAnimationOptions.CurveLinear | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.Autoreverse
-//        
-//        // set up some constants for the fish
+
+    }
+    
+    func showOneFish(){
+        //        // set up some constants for the animation
+        //        let duration : NSTimeInterval = 1.0
+        //        let delay : NSTimeInterval = 0.0
+        //        let options = UIViewAnimationOptions.CurveLinear | UIViewAnimationOptions.Repeat | UIViewAnimationOptions.Autoreverse
+        //
+        //        // set up some constants for the fish
         let length: CGFloat = CGFloat(107)
         let height: CGFloat = CGFloat(68)
-//        let size : CGFloat = CGFloat(122)
+        //        let size : CGFloat = CGFloat(122)
         let yPosition : CGFloat = CGFloat(84)
-//
-//        // create the fish and add it to the screen
-//        let fish = UIImageView()
-//        fish.image = UIImage(named: "testFishWithHat")
-//        fish.frame = CGRectMake(0, yPosition, size, size)
-//        self.view.addSubview(fish)
-//        
-//        // define the animation
-//        UIView.animateWithDuration(duration, delay: delay, options: options, animations: {
-//            
-//            // move the fish
-//            fish.frame = CGRectMake(320-size, yPosition, size, size)
-//            
-//            }, completion: { animationFinished in
-//                
-//                // remove the fish
-//                fish.removeFromSuperview()
-//                
-//        })
+        //
+        //        // create the fish and add it to the screen
+        //        let fish = UIImageView()
+        //        fish.image = UIImage(named: "testFishWithHat")
+        //        fish.frame = CGRectMake(0, yPosition, size, size)
+        //        self.view.addSubview(fish)
+        //
+        //        // define the animation
+        //        UIView.animateWithDuration(duration, delay: delay, options: options, animations: {
+        //
+        //            // move the fish
+        //            fish.frame = CGRectMake(320-size, yPosition, size, size)
+        //
+        //            }, completion: { animationFinished in
+        //
+        //                // remove the fish
+        //                fish.removeFromSuperview()
+        //
+        //        })
         
         
         let fish1 = UIImageView()

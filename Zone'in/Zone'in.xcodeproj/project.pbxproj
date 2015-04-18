@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733644E1AE2263E00AD0176 /* WinViewController.swift */; };
+		1742686F1AE2F7B200D68BC3 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1742686E1AE2F7B200D68BC3 /* testViewController.swift */; };
 		174449B51AE027170012D881 /* HaveOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B41AE027170012D881 /* HaveOneViewController.swift */; };
 		174449B71AE0840A0012D881 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B61AE0840A0012D881 /* Prize.swift */; };
 		174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1733644E1AE2263E00AD0176 /* WinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		1742686E1AE2F7B200D68BC3 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		174449B41AE027170012D881 /* HaveOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaveOneViewController.swift; sourceTree = "<group>"; };
 		174449B61AE0840A0012D881 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPropViewController.swift; sourceTree = "<group>"; };
@@ -121,9 +125,11 @@
 				17C4F1951AA97A3500CAF74F /* Singleton.swift */,
 				174449B61AE0840A0012D881 /* Prize.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
+				1742686E1AE2F7B200D68BC3 /* testViewController.swift */,
 				17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */,
 				17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */,
 				17C75FC31AC5175300A3586E /* TimerViewController.swift */,
+				1733644E1AE2263E00AD0176 /* WinViewController.swift */,
 				1775F2A31AD31E0500D2913A /* QuitViewController.swift */,
 				177145F51AC0CB380052809F /* StoreViewController.swift */,
 				174449B41AE027170012D881 /* HaveOneViewController.swift */,
@@ -268,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */,
 				1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */,
 				1789BB621AE0BEC500BAE753 /* HaveTwoViewController.swift in Sources */,
 				17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */,
@@ -279,6 +286,7 @@
 				174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */,
 				174449B71AE0840A0012D881 /* Prize.swift in Sources */,
 				17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */,
+				1742686F1AE2F7B200D68BC3 /* testViewController.swift in Sources */,
 				17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */,
 				17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */,
 				17C4F1961AA97A3500CAF74F /* Singleton.swift in Sources */,

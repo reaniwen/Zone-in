@@ -30,6 +30,8 @@
 		17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */; };
 		17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */; };
 		17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC31AC5175300A3586E /* TimerViewController.swift */; };
+		17D741A71AE47F98000B4CD7 /* ChooseFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */; };
+		17D741A91AE47FA4000B4CD7 /* ConfirmFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A81AE47FA4000B4CD7 /* ConfirmFishViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPrizeViewController.swift; sourceTree = "<group>"; };
 		17C75FC31AC5175300A3586E /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFishViewController.swift; sourceTree = "<group>"; };
+		17D741A81AE47FA4000B4CD7 /* ConfirmFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfirmFishViewController.swift; path = ../ConfirmFishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,8 @@
 		17D741A51AE479B9000B4CD7 /* StoreGroup */ = {
 			isa = PBXGroup;
 			children = (
+				17D741A81AE47FA4000B4CD7 /* ConfirmFishViewController.swift */,
+				17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */,
 				177145F51AC0CB380052809F /* StoreViewController.swift */,
 				174449B41AE027170012D881 /* HaveOneViewController.swift */,
 				1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */,
@@ -299,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */,
+				17D741A91AE47FA4000B4CD7 /* ConfirmFishViewController.swift in Sources */,
 				1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */,
 				1789BB621AE0BEC500BAE753 /* HaveTwoViewController.swift in Sources */,
 				17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */,
@@ -316,6 +323,7 @@
 				17C4F1961AA97A3500CAF74F /* Singleton.swift in Sources */,
 				1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */,
 				17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */,
+				17D741A71AE47F98000B4CD7 /* ChooseFishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

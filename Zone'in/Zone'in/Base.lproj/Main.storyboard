@@ -623,10 +623,10 @@
             </objects>
             <point key="canvasLocation" x="1396" y="794"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose Fish View Controller-->
         <scene sceneID="skk-Vy-Dy7">
             <objects>
-                <viewController id="NKQ-CY-zyl" sceneMemberID="viewController">
+                <viewController id="NKQ-CY-zyl" customClass="ChooseFishViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xEn-Bf-lf7"/>
                         <viewControllerLayoutGuide type="bottom" id="Wg2-0T-reF"/>
@@ -673,10 +673,10 @@
             </objects>
             <point key="canvasLocation" x="1823" y="794"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirm Fish View Controller-->
         <scene sceneID="WHN-qm-Pq9">
             <objects>
-                <viewController id="Kcb-7g-YEO" sceneMemberID="viewController">
+                <viewController id="Kcb-7g-YEO" customClass="ConfirmFishViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u5m-d0-tLj"/>
                         <viewControllerLayoutGuide type="bottom" id="X4I-mt-j94"/>

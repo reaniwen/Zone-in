@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733644E1AE2263E00AD0176 /* WinViewController.swift */; };
 		1742686F1AE2F7B200D68BC3 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1742686E1AE2F7B200D68BC3 /* testViewController.swift */; };
-		174449B51AE027170012D881 /* HaveOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B41AE027170012D881 /* HaveOneViewController.swift */; };
+		174449B51AE027170012D881 /* StorePageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B41AE027170012D881 /* StorePageOneViewController.swift */; };
 		174449B71AE0840A0012D881 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B61AE0840A0012D881 /* Prize.swift */; };
 		174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */; };
-		177145F61AC0CB380052809F /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177145F51AC0CB380052809F /* StoreViewController.swift */; };
+		177145F61AC0CB380052809F /* Store1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177145F51AC0CB380052809F /* Store1ViewController.swift */; };
 		1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775F2A31AD31E0500D2913A /* QuitViewController.swift */; };
-		1789BB621AE0BEC500BAE753 /* HaveTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */; };
+		1789BB621AE0BEC500BAE753 /* StorePageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */; };
 		1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */; };
 		1789BB661AE1C68600BAE753 /* BuyTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */; };
 		1789BB681AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB671AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift */; };
@@ -31,7 +31,7 @@
 		17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */; };
 		17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC31AC5175300A3586E /* TimerViewController.swift */; };
 		17D741A71AE47F98000B4CD7 /* ChooseFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */; };
-		17D741A91AE47FA4000B4CD7 /* ConfirmFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A81AE47FA4000B4CD7 /* ConfirmFishViewController.swift */; };
+		17D741A91AE47FA4000B4CD7 /* ConFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A81AE47FA4000B4CD7 /* ConFishViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +47,12 @@
 /* Begin PBXFileReference section */
 		1733644E1AE2263E00AD0176 /* WinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		1742686E1AE2F7B200D68BC3 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
-		174449B41AE027170012D881 /* HaveOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaveOneViewController.swift; sourceTree = "<group>"; };
+		174449B41AE027170012D881 /* StorePageOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageOneViewController.swift; sourceTree = "<group>"; };
 		174449B61AE0840A0012D881 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPropViewController.swift; sourceTree = "<group>"; };
-		177145F51AC0CB380052809F /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		177145F51AC0CB380052809F /* Store1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store1ViewController.swift; sourceTree = "<group>"; };
 		1775F2A31AD31E0500D2913A /* QuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
-		1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaveTwoViewController.swift; sourceTree = "<group>"; };
+		1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageTwoViewController.swift; sourceTree = "<group>"; };
 		1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyOneViewController.swift; sourceTree = "<group>"; };
 		1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyTwoViewController.swift; sourceTree = "<group>"; };
 		1789BB671AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPurchaseViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPrizeViewController.swift; sourceTree = "<group>"; };
 		17C75FC31AC5175300A3586E /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFishViewController.swift; sourceTree = "<group>"; };
-		17D741A81AE47FA4000B4CD7 /* ConfirmFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfirmFishViewController.swift; path = ../ConfirmFishViewController.swift; sourceTree = "<group>"; };
+		17D741A81AE47FA4000B4CD7 /* ConFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConFishViewController.swift; path = ../ConFishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,12 +193,12 @@
 		17D741A51AE479B9000B4CD7 /* StoreGroup */ = {
 			isa = PBXGroup;
 			children = (
-				17D741A81AE47FA4000B4CD7 /* ConfirmFishViewController.swift */,
-				17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */,
-				177145F51AC0CB380052809F /* StoreViewController.swift */,
-				174449B41AE027170012D881 /* HaveOneViewController.swift */,
-				1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */,
+				177145F51AC0CB380052809F /* Store1ViewController.swift */,
+				174449B41AE027170012D881 /* StorePageOneViewController.swift */,
+				1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */,
 				174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */,
+				17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */,
+				17D741A81AE47FA4000B4CD7 /* ConFishViewController.swift */,
 			);
 			name = StoreGroup;
 			sourceTree = "<group>";
@@ -305,13 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */,
-				17D741A91AE47FA4000B4CD7 /* ConfirmFishViewController.swift in Sources */,
+				17D741A91AE47FA4000B4CD7 /* ConFishViewController.swift in Sources */,
 				1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */,
-				1789BB621AE0BEC500BAE753 /* HaveTwoViewController.swift in Sources */,
+				1789BB621AE0BEC500BAE753 /* StorePageTwoViewController.swift in Sources */,
 				17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */,
-				174449B51AE027170012D881 /* HaveOneViewController.swift in Sources */,
+				174449B51AE027170012D881 /* StorePageOneViewController.swift in Sources */,
 				1789BB661AE1C68600BAE753 /* BuyTwoViewController.swift in Sources */,
-				177145F61AC0CB380052809F /* StoreViewController.swift in Sources */,
+				177145F61AC0CB380052809F /* Store1ViewController.swift in Sources */,
 				1789BB681AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift in Sources */,
 				17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */,
 				174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */,
@@ -447,9 +447,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Huifang Zhang (9ZW93ENW6P)";
 				DEFINES_MODULE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Zone'in/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -463,9 +465,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Huifang Zhang (9ZW93ENW6P)";
 				DEFINES_MODULE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Zone'in/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;

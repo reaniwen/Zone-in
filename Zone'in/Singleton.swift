@@ -16,6 +16,13 @@ class Singleton: NSObject {
     
     var time: Int = 0
     
+    var babyWithHat: Bool = false
+    var adultWithHat: Bool = false
+    var adultWithPipe: Bool = false
+    var sharkWithHat: Bool = false
+    var sharkWithPipe: Bool = false
+    
+    
     class var sharedInstance: Singleton {
         struct Static {
             static let instance: Singleton = Singleton()
@@ -26,5 +33,6 @@ class Singleton: NSObject {
     func updateLockStatus(state: Bool){
         isLocked = state
     }
+    
     
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -15,58 +15,6 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Test View Controller-->
-        <scene sceneID="NBL-Jh-CgJ">
-            <objects>
-                <viewController id="ce7-m3-QRo" customClass="testViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ngu-yN-9YX"/>
-                        <viewControllerLayoutGuide type="bottom" id="63A-5e-oB8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vtZ-kL-1Nh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7.win" translatesAutoresizingMaskIntoConstraints="NO" id="VBo-y6-MLL">
-                                <rect key="frame" x="60" y="184" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="UYp-FW-6Zi"/>
-                                    <constraint firstAttribute="height" constant="200" id="dBi-bg-kY6"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDS-sh-rEh">
-                                <rect key="frame" x="21" y="20" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="testAnimationAct:" destination="ce7-m3-QRo" eventType="touchUpInside" id="Q22-JE-Hpf"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47U-OE-Ik2">
-                                <rect key="frame" x="139" y="109" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="VBo-y6-MLL" secondAttribute="centerY" id="BPL-c7-Ndf"/>
-                            <constraint firstAttribute="centerX" secondItem="VBo-y6-MLL" secondAttribute="centerX" id="CFq-Hk-PU3"/>
-                            <constraint firstItem="47U-OE-Ik2" firstAttribute="centerX" secondItem="VBo-y6-MLL" secondAttribute="centerX" id="o4R-cX-3wj"/>
-                            <constraint firstItem="VBo-y6-MLL" firstAttribute="top" secondItem="47U-OE-Ik2" secondAttribute="bottom" constant="54" id="t6T-qk-WLK"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="testImageView" destination="VBo-y6-MLL" id="AvM-TF-NEZ"/>
-                        <outlet property="testLabel" destination="47U-OE-Ik2" id="qba-JG-1s4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oLJ-e5-wo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="112" y="-548"/>
-        </scene>
         <!--Select Time View Controller-->
         <scene sceneID="ixA-x7-bQW">
             <objects>
@@ -146,15 +94,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="jFB-eT-JsB" kind="modal" identifier="SelectPrizeSegue" id="3rI-SZ-MpJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxN-eW-Piq">
-                                <rect key="frame" x="6" y="0.0" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ce7-m3-QRo" kind="modal" id="Do2-4L-iK3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -397,6 +336,9 @@
                                 <state key="normal" image="1.ok button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="1jC-pC-TQt" kind="unwind" unwindAction="toSelectTimeViewController:" id="FaQ-gi-a70"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7.maskedCat" translatesAutoresizingMaskIntoConstraints="NO" id="CeR-Go-sLH">
                                 <rect key="frame" x="145" y="42" width="232" height="206"/>
@@ -433,13 +375,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhW-wa-PzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1jC-pC-TQt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1408" y="118"/>
         </scene>
-        <!--Have Two View Controller-->
+        <!--Store Page Two View Controller-->
         <scene sceneID="k9f-5m-72G">
             <objects>
-                <viewController id="cRL-lX-y9T" customClass="HaveTwoViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cRL-lX-y9T" customClass="StorePageTwoViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yFK-hd-7pt"/>
                         <viewControllerLayoutGuide type="bottom" id="VeZ-zu-Ry1"/>
@@ -510,19 +453,19 @@
                             <constraint firstItem="zvM-Hc-1Td" firstAttribute="width" secondItem="OHu-kz-brG" secondAttribute="height" multiplier="59:568" id="3Oj-vV-mwu"/>
                             <constraint firstItem="eUt-Wy-nRc" firstAttribute="trailing" secondItem="IRH-Nr-ay7" secondAttribute="trailing" constant="-14" id="8AY-Xg-5Sq"/>
                             <constraint firstItem="eUt-Wy-nRc" firstAttribute="top" secondItem="IRH-Nr-ay7" secondAttribute="bottom" constant="8" id="8a8-A4-Gkf"/>
-                            <constraint firstItem="cD8-2W-fro" firstAttribute="top" secondItem="yFK-hd-7pt" secondAttribute="bottom" constant="-20" id="Eys-4O-d1I"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zvM-Hc-1Td" secondAttribute="trailing" constant="-16" id="FE3-c8-KNp"/>
+                            <constraint firstItem="cD8-2W-fro" firstAttribute="height" secondItem="OHu-kz-brG" secondAttribute="height" id="GZp-JA-5kZ"/>
                             <constraint firstAttribute="centerY" secondItem="IRH-Nr-ay7" secondAttribute="centerY" constant="14" id="IDy-K9-KBI"/>
                             <constraint firstAttribute="width" secondItem="IRH-Nr-ay7" secondAttribute="height" multiplier="80:71" id="PzR-GU-faO"/>
                             <constraint firstItem="VeZ-zu-Ry1" firstAttribute="top" secondItem="qY8-3g-PY4" secondAttribute="bottom" id="QFU-ec-PcT"/>
                             <constraint firstAttribute="centerX" secondItem="IRH-Nr-ay7" secondAttribute="centerX" constant="-0.5" id="R88-zF-jDC"/>
                             <constraint firstItem="eUt-Wy-nRc" firstAttribute="width" secondItem="OHu-kz-brG" secondAttribute="height" multiplier="63:568" id="VO8-XT-OFK"/>
+                            <constraint firstItem="cD8-2W-fro" firstAttribute="width" secondItem="OHu-kz-brG" secondAttribute="width" id="ZhI-n1-VFU"/>
                             <constraint firstItem="qY8-3g-PY4" firstAttribute="width" secondItem="OHu-kz-brG" secondAttribute="height" multiplier="163:568" id="dDe-I1-lve"/>
+                            <constraint firstItem="VeZ-zu-Ry1" firstAttribute="top" secondItem="cD8-2W-fro" secondAttribute="bottom" id="fjK-fT-7Fu"/>
                             <constraint firstItem="qY8-3g-PY4" firstAttribute="leading" secondItem="OHu-kz-brG" secondAttribute="leadingMargin" constant="-16" id="gE6-7L-31d"/>
-                            <constraint firstAttribute="height" secondItem="cD8-2W-fro" secondAttribute="height" id="rNv-X2-Dad"/>
-                            <constraint firstItem="cD8-2W-fro" firstAttribute="leading" secondItem="OHu-kz-brG" secondAttribute="leadingMargin" constant="-16" id="ul8-mn-rfQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cD8-2W-fro" secondAttribute="trailing" constant="-16" id="mzM-RA-W1M"/>
                             <constraint firstItem="VeZ-zu-Ry1" firstAttribute="top" secondItem="zvM-Hc-1Td" secondAttribute="bottom" constant="-1" id="yeb-Sn-4If"/>
-                            <constraint firstAttribute="width" secondItem="cD8-2W-fro" secondAttribute="width" id="zaG-tY-KmW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -570,7 +513,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NKQ-CY-zyl" kind="modal" id="r9t-eC-BaC"/>
+                                    <segue destination="NKQ-CY-zyl" kind="modal" identifier="GotoSelFishSegue" id="r9t-eC-BaC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE0-Zp-DB6">
@@ -646,6 +589,9 @@
                                 <state key="normal" title="AdultFish" image="18.2.adultFish">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="adultFishAct:" destination="NKQ-CY-zyl" eventType="touchUpInside" id="8Y2-Iu-jtG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9G-lB-bjC">
                                 <rect key="frame" x="96" y="369" width="128" height="128"/>
@@ -655,6 +601,9 @@
                                 <state key="normal" title="Shark" image="18.3.shark">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sharkAct:" destination="NKQ-CY-zyl" eventType="touchUpInside" id="Xih-d2-K0u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhA-tZ-aO1">
                                 <rect key="frame" x="261" y="520" width="59" height="48"/>
@@ -664,6 +613,9 @@
                                 <state key="normal" title="Back" image="2.backOnTheRight">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="close" destination="NKQ-CY-zyl" eventType="touchUpInside" id="VIW-lL-WRL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax2-Sg-e4o">
                                 <rect key="frame" x="96" y="68" width="128" height="128"/>
@@ -674,7 +626,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Kcb-7g-YEO" kind="modal" id="x7d-db-ozz"/>
+                                    <action selector="babyFishAct:" destination="NKQ-CY-zyl" eventType="touchUpInside" id="0QD-YK-H5A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -698,15 +650,19 @@
                             <constraint firstAttribute="centerX" secondItem="Ax2-Sg-e4o" secondAttribute="centerX" id="yyh-pa-dZg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="babyfishBtn" destination="Ax2-Sg-e4o" id="qIf-zG-GDM"/>
+                        <segue destination="Kcb-7g-YEO" kind="modal" identifier="ConfirmUseSegue" id="2iA-Wx-cKX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5z-qE-I7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1823" y="794"/>
         </scene>
-        <!--Confirm Fish View Controller-->
+        <!--Con Fish View Controller-->
         <scene sceneID="WHN-qm-Pq9">
             <objects>
-                <viewController id="Kcb-7g-YEO" customClass="ConfirmFishViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Kcb-7g-YEO" customClass="ConFishViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u5m-d0-tLj"/>
                         <viewControllerLayoutGuide type="bottom" id="X4I-mt-j94"/>
@@ -732,6 +688,9 @@
                                 <state key="normal" title="OK" image="1.ok button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="u1K-zy-b7M" kind="modal" id="Wzg-b5-ZNd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -748,6 +707,9 @@
                             <constraint firstItem="SKB-C4-UxI" firstAttribute="height" secondItem="cNH-uj-o2R" secondAttribute="height" id="z5T-8p-Z9n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fishImage" destination="CyE-1O-ezY" id="J40-lm-sJM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kx7-Ng-GzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -887,10 +849,10 @@
             </objects>
             <point key="canvasLocation" x="1448" y="-660"/>
         </scene>
-        <!--Store View Controller-->
+        <!--Store1 View Controller-->
         <scene sceneID="0eG-qr-CxC">
             <objects>
-                <viewController id="u1K-zy-b7M" customClass="StoreViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u1K-zy-b7M" customClass="Store1ViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="viP-L0-cIx"/>
                         <viewControllerLayoutGuide type="bottom" id="sOM-bG-wFX"/>
@@ -923,7 +885,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="close" destination="u1K-zy-b7M" eventType="touchUpInside" id="w5h-n4-uWV"/>
+                                    <segue destination="iKM-od-ust" kind="unwind" unwindAction="toSelectTimeViewController:" id="eDy-Ve-PWf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVX-wl-Hf0">
@@ -960,6 +922,7 @@
                     <navigationItem key="navigationItem" id="leB-g9-LT1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhD-cw-nGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iKM-od-ust" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="112" y="794"/>
         </scene>
@@ -1263,10 +1226,10 @@
             </objects>
             <point key="canvasLocation" x="1823" y="1536"/>
         </scene>
-        <!--Have One View Controller-->
+        <!--Store Page One View Controller-->
         <scene sceneID="82y-U2-58X">
             <objects>
-                <viewController id="HDr-7L-OKN" customClass="HaveOneViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HDr-7L-OKN" customClass="StorePageOneViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bgq-b8-kPV"/>
                         <viewControllerLayoutGuide type="bottom" id="XM0-BI-yP9"/>
@@ -1461,7 +1424,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="4Tn-uA-CyM"/>
+        <segue reference="OHF-XC-8gY"/>
+        <segue reference="YHv-2w-sV2"/>
         <segue reference="kIO-uA-Taz"/>
-        <segue reference="N9g-BE-c4M"/>
     </inferredMetricsTieBreakers>
 </document>

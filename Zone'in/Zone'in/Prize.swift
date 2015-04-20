@@ -23,4 +23,16 @@ enum Prizes: Int {
         }
     }
 }
-
+enum FishClass: Int {
+    case BabyFish = 0
+    case AdultFish, Shark, Others
+    
+    func simpleDescription() -> String {
+        switch self {
+        case .BabyFish: return "BabyFish"
+        case .AdultFish: return "AdultFish"
+        case .Shark: return "Shark"
+        case .Others: return "Others"
+        }
+    }
+}

@@ -9,9 +9,24 @@
 import UIKit
 
 class ChooseFishViewController: UIViewController {
-
+    var prize : Prizes = .Others
+    var fish: FishClass = .Others
+    
+    let sharedData:Singleton = Singleton.sharedInstance
+    
+    @IBOutlet weak var babyfishBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if prize == .Pipe {
+            babyfishBtn.setImage(UIImage(named: "18.1.babyFish2"), forState: .Normal)
+            babyfishBtn.enabled = false
+
+        }else {
+            babyfishBtn.setImage(UIImage(named: "18.1.babyFish"), forState: .Normal)
+            babyfishBtn.enabled = true
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -20,16 +35,47 @@ class ChooseFishViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func babyFishAct(sender: AnyObject) {
+        fish = FishClass.BabyFish
+        if prize == .FunnyHat {
+            sharedData.babyWithHat = true
+            self.performSegueWithIdentifier("ConfirmUseSegue", sender: self)
+        }
     }
-    */
+    
+    @IBAction func adultFishAct(sender: AnyObject) {
+        fish = FishClass.AdultFish
+        if prize == .FunnyHat {
+            sharedData.adultWithHat = true
+            self.performSegueWithIdentifier("ConfirmUseSegue", sender: self)
+        }else if prize == .Pipe {
+            sharedData.adultWithPipe = true
+            self.performSegueWithIdentifier("ConfirmUseSegue", sender: self)
+        }
+    }
+    
+    @IBAction func sharkAct(sender: AnyObject) {
+        fish = FishClass.Shark
+        if prize == .FunnyHat {
+            sharedData.sharkWithHat = true
+            self.performSegueWithIdentifier("ConfirmUseSegue", sender: self)
+        }else if prize == .Pipe {
+            sharedData.sharkWithPipe = true
+            self.performSegueWithIdentifier("ConfirmUseSegue", sender: self)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ConfirmUseSegue" {
+            if let destinationVC = segue.destinationViewController as? ConFishViewController {
 
+                destinationVC.fish = fish
+            }
+        }
+    }
+    
+    @IBAction func close(){
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
+

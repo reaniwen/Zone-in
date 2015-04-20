@@ -47,6 +47,15 @@ class ConfirmPropViewController: UIViewController {
         prizeImage.image = prizeImageSet[prize.rawValue]
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "GotoSelFishSegue" {
+            if let destinationVC = segue.destinationViewController as? ChooseFishViewController {
+//                destinationVC.testText = prize.simpleDescription()
+                destinationVC.prize = prize
+            }
+        }
+    }
+    
     @IBAction func close(){
         dismissViewControllerAnimated(true, completion: nil)
     }

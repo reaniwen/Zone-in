@@ -126,18 +126,9 @@
 				174449B61AE0840A0012D881 /* Prize.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
 				1742686E1AE2F7B200D68BC3 /* testViewController.swift */,
-				17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */,
-				17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */,
-				17C75FC31AC5175300A3586E /* TimerViewController.swift */,
-				1733644E1AE2263E00AD0176 /* WinViewController.swift */,
-				1775F2A31AD31E0500D2913A /* QuitViewController.swift */,
-				177145F51AC0CB380052809F /* StoreViewController.swift */,
-				174449B41AE027170012D881 /* HaveOneViewController.swift */,
-				1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */,
-				174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */,
-				1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */,
-				1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */,
-				1789BB671AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift */,
+				17D741A41AE479AE000B4CD7 /* CoreGroup */,
+				17D741A51AE479B9000B4CD7 /* StoreGroup */,
+				17D741A31AE4798C000B4CD7 /* PurchaseGroup */,
 				17C4F1901AA96B5B00CAF74F /* LockNotifierCallback.h */,
 				17C4F1911AA96B5B00CAF74F /* LockNotifierCallback.m */,
 				17C4F1761AA9270500CAF74F /* Images.xcassets */,
@@ -171,6 +162,39 @@
 				17C4F1841AA9270600CAF74F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17D741A31AE4798C000B4CD7 /* PurchaseGroup */ = {
+			isa = PBXGroup;
+			children = (
+				1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */,
+				1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */,
+				1789BB671AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift */,
+			);
+			name = PurchaseGroup;
+			sourceTree = "<group>";
+		};
+		17D741A41AE479AE000B4CD7 /* CoreGroup */ = {
+			isa = PBXGroup;
+			children = (
+				17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */,
+				17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */,
+				17C75FC31AC5175300A3586E /* TimerViewController.swift */,
+				1733644E1AE2263E00AD0176 /* WinViewController.swift */,
+				1775F2A31AD31E0500D2913A /* QuitViewController.swift */,
+			);
+			name = CoreGroup;
+			sourceTree = "<group>";
+		};
+		17D741A51AE479B9000B4CD7 /* StoreGroup */ = {
+			isa = PBXGroup;
+			children = (
+				177145F51AC0CB380052809F /* StoreViewController.swift */,
+				174449B41AE027170012D881 /* HaveOneViewController.swift */,
+				1789BB611AE0BEC500BAE753 /* HaveTwoViewController.swift */,
+				174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */,
+			);
+			name = StoreGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

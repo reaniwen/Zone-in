@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -148,7 +148,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OEc-uS-nKM" secondAttribute="height" multiplier="58:7" id="7Mg-7O-N1S"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -516,9 +516,9 @@
                                     <segue destination="NKQ-CY-zyl" kind="modal" identifier="GotoSelFishSegue" id="r9t-eC-BaC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE0-Zp-DB6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE0-Zp-DB6">
                                 <rect key="frame" x="140" y="368" width="40" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -947,12 +947,6 @@
                                     <constraint firstAttribute="width" secondItem="jbN-nD-9jy" secondAttribute="height" multiplier="11:8" id="OhA-ot-BnP"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22.mySeaweed" translatesAutoresizingMaskIntoConstraints="NO" id="Qpg-Sb-2hk">
-                                <rect key="frame" x="38" y="411" width="67" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Qpg-Sb-2hk" secondAttribute="height" multiplier="67:29" id="eUN-43-2tN"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeJ-sM-fjc">
                                 <rect key="frame" x="37" y="128" width="247" height="284"/>
                                 <subviews>
@@ -1029,29 +1023,53 @@
                                     <segue destination="lqs-Vz-zNR" kind="unwind" unwindAction="toStoreViewController:" id="lFD-lD-y5l"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my seaweed" translatesAutoresizingMaskIntoConstraints="NO" id="Tzb-34-rV2">
+                                <rect key="frame" x="209" y="39" width="81" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tzb-34-rV2" secondAttribute="height" multiplier="81:34" id="HQT-E4-stE"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCg-Qf-6w0">
+                                <rect key="frame" x="292" y="0.0" width="28" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vCg-Qf-6w0" secondAttribute="height" multiplier="14:51" id="YFL-jU-H2w"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jy5-T2-mEy">
+                                <rect key="frame" x="209" y="0.0" width="81" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jy5-T2-mEy" secondAttribute="height" multiplier="27:13" id="Z3R-7A-rRp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OIE-3t-5ly" firstAttribute="top" secondItem="jbN-nD-9jy" secondAttribute="bottom" id="1Kl-FC-By9"/>
+                            <constraint firstItem="vCg-Qf-6w0" firstAttribute="top" secondItem="K1z-b5-8XD" secondAttribute="bottom" constant="-20" id="4wT-1v-p3r"/>
                             <constraint firstItem="ZwF-l7-jha" firstAttribute="width" secondItem="buV-b4-iBD" secondAttribute="height" multiplier="51:284" id="5Fs-0U-H88"/>
                             <constraint firstAttribute="width" secondItem="nhF-Zk-DF6" secondAttribute="height" multiplier="160:51" id="7wQ-La-BvT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XrF-eR-rAV" secondAttribute="trailing" constant="-17" id="A8L-Cb-VgP"/>
+                            <constraint firstItem="Tzb-34-rV2" firstAttribute="top" secondItem="Jy5-T2-mEy" secondAttribute="bottom" id="BP3-yH-BEz"/>
+                            <constraint firstItem="vCg-Qf-6w0" firstAttribute="leading" secondItem="Tzb-34-rV2" secondAttribute="trailing" constant="2" id="Bpg-oO-Xqw"/>
                             <constraint firstAttribute="centerY" secondItem="SeJ-sM-fjc" secondAttribute="centerY" constant="14" id="G7x-10-sNQ"/>
+                            <constraint firstAttribute="width" secondItem="Tzb-34-rV2" secondAttribute="height" multiplier="160:17" id="IM9-vt-heT"/>
                             <constraint firstItem="YoN-xb-hJG" firstAttribute="height" secondItem="buV-b4-iBD" secondAttribute="height" id="NWH-tk-Nhy"/>
+                            <constraint firstItem="K1z-b5-8XD" firstAttribute="top" secondItem="Jy5-T2-mEy" secondAttribute="bottom" constant="-19" id="P7a-kb-bGF"/>
                             <constraint firstItem="hQA-yW-9aP" firstAttribute="width" secondItem="buV-b4-iBD" secondAttribute="height" multiplier="51:284" id="PVs-z2-KnY"/>
-                            <constraint firstItem="Qpg-Sb-2hk" firstAttribute="width" secondItem="SeJ-sM-fjc" secondAttribute="height" multiplier="67:284" id="Pck-Qq-Wj7"/>
-                            <constraint firstItem="jbN-nD-9jy" firstAttribute="top" secondItem="Qpg-Sb-2hk" secondAttribute="bottom" id="T8R-Hh-GnG"/>
                             <constraint firstItem="OIE-3t-5ly" firstAttribute="top" secondItem="XrF-eR-rAV" secondAttribute="bottom" constant="-1" id="Uj9-88-nNL"/>
                             <constraint firstItem="YoN-xb-hJG" firstAttribute="top" secondItem="K1z-b5-8XD" secondAttribute="bottom" constant="-20" id="Ukr-bc-dNZ"/>
-                            <constraint firstItem="Qpg-Sb-2hk" firstAttribute="centerX" secondItem="jbN-nD-9jy" secondAttribute="centerX" constant="-16.5" id="YDd-9N-UaP"/>
                             <constraint firstItem="XrF-eR-rAV" firstAttribute="width" secondItem="buV-b4-iBD" secondAttribute="height" multiplier="59:568" id="bQZ-cV-Alt"/>
                             <constraint firstItem="jbN-nD-9jy" firstAttribute="width" secondItem="buV-b4-iBD" secondAttribute="height" multiplier="22:71" id="cBB-lE-uaH"/>
                             <constraint firstAttribute="width" secondItem="SeJ-sM-fjc" secondAttribute="height" multiplier="80:71" id="fVp-v8-fXI"/>
+                            <constraint firstItem="Jy5-T2-mEy" firstAttribute="width" secondItem="buV-b4-iBD" secondAttribute="height" multiplier="81:568" id="ixR-Lm-geX"/>
                             <constraint firstItem="YoN-xb-hJG" firstAttribute="width" secondItem="buV-b4-iBD" secondAttribute="width" id="lvQ-XJ-TRO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vCg-Qf-6w0" secondAttribute="trailing" constant="-16" id="pXn-Vr-wYg"/>
                             <constraint firstItem="YoN-xb-hJG" firstAttribute="leading" secondItem="buV-b4-iBD" secondAttribute="leadingMargin" constant="-16" id="pn7-pW-7Jk"/>
+                            <constraint firstAttribute="width" secondItem="vCg-Qf-6w0" secondAttribute="height" multiplier="160:51" id="sCX-VO-6XH"/>
                             <constraint firstAttribute="centerX" secondItem="SeJ-sM-fjc" secondAttribute="centerX" constant="-0.5" id="slJ-rA-Tj4"/>
                             <constraint firstItem="i0y-3j-qAT" firstAttribute="width" secondItem="buV-b4-iBD" secondAttribute="height" multiplier="51:284" id="tCg-2n-DAw"/>
                             <constraint firstItem="jbN-nD-9jy" firstAttribute="leading" secondItem="buV-b4-iBD" secondAttribute="leadingMargin" constant="-16" id="uqN-e3-dXC"/>
+                            <constraint firstItem="vCg-Qf-6w0" firstAttribute="leading" secondItem="Jy5-T2-mEy" secondAttribute="trailing" constant="2" id="v51-lC-wJZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1061,7 +1079,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rz1-Uu-9IJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lqs-Vz-zNR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="536" y="1536"/>
+            <point key="canvasLocation" x="529" y="1590"/>
         </scene>
         <!--Buy Two View Controller-->
         <scene sceneID="VTa-kK-bAN">
@@ -1121,9 +1139,9 @@
                                     <segue destination="Kr5-YW-Ddr" kind="modal" id="WXC-HQ-KeV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqL-BW-SW6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqL-BW-SW6">
                                 <rect key="frame" x="140" y="368" width="40" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1396,7 +1414,6 @@
         <image name="22.2.pill" width="225" height="225"/>
         <image name="22.3.funnyHat" width="225" height="225"/>
         <image name="22.4.pipe" width="225" height="225"/>
-        <image name="22.mySeaweed" width="178" height="76"/>
         <image name="22.shopIcon" width="334" height="238"/>
         <image name="23.buy" width="187" height="207"/>
         <image name="27.NewItem" width="487" height="487"/>
@@ -1416,6 +1433,7 @@
         <image name="Bg of NSTimer" width="8043" height="4742"/>
         <image name="QUITicon" width="368" height="351"/>
         <image name="Store" width="181" height="145"/>
+        <image name="my seaweed" width="172" height="75"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

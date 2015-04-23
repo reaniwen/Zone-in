@@ -11,7 +11,7 @@ import UIKit
 class WinViewController: UIViewController {
     @IBOutlet weak var winImage: UIImageView!
     
-    var secondImage:UIImage = UIImage(named: "7.newItemInAquarium")!
+    var secondImage:UIImage = UIImage(named: "new item in aquatium")!
     
     var timer = NSTimer()
     var counter: Int = 1

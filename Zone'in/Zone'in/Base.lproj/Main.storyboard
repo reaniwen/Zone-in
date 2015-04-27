@@ -1225,7 +1225,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7yG-86-91y" kind="unwind" unwindAction="toSelectTimeViewController:" id="vOE-7o-wTq"/>
+                                    <segue destination="7yG-86-91y" kind="unwind" unwindAction="toBuyOneViewController:" id="6ff-fF-Cfc"/>
                                 </connections>
                             </button>
                         </subviews>

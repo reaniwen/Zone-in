@@ -55,6 +55,10 @@ class BuyOneViewController: UIViewController {
         }
     }
     
+    @IBAction func toBuyOneViewController(segue:UIStoryboardSegue) {
+        
+    }
+    
     @IBAction func close(){
         dismissViewControllerAnimated(true, completion: nil)
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -260,10 +260,19 @@
                                     <constraint firstAttribute="width" secondItem="hsm-QA-GlY" secondAttribute="height" multiplier="7:4" id="gZ8-dD-zLs"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huJ-VQ-Nb5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huJ-VQ-Nb5" userLabel="TankImageView">
                                 <rect key="frame" x="60" y="288" width="200" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="huJ-VQ-Nb5" secondAttribute="height" multiplier="20:17" id="eTd-sY-KRQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zt-fs-rSt" userLabel="FishImageView">
+                                <rect key="frame" x="40" y="317" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zug-et-XBH" userLabel="WaterImageView">
+                                <rect key="frame" x="60" y="288" width="200" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zug-et-XBH" secondAttribute="height" multiplier="20:17" id="TOB-6A-j5M"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS5-BL-iFr" userLabel="Secs">
@@ -285,6 +294,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="huJ-VQ-Nb5" firstAttribute="width" secondItem="zug-et-XBH" secondAttribute="width" id="0cv-Ne-spJ"/>
+                            <constraint firstAttribute="centerX" secondItem="zug-et-XBH" secondAttribute="centerX" id="Dkk-lv-jqg"/>
                             <constraint firstItem="hsm-QA-GlY" firstAttribute="centerX" secondItem="vSL-js-ta2" secondAttribute="centerX" constant="23" id="Ell-1k-qky"/>
                             <constraint firstItem="ZUS-HD-fgG" firstAttribute="top" secondItem="bst-hs-jFf" secondAttribute="bottom" id="Fgp-uZ-zlI"/>
                             <constraint firstItem="hsm-QA-GlY" firstAttribute="top" secondItem="Sdm-ud-pyi" secondAttribute="bottom" constant="73" id="IQQ-SP-wOR"/>
@@ -293,6 +304,7 @@
                             <constraint firstAttribute="centerX" secondItem="hsm-QA-GlY" secondAttribute="centerX" id="N0G-mu-ONJ"/>
                             <constraint firstItem="vS5-BL-iFr" firstAttribute="height" secondItem="vSL-js-ta2" secondAttribute="height" id="R2r-Ou-v5z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bst-hs-jFf" secondAttribute="trailing" constant="-16" id="VYa-9q-hY1"/>
+                            <constraint firstItem="zug-et-XBH" firstAttribute="top" secondItem="hsm-QA-GlY" secondAttribute="bottom" constant="51" id="Zzo-t5-QYk"/>
                             <constraint firstAttribute="width" secondItem="huJ-VQ-Nb5" secondAttribute="height" multiplier="32:17" id="h4J-XW-MHL"/>
                             <constraint firstItem="vS5-BL-iFr" firstAttribute="centerX" secondItem="hsm-QA-GlY" secondAttribute="centerX" constant="23" id="mmA-dS-Wcn"/>
                             <constraint firstItem="hsm-QA-GlY" firstAttribute="centerX" secondItem="huJ-VQ-Nb5" secondAttribute="centerX" id="oXH-7R-ugv"/>
@@ -302,9 +314,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fishTankImage" destination="huJ-VQ-Nb5" id="ZKS-gF-hFm"/>
+                        <outlet property="fishImage" destination="8zt-fs-rSt" id="RbF-mT-OCa"/>
                         <outlet property="minsLabel" destination="vSL-js-ta2" id="hGZ-Y4-Q6I"/>
                         <outlet property="secsLabel" destination="vS5-BL-iFr" id="Bcg-g5-pHd"/>
+                        <outlet property="tankImage" destination="huJ-VQ-Nb5" id="AlM-Cs-Tdj"/>
+                        <outlet property="waterImage" destination="zug-et-XBH" id="duf-8J-pax"/>
                         <segue destination="HNc-TF-uhT" kind="modal" identifier="SucceedSegue" id="SVr-bf-1TT"/>
                         <segue destination="s1c-Mz-LLM" kind="modal" identifier="LoseSegue" id="kIO-uA-Taz"/>
                     </connections>

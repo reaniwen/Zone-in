@@ -12,21 +12,25 @@ class TimerViewController: UIViewController {
 
     @IBOutlet weak var minsLabel: UILabel!
     @IBOutlet weak var secsLabel: UILabel!
-    @IBOutlet weak var fishTankImage: UIImageView!
+    @IBOutlet weak var tankImage: UIImageView!
+    @IBOutlet weak var waterImage: UIImageView!
+    @IBOutlet weak var fishImage: UIImageView!
     
 //    var minsVal: Int = 0
 //    var secsVal: Int = 0
     var timer = NSTimer()
     var counter: Int = 0
+    var estCounter: Int = 0
     let sharedData: Singleton = Singleton.sharedInstance
     var prize: Prize = .Fish
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        estCounter = counter / 20
         startCounting(counter)
-        var image = UIImage(named: "3.1")
-        fishTankImage.image = image
+        updateTankImage(0)
+//        var image = UIImage(named: "3.1")
+//        fishTankImage.image = image
     }
     
     func startCounting(counter: Int){
@@ -62,7 +66,7 @@ class TimerViewController: UIViewController {
         updateLabel(strMinutes, secs: strSeconds)
 //        countingLabel.text = "\(strMinutes):\(strSeconds)"
         
-        counter--
+        
         
         if counter == 0{
             //success
@@ -75,23 +79,77 @@ class TimerViewController: UIViewController {
             timer.invalidate()
         }
         
-        if counter <= 15 {
-            let image = UIImage(named: "3.2")
-            fishTankImage.image = image
+        if counter % 2 == 1 {
+            fishImage.image = UIImage(named: "f_babyfish1")
+        }else {
+            fishImage.image = UIImage(named: "f_babyfish2")
         }
-        if counter <= 10 {
-            let image = UIImage(named: "3.3")
-            fishTankImage.image = image
+
+        
+        if counter <= estCounter {
+            updateTankImage(22)
+        }else if counter <= estCounter * 2 {
+            updateTankImage(21)
+        }else if counter <= estCounter * 3 {
+            updateTankImage(20)
+        }else if counter <= estCounter * 4 {
+            updateTankImage(19)
+        }else if counter <= estCounter * 5 {
+            updateTankImage(17)
+        }else if counter <= estCounter * 6 {
+            updateTankImage(16)
+        }else if counter <= estCounter * 7 {
+            updateTankImage(15)
+        }else if counter <= estCounter * 8 {
+            updateTankImage(13)
+        }else if counter <= estCounter * 9 {
+            updateTankImage(12)
+        }else if counter <= estCounter * 10 {
+            updateTankImage(11)
+        }else if counter <= estCounter * 11 {
+            updateTankImage(10)
+        }else if counter <= estCounter * 12 {
+            updateTankImage(9)
+        }else if counter <= estCounter * 13 {
+            updateTankImage(7)
+        }else if counter <= estCounter * 14 {
+            updateTankImage(6)
+        }else if counter <= estCounter * 15 {
+            updateTankImage(5)
+        }else if counter <= estCounter * 16 {
+            updateTankImage(4)
+        }else if counter <= estCounter * 17 {
+            updateTankImage(3)
+        }else if counter <= estCounter * 18 {
+            updateTankImage(2)
+        }else if counter <= estCounter * 19 {
+            updateTankImage(1)
+        }else {
+            updateTankImage(0)
         }
-        if counter <= 5 {
-            let image = UIImage(named: "3.4")
-            fishTankImage.image = image
-        }
+        
+        counter--
     }
     
     func updateLabel(mins: String, secs: String) {
         minsLabel.text = mins
         secsLabel.text = secs
     }
+    
+    func updateTankImage(currNum: Int) {
+        let currTankImage: UIImage = UIImage(named: "3.fishtank\(currNum)")!
+        let currWaterImage: UIImage = UIImage(named: "3.water\(currNum)")!
+        tankImage.image = currTankImage
+        waterImage.image = currWaterImage
+    }
 
+}
+
+class CountTankImage {
+    var tankImage: UIImage
+    var waterImage: UIImage
+    init(tankImage: UIImage, waterImage: UIImage){
+        self.tankImage = tankImage
+        self.waterImage = waterImage
+    }
 }

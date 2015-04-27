@@ -143,7 +143,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-uS-nKM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-uS-nKM">
                                 <rect key="frame" x="67" y="539" width="174" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OEc-uS-nKM" secondAttribute="height" multiplier="58:7" id="7Mg-7O-N1S"/>
@@ -266,6 +266,12 @@
                                     <constraint firstAttribute="width" secondItem="huJ-VQ-Nb5" secondAttribute="height" multiplier="20:17" id="eTd-sY-KRQ"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zt-fs-rSt" userLabel="FishImageView">
+                                <rect key="frame" x="140" y="409" width="115" height="115"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UvY-K6-vXf" userLabel="SeaweedImageView">
+                                <rect key="frame" x="140" y="373" width="120" height="121"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zug-et-XBH" userLabel="WaterImageView">
                                 <rect key="frame" x="60" y="288" width="200" height="170"/>
                                 <constraints>
@@ -288,9 +294,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zt-fs-rSt" userLabel="FishImageView">
-                                <rect key="frame" x="140" y="409" width="115" height="115"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -316,6 +319,7 @@
                     <connections>
                         <outlet property="fishImage" destination="8zt-fs-rSt" id="RbF-mT-OCa"/>
                         <outlet property="minsLabel" destination="vSL-js-ta2" id="hGZ-Y4-Q6I"/>
+                        <outlet property="seaWeedImage" destination="UvY-K6-vXf" id="Fc0-o2-JKV"/>
                         <outlet property="secsLabel" destination="vS5-BL-iFr" id="Bcg-g5-pHd"/>
                         <outlet property="tankImage" destination="huJ-VQ-Nb5" id="AlM-Cs-Tdj"/>
                         <outlet property="waterImage" destination="zug-et-XBH" id="duf-8J-pax"/>
@@ -931,6 +935,59 @@
             </objects>
             <point key="canvasLocation" x="112" y="794"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XtX-bm-6i4">
+            <objects>
+                <viewController id="8kf-QG-wGh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="onA-35-c9k"/>
+                        <viewControllerLayoutGuide type="bottom" id="xdh-MC-hOL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Va-lj-9m1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="32n-Je-jmQ">
+                                <rect key="frame" x="-10" y="-17" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyv-CV-H1e" userLabel="BackButton">
+                                <rect key="frame" x="251" y="503" width="59" height="48"/>
+                                <state key="normal" image="2.backOnTheRight">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close" destination="npy-0G-oiZ" eventType="touchUpInside" id="LeW-Dx-8fa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nR0-zc-HQA">
+                                <rect key="frame" x="18" y="381" width="95" height="106"/>
+                                <state key="normal" image="12.use">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FlE-eI-f80" kind="modal" id="8Pe-uM-YG9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Money to Use" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfZ-zS-DEl">
+                                <rect key="frame" x="130" y="351" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="12.1.seaweed" translatesAutoresizingMaskIntoConstraints="NO" id="EfS-eS-ycn">
+                                <rect key="frame" x="70" y="157" width="161" height="161"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z30-tB-eTw">
+                                <rect key="frame" x="-10" y="381" width="28" height="170"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auz-SQ-VAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="1590"/>
+        </scene>
         <!--Buy One View Controller-->
         <scene sceneID="kAX-Pd-Nq5">
             <objects>
@@ -1294,7 +1351,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="FlE-eI-f80" kind="modal" id="BiW-iZ-OaA"/>
+                                            <segue destination="8kf-QG-wGh" kind="modal" id="Hp5-Mr-SYv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcL-DH-amc">
@@ -1408,6 +1465,7 @@
         <image name="10.leftMoreIcon" width="118" height="107"/>
         <image name="10.rightMoreIcon" width="118" height="107"/>
         <image name="10.treasureChest" width="314" height="243"/>
+        <image name="12.1.seaweed" width="225" height="225"/>
         <image name="12.use" width="187" height="207"/>
         <image name="18.1.babyFish" width="268" height="268"/>
         <image name="18.2.adultFish" width="268" height="268"/>
@@ -1446,9 +1504,9 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="OHF-XC-8gY"/>
-        <segue reference="4Tn-uA-CyM"/>
-        <segue reference="Rrp-Hx-Fqt"/>
         <segue reference="N9g-BE-c4M"/>
+        <segue reference="8Pe-uM-YG9"/>
+        <segue reference="hhf-2d-JWh"/>
         <segue reference="kIO-uA-Taz"/>
     </inferredMetricsTieBreakers>
 </document>

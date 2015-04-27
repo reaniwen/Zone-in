@@ -15,6 +15,7 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var tankImage: UIImageView!
     @IBOutlet weak var waterImage: UIImageView!
     @IBOutlet weak var fishImage: UIImageView!
+    @IBOutlet weak var seaWeedImage: UIImageView!
     
 //    var minsVal: Int = 0
 //    var secsVal: Int = 0
@@ -78,15 +79,21 @@ class TimerViewController: UIViewController {
             self.performSegueWithIdentifier("LoseSegue", sender: self)
             timer.invalidate()
         }
-        
-        if counter % 2 == 1 {
-            
-            fishImage.image = UIImage(named: "f_babyfish1")?.imageRotatedByDegrees(20, flip: false)
-//            rotatedPhoto = rotatedPhoto?.imageRotatedByDegrees(90, flip: false)
-        }else {
-            fishImage.image = UIImage(named: "f_babyfish2")?.imageRotatedByDegrees(20, flip: false)
+        if prize == .Fish {
+            fishImage.hidden = false
+            seaWeedImage.hidden = true
+            if counter % 2 == 1 {
+                fishImage.image = UIImage(named: "f_babyfish1")?.imageRotatedByDegrees(20, flip: false)
+                //            rotatedPhoto = rotatedPhoto?.imageRotatedByDegrees(90, flip: false)
+            }else {
+                fishImage.image = UIImage(named: "f_babyfish2")?.imageRotatedByDegrees(20, flip: false)
+            }
+        }else if prize == .Seaweed {
+            fishImage.hidden = true
+            seaWeedImage.hidden = false
+            seaWeedImage.image = UIImage(named: "3.magicSeaweed")
         }
-
+        
         
         if counter <= estCounter {
             updateTankImage(22)

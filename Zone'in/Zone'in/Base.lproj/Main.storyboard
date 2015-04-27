@@ -340,16 +340,10 @@
                                     <segue destination="1jC-pC-TQt" kind="unwind" unwindAction="toSelectTimeViewController:" id="FaQ-gi-a70"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7.win" translatesAutoresizingMaskIntoConstraints="NO" id="rdu-Ye-n1V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="win" translatesAutoresizingMaskIntoConstraints="NO" id="rdu-Ye-n1V">
                                 <rect key="frame" x="35" y="104" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rdu-Ye-n1V" secondAttribute="height" multiplier="1:1" id="qmh-Fr-N70"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fishGroup" translatesAutoresizingMaskIntoConstraints="NO" id="ilr-GT-ygl">
-                                <rect key="frame" x="6" y="255" width="323" height="141"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ilr-GT-ygl" secondAttribute="height" multiplier="323:141" id="vjC-Qw-FkA"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -359,15 +353,12 @@
                             <constraint firstAttribute="centerX" secondItem="fi7-kv-YAl" secondAttribute="centerX" constant="-0.5" id="Cps-OC-q8h"/>
                             <constraint firstItem="rdu-Ye-n1V" firstAttribute="width" secondItem="WcB-30-tZA" secondAttribute="height" multiplier="125:284" id="LgT-y5-UQQ"/>
                             <constraint firstItem="0WB-4M-yHH" firstAttribute="height" secondItem="WcB-30-tZA" secondAttribute="height" id="RgR-G3-cJ7"/>
-                            <constraint firstItem="rdu-Ye-n1V" firstAttribute="centerX" secondItem="ilr-GT-ygl" secondAttribute="centerX" constant="-7.5" id="TkH-kU-8om"/>
                             <constraint firstItem="psO-Zs-RX2" firstAttribute="top" secondItem="0WB-4M-yHH" secondAttribute="bottom" id="fvU-TS-knw"/>
                             <constraint firstAttribute="width" secondItem="fi7-kv-YAl" secondAttribute="height" multiplier="320:67" id="gPc-B8-7d5"/>
-                            <constraint firstItem="ilr-GT-ygl" firstAttribute="width" secondItem="WcB-30-tZA" secondAttribute="height" multiplier="323:568" id="jjA-e0-V2T"/>
                             <constraint firstItem="0WB-4M-yHH" firstAttribute="leading" secondItem="WcB-30-tZA" secondAttribute="leadingMargin" constant="-16" id="lyW-3e-88s"/>
                             <constraint firstAttribute="centerX" secondItem="rdu-Ye-n1V" secondAttribute="centerX" id="nQ1-Cu-4Vj"/>
                             <constraint firstItem="0WB-4M-yHH" firstAttribute="width" secondItem="WcB-30-tZA" secondAttribute="width" id="q5T-Nu-G2i"/>
                             <constraint firstItem="fi7-kv-YAl" firstAttribute="top" secondItem="rdu-Ye-n1V" secondAttribute="bottom" constant="79" id="sch-b6-AIV"/>
-                            <constraint firstItem="rdu-Ye-n1V" firstAttribute="bottom" secondItem="ilr-GT-ygl" secondAttribute="bottom" constant="-42" id="zrM-Am-S6H"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1424,7 +1415,6 @@
         <image name="4.quit" width="144" height="144"/>
         <image name="5.Boooo" width="304" height="52"/>
         <image name="5.fishBone" width="480" height="374"/>
-        <image name="7.win" width="487" height="487"/>
         <image name="9.background" width="640" height="1137"/>
         <image name="9.storeIcon" width="260" height="98"/>
         <image name="9.treasureChest" width="117" height="95"/>
@@ -1432,8 +1422,8 @@
         <image name="QUITicon" width="368" height="351"/>
         <image name="Store" width="181" height="145"/>
         <image name="background_win" width="640" height="1115"/>
-        <image name="fishGroup" width="637" height="283"/>
         <image name="my seaweed" width="172" height="75"/>
+        <image name="win" width="487" height="487"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

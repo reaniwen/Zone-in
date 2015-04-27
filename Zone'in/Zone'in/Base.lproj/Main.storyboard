@@ -143,7 +143,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-uS-nKM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-uS-nKM">
                                 <rect key="frame" x="67" y="539" width="174" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OEc-uS-nKM" secondAttribute="height" multiplier="58:7" id="7Mg-7O-N1S"/>
@@ -1294,7 +1294,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="seaweedAct:" destination="HDr-7L-OKN" eventType="touchUpInside" id="OrA-Kx-gN6"/>
+                                            <segue destination="FlE-eI-f80" kind="modal" id="BiW-iZ-OaA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcL-DH-amc">
@@ -1447,7 +1447,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="4Tn-uA-CyM"/>
         <segue reference="OHF-XC-8gY"/>
-        <segue reference="YHv-2w-sV2"/>
+        <segue reference="N9g-BE-c4M"/>
+        <segue reference="BiW-iZ-OaA"/>
         <segue reference="kIO-uA-Taz"/>
     </inferredMetricsTieBreakers>
 </document>

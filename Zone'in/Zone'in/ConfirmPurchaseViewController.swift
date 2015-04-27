@@ -16,6 +16,7 @@ class ConfirmPurchaseViewController: UIViewController {
     var prize: Prizes = .Others
     
     var prizeImageSet: [UIImage] = []
+    var labelSet: [String] = []
     
     
     
@@ -27,9 +28,10 @@ class ConfirmPurchaseViewController: UIViewController {
         let pipe:UIImage = UIImage(named: "23.4pipe2")!
         let pill:UIImage = UIImage(named: "23.2pill2")!
         prizeImageSet = [seaWeed, cleaningSet, funnyHat, pipe, pill]
+        labelSet = ["", "To clean", "Funny Hat", "Pipe", "Make fish grow"]
         
-        updateTestLabel()
-        updateImage()
+//        updateTestLabel()
+        updateImageAndLabel()
         // Do any additional setup after loading the view.
     }
     
@@ -42,8 +44,9 @@ class ConfirmPurchaseViewController: UIViewController {
         testLabel.text = testText
     }
     
-    func updateImage(){
+    func updateImageAndLabel(){
         prizeImage.image = prizeImageSet[prize.rawValue]
+        testLabel.text = labelSet[prize.rawValue]
     }
     
     @IBAction func close(){

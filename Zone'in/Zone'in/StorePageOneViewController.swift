@@ -48,6 +48,10 @@ class StorePageOneViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func toUseOneViewController(segue:UIStoryboardSegue) {
+        
+    }
 
     @IBAction func close(){
         dismissViewControllerAnimated(true, completion: nil)

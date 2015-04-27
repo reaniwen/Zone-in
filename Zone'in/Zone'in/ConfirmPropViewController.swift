@@ -17,6 +17,7 @@ class ConfirmPropViewController: UIViewController {
     var prize: Prizes = .Others
     
     var prizeImageSet: [UIImage] = []
+    var labelSet:[String] = []
     
     
 
@@ -28,9 +29,10 @@ class ConfirmPropViewController: UIViewController {
         let pipe:UIImage = UIImage(named: "12.4.pipe")!
         let pill:UIImage = UIImage(named: "12.5.pill")!
         prizeImageSet = [seaWeed, cleaningSet, funnyHat, pipe, pill]
+        labelSet = ["", "To clean", "Funny Hat", "Pipe", "Make fish grow"]
 
-        updateTestLabel()
-        updateImage()
+//        updateTestLabel()
+        updateImageAndLabel()
         // Do any additional setup after loading the view.
     }
 
@@ -40,11 +42,13 @@ class ConfirmPropViewController: UIViewController {
     }
     
     func updateTestLabel(){
+        
         testLabel.text = testText
     }
     
-    func updateImage(){
+    func updateImageAndLabel(){
         prizeImage.image = prizeImageSet[prize.rawValue]
+        testLabel.text = labelSet[prize.rawValue]
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

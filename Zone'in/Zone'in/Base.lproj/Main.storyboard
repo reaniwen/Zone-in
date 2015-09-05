@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -66,12 +66,6 @@
                                     <action selector="lessTimeAction:" destination="j57-Cu-fD6" eventType="touchUpInside" id="gjg-gF-msV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klj-RS-DNG">
-                                <rect key="frame" x="131" y="203" width="72" height="72"/>
-                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="63"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRZ-9K-maG" userLabel="StoreButton">
                                 <rect key="frame" x="0.0" y="520" width="59" height="48"/>
                                 <constraints>
@@ -96,11 +90,20 @@
                                     <segue destination="jFB-eT-JsB" kind="modal" identifier="SelectPrizeSegue" id="3rI-SZ-MpJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klj-RS-DNG">
+                                <rect key="frame" x="107" y="183" width="110" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Klj-RS-DNG" secondAttribute="height" multiplier="11:9" id="9Fp-L3-bZA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Klj-RS-DNG" firstAttribute="centerX" secondItem="Bp2-zx-dhs" secondAttribute="centerX" constant="6.5" id="0iU-Xq-fhY"/>
                             <constraint firstItem="LhJ-SU-g6r" firstAttribute="top" secondItem="Ohd-Iq-Lid" secondAttribute="bottom" constant="66" id="6kZ-nO-hjb"/>
+                            <constraint firstAttribute="width" secondItem="Klj-RS-DNG" secondAttribute="height" multiplier="32:9" id="70f-9r-Dn4"/>
                             <constraint firstItem="Bp2-zx-dhs" firstAttribute="top" secondItem="nen-tq-keZ" secondAttribute="bottom" constant="114" id="9mL-cd-JhN"/>
                             <constraint firstItem="Bp2-zx-dhs" firstAttribute="top" secondItem="6iq-bA-6Cg" secondAttribute="top" constant="39" id="Fjf-BT-5IY"/>
                             <constraint firstItem="iRZ-9K-maG" firstAttribute="width" secondItem="iKZ-G2-spQ" secondAttribute="width" multiplier="37:200" id="Gy7-0s-VJo"/>
@@ -112,11 +115,12 @@
                             <constraint firstItem="Ohd-Iq-Lid" firstAttribute="width" secondItem="6iq-bA-6Cg" secondAttribute="width" id="a6R-kf-eTx"/>
                             <constraint firstItem="Bp2-zx-dhs" firstAttribute="width" secondItem="6iq-bA-6Cg" secondAttribute="height" multiplier="184:35" id="dfP-Og-12a"/>
                             <constraint firstItem="Bp2-zx-dhs" firstAttribute="leading" secondItem="iKZ-G2-spQ" secondAttribute="leadingMargin" id="e4q-BD-ju1"/>
+                            <constraint firstItem="Bp2-zx-dhs" firstAttribute="centerY" secondItem="Klj-RS-DNG" secondAttribute="centerY" constant="-12" id="ep8-QS-SRc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bp2-zx-dhs" secondAttribute="trailing" id="fY9-j9-H5p"/>
-                            <constraint firstItem="Klj-RS-DNG" firstAttribute="centerY" secondItem="Bp2-zx-dhs" secondAttribute="centerY" constant="22.5" id="hAG-32-5dy"/>
                             <constraint firstItem="LhJ-SU-g6r" firstAttribute="width" secondItem="iKZ-G2-spQ" secondAttribute="height" multiplier="35:284" id="mBu-BB-CTa"/>
                             <constraint firstItem="iRZ-9K-maG" firstAttribute="leading" secondItem="iKZ-G2-spQ" secondAttribute="leading" id="sJg-aG-G5t"/>
                             <constraint firstAttribute="centerX" secondItem="LhJ-SU-g6r" secondAttribute="centerX" id="tcj-pt-Tt3"/>
+                            <constraint firstAttribute="centerX" secondItem="Klj-RS-DNG" secondAttribute="centerX" constant="-2" id="yrD-pH-fP5"/>
                             <constraint firstItem="Sl8-CS-orF" firstAttribute="top" secondItem="icj-bC-ax2" secondAttribute="bottom" constant="2" id="ytC-hk-uC3"/>
                         </constraints>
                     </view>
@@ -1554,10 +1558,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="8Pe-uM-YG9"/>
-        <segue reference="OHF-XC-8gY"/>
-        <segue reference="hhf-2d-JWh"/>
-        <segue reference="kIO-uA-Taz"/>
         <segue reference="N9g-BE-c4M"/>
+        <segue reference="OHF-XC-8gY"/>
+        <segue reference="4Tn-uA-CyM"/>
+        <segue reference="kIO-uA-Taz"/>
+        <segue reference="8Pe-uM-YG9"/>
     </inferredMetricsTieBreakers>
 </document>

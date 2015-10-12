@@ -36,13 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let state: UIApplicationState = UIApplication.sharedApplication().applicationState
         if sharedData.isLocked == true && state == UIApplicationState.Background{
-            println("screen is locked")
+            print("screen is locked")
             
         }else if sharedData.isLocked == false && state == UIApplicationState.Background{
-            println("home button is pressed")
+            print("home button is pressed")
             sharedData.isFailed = true
         }
-        println("DidEnterBackground",state.rawValue)
+        print("DidEnterBackground",state.rawValue)
         //useful here
     }
 
@@ -63,13 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let state: UIApplicationState = UIApplication.sharedApplication().applicationState
         if sharedData.isLocked == true && state == UIApplicationState.Background{
-            println("screen is locked")
+            print("screen is locked")
             
         }else if sharedData.isLocked == false && state == UIApplicationState.Background{
-            println("home button is pressed")
+            print("home button is pressed")
             sharedData.isFailed = true
         }
-        println("DidEnterBackground",state.rawValue)
+        print("DidEnterBackground",state.rawValue)
     }
 
 }

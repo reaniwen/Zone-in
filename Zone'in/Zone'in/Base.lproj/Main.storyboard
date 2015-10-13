@@ -792,6 +792,68 @@
             </objects>
             <point key="canvasLocation" x="2240" y="794"/>
         </scene>
+        <!--Check First Login View Controller-->
+        <scene sceneID="hc5-Qe-eKu">
+            <objects>
+                <viewController id="C6j-be-VtQ" customClass="CheckFirstLoginViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N4d-NR-NHX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ix1-Dp-waC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ogp-Fg-kMY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-4Z-nmI">
+                                <rect key="frame" x="87" y="181" width="147" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="wwW-oz-vJO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxL-he-5w9">
+                                <rect key="frame" x="103" y="308" width="114" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Take the Tutorial"/>
+                                <connections>
+                                    <action selector="takeTutorialAct:" destination="C6j-be-VtQ" eventType="touchUpInside" id="JkS-7j-Au2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-5H-Xne">
+                                <rect key="frame" x="95" y="112" width="130" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Warning Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maW-mv-sZT">
+                                <rect key="frame" x="105" y="251" width="110" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Fm-4Z-nmI" firstAttribute="top" secondItem="NLf-5H-Xne" secondAttribute="bottom" constant="48" id="4IA-Qv-CBa"/>
+                            <constraint firstItem="NLf-5H-Xne" firstAttribute="top" secondItem="N4d-NR-NHX" secondAttribute="bottom" constant="92" id="GTX-6y-uhX"/>
+                            <constraint firstItem="NLf-5H-Xne" firstAttribute="centerX" secondItem="ogp-Fg-kMY" secondAttribute="centerX" id="jdi-51-zTw"/>
+                            <constraint firstItem="6Fm-4Z-nmI" firstAttribute="centerX" secondItem="ogp-Fg-kMY" secondAttribute="centerX" id="rEs-Tu-4Xv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="6Fm-4Z-nmI" id="ew7-fg-KLd"/>
+                        <outlet property="warningLabel" destination="maW-mv-sZT" id="QJA-3J-iCW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEJ-G8-vyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="-581"/>
+        </scene>
         <!--Quit View Controller-->
         <scene sceneID="a7C-lM-ZMd">
             <objects>
@@ -804,7 +866,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Sure?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-5q-nYJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" Sure?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-5q-nYJ">
                                 <rect key="frame" x="108" y="136" width="105" height="46"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="40"/>
@@ -1662,10 +1724,10 @@
         <image name="win" width="487" height="487"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N9g-BE-c4M"/>
         <segue reference="OHF-XC-8gY"/>
-        <segue reference="4Tn-uA-CyM"/>
+        <segue reference="hhf-2d-JWh"/>
         <segue reference="kIO-uA-Taz"/>
+        <segue reference="N9g-BE-c4M"/>
         <segue reference="8Pe-uM-YG9"/>
     </inferredMetricsTieBreakers>
 </document>

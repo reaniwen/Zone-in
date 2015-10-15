@@ -23,7 +23,7 @@ class CheckFirstLoginViewController: UIViewController {
 //            testLabel.text = "first"
             //jump to the time selecter view
             //jumpToTimer()
-            
+//            self.performSegueWithIdentifier("firstJumpSegue", sender: nil)
         }
         
         // Do any additional setup after loading the view.
@@ -44,6 +44,7 @@ class CheckFirstLoginViewController: UIViewController {
     func jumpToTimer(){
     
     }
+
 
     /*
     // MARK: - Navigation

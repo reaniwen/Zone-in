@@ -16,6 +16,64 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--First Time View Controller-->
+        <scene sceneID="KVE-lf-s8P">
+            <objects>
+                <viewController id="o4x-GP-5Sl" customClass="FirstTimeViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QZ6-pg-a19"/>
+                        <viewControllerLayoutGuide type="bottom" id="r9Q-kV-T0m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l6V-RT-cCx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRS-uu-emA">
+                                <rect key="frame" x="137" y="274" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testSegue:" destination="o4x-GP-5Sl" eventType="touchUpInside" id="6mT-fj-c5y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3r-iY-DHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="-578"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6sq-Si-fLO">
+            <objects>
+                <viewController id="Rwz-ar-PM2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4KA-TD-1t1"/>
+                        <viewControllerLayoutGuide type="bottom" id="MQG-uP-box"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ecC-y0-UH6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-ey-uvN">
+                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f4p-yf-cDg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqn-MI-Ug3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="499" y="-578"/>
+        </scene>
         <!--Select Time View Controller-->
         <scene sceneID="ixA-x7-bQW">
             <objects>
@@ -133,11 +191,13 @@
                             <constraint firstItem="Sl8-CS-orF" firstAttribute="top" secondItem="icj-bC-ax2" secondAttribute="bottom" constant="2" id="ytC-hk-uC3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hSA-V2-KDG"/>
                     <connections>
                         <outlet property="backTimerImage" destination="Bp2-zx-dhs" id="Nd6-ba-V0e"/>
                         <outlet property="lessTimeBtn" destination="Ohd-Iq-Lid" id="TB3-Vf-qc4"/>
                         <outlet property="moreTimeBtn" destination="6iq-bA-6Cg" id="NPm-3E-Y1p"/>
                         <outlet property="timeLabel" destination="Klj-RS-DNG" id="84i-Hh-Kw0"/>
+                        <segue destination="o4x-GP-5Sl" kind="modal" identifier="FirstTimeSegue" id="Bo5-Mn-czx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7Y-N5-94X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,6 +278,13 @@
                                     <segue destination="s1d-Xv-FQf" kind="modal" identifier="StartTimerSegue" id="hhf-2d-JWh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(gonna delete)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48i-EE-15l">
+                                <rect key="frame" x="99" y="498" width="111" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -444,7 +511,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="cD8-2W-fro">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cD8-2W-fro">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -506,6 +573,13 @@
                                     <segue destination="RZ5-D1-g5l" kind="unwind" unwindAction="toStoreViewController:" id="QG1-C9-nl8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0X-y6-dyG">
+                                <rect key="frame" x="103" y="46" width="114" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -549,7 +623,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="HHu-nZ-a3a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HHu-nZ-a3a">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -645,7 +719,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9.background" translatesAutoresizingMaskIntoConstraints="NO" id="S9M-hV-TAR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S9M-hV-TAR">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -701,6 +775,13 @@
                                     <action selector="babyFishAct:" destination="NKQ-CY-zyl" eventType="touchUpInside" id="0QD-YK-H5A"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9.background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJx-jj-K96">
+                                <rect key="frame" x="107" y="28" width="106" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -744,7 +825,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9.background" translatesAutoresizingMaskIntoConstraints="NO" id="SKB-C4-UxI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SKB-C4-UxI">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -791,68 +872,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kx7-Ng-GzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2240" y="794"/>
-        </scene>
-        <!--Check First Login View Controller-->
-        <scene sceneID="hc5-Qe-eKu">
-            <objects>
-                <viewController id="C6j-be-VtQ" customClass="CheckFirstLoginViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N4d-NR-NHX"/>
-                        <viewControllerLayoutGuide type="bottom" id="ix1-Dp-waC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ogp-Fg-kMY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-4Z-nmI">
-                                <rect key="frame" x="87" y="181" width="147" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="147" id="wwW-oz-vJO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxL-he-5w9">
-                                <rect key="frame" x="103" y="308" width="114" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Take the Tutorial"/>
-                                <connections>
-                                    <action selector="takeTutorialAct:" destination="C6j-be-VtQ" eventType="touchUpInside" id="JkS-7j-Au2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLf-5H-Xne">
-                                <rect key="frame" x="95" y="112" width="130" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Warning Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maW-mv-sZT">
-                                <rect key="frame" x="105" y="251" width="110" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6Fm-4Z-nmI" firstAttribute="top" secondItem="NLf-5H-Xne" secondAttribute="bottom" constant="48" id="4IA-Qv-CBa"/>
-                            <constraint firstItem="NLf-5H-Xne" firstAttribute="top" secondItem="N4d-NR-NHX" secondAttribute="bottom" constant="92" id="GTX-6y-uhX"/>
-                            <constraint firstItem="NLf-5H-Xne" firstAttribute="centerX" secondItem="ogp-Fg-kMY" secondAttribute="centerX" id="jdi-51-zTw"/>
-                            <constraint firstItem="6Fm-4Z-nmI" firstAttribute="centerX" secondItem="ogp-Fg-kMY" secondAttribute="centerX" id="rEs-Tu-4Xv"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="nameLabel" destination="6Fm-4Z-nmI" id="ew7-fg-KLd"/>
-                        <outlet property="warningLabel" destination="maW-mv-sZT" id="QJA-3J-iCW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PEJ-G8-vyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="112" y="-581"/>
         </scene>
         <!--Quit View Controller-->
         <scene sceneID="a7C-lM-ZMd">
@@ -950,14 +969,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.Boooo" translatesAutoresizingMaskIntoConstraints="NO" id="U70-0B-hUa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U70-0B-hUa">
                                 <rect key="frame" x="89" y="113" width="142" height="23"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="U70-0B-hUa" secondAttribute="height" multiplier="142:23" id="h0x-Lm-AlE"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.fishBone" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-E4-4O0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-E4-4O0">
                                 <rect key="frame" x="75" y="182" width="208" height="163"/>
                                 <animations/>
                                 <constraints>
@@ -977,6 +996,20 @@
                                     <segue destination="Sie-SB-kYU" kind="unwind" unwindAction="toSelectTimeViewController:" id="o3U-oQ-Ze8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.Booo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2K-bp-8Ie">
+                                <rect key="frame" x="133" y="84" width="54" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.FishBone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="equ-Yp-Nu0">
+                                <rect key="frame" x="125" y="353" width="85" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1400,7 +1433,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="qJb-o3-DNg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qJb-o3-DNg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -1452,6 +1485,13 @@
                                     <constraint firstAttribute="width" secondItem="Kvg-8m-DDz" secondAttribute="height" multiplier="14:85" id="nPX-eb-XeW"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmw-Au-ivO">
+                                <rect key="frame" x="103" y="70" width="114" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1556,7 +1596,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="7XR-cv-t76">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7XR-cv-t76">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -1666,6 +1706,13 @@
                                     <segue destination="cRL-lX-y9T" kind="modal" modalTransitionStyle="crossDissolve" id="Y5y-Q2-EX5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4U1-LU-oHK">
+                                <rect key="frame" x="103" y="33" width="114" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1732,8 +1779,6 @@
         <image name="4.catFace" width="110" height="294"/>
         <image name="4.fishface" width="101" height="182"/>
         <image name="4.quit" width="144" height="144"/>
-        <image name="5.Boooo" width="304" height="52"/>
-        <image name="5.fishBone" width="480" height="374"/>
         <image name="9.background" width="640" height="1137"/>
         <image name="9.storeIcon" width="260" height="98"/>
         <image name="9.treasureChest" width="117" height="95"/>
@@ -1745,10 +1790,10 @@
         <image name="win" width="487" height="487"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="YHv-2w-sV2"/>
         <segue reference="OHF-XC-8gY"/>
-        <segue reference="hhf-2d-JWh"/>
+        <segue reference="4Tn-uA-CyM"/>
         <segue reference="kIO-uA-Taz"/>
-        <segue reference="N9g-BE-c4M"/>
         <segue reference="8Pe-uM-YG9"/>
     </inferredMetricsTieBreakers>
 </document>

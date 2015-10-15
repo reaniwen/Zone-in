@@ -27,6 +27,21 @@ class SelectTimeViewController: UIViewController {
         updateTime(time)
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //判断是否第一次启动：
+        if((NSUserDefaults.standardUserDefaults().boolForKey("IsFirstLaunch") as Bool!) == false){
+            //第一次启动，播放引导页面
+            print("第一次启动")
+            //设置为非第一次启动
+            self.performSegueWithIdentifier("FirstTimeSegue", sender: self)
+        }else{
+            print("不是第一次启动")
+        }
+        
+    }
+    
 
     @IBAction func moreTimeAction(sender: AnyObject) {
         if time <= 60 {
@@ -70,6 +85,10 @@ class SelectTimeViewController: UIViewController {
     
     @IBAction func toSelectTimeViewController(segue:UIStoryboardSegue) {
         
+    }
+    
+    @IBAction func test(sender: AnyObject) {
+        self.performSegueWithIdentifier("testSegue", sender: self)
     }
     
     //this is the demo for prepareForSegue

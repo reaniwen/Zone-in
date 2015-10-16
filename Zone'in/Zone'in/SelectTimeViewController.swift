@@ -31,6 +31,7 @@ class SelectTimeViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         //判断是否第一次启动：
+        self.performSegueWithIdentifier("FirstTimeSegue", sender: self)
         if((NSUserDefaults.standardUserDefaults().boolForKey("IsFirstLaunch") as Bool!) == false){
             //第一次启动，播放引导页面
             print("第一次启动")

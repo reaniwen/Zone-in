@@ -28,12 +28,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRS-uu-emA">
-                                <rect key="frame" x="137" y="274" width="46" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6K-9K-3vq">
+                                <rect key="frame" x="112" y="217" width="97" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type in your nickname and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie4-Li-3uh">
+                                <rect key="frame" x="58" y="76" width="205" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start the jounry to change your habit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yae-t1-kaB">
+                                <rect key="frame" x="20" y="105" width="281" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRS-uu-emA">
+                                <rect key="frame" x="105" y="303" width="111" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Take the tutorial"/>
                                 <connections>
                                     <action selector="testSegue:" destination="o4x-GP-5Sl" eventType="touchUpInside" id="6mT-fj-c5y"/>
+                                    <segue destination="Rwz-ar-PM2" kind="modal" id="eUi-Ya-T47"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,13 +78,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-ey-uvN">
-                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ok 'Name', this will be the first step, you could choose more or less time with these two buttons." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p7Q-co-grJ">
+                                <rect key="frame" x="40" y="78" width="240" height="66"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="But Lets' try 20s first by press &quot;OK&quot; button" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jT4-jW-jh5">
+                                <rect key="frame" x="40" y="329" width="240" height="53"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlF-7L-EHD">
+                                <rect key="frame" x="137" y="410" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="2Yv-Lj-0ye" kind="modal" id="Pfq-aS-df7"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You can view your acq by pressing here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l13-If-rpa">
+                                <rect key="frame" x="40" y="466" width="240" height="50"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,6 +113,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqn-MI-Ug3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="499" y="-578"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ijs-7m-SoX">
+            <objects>
+                <viewController id="2Yv-Lj-0ye" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FBC-43-KVW"/>
+                        <viewControllerLayoutGuide type="bottom" id="hVX-Sl-fLp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mA2-UQ-Vvb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="you will get your prize after 20s." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-ow-V1a">
+                                <rect key="frame" x="40" y="75" width="240" height="37"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNN-v5-Xgb">
+                                <rect key="frame" x="137" y="400" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="fQL-ba-vBm" kind="modal" id="52Y-L8-fze"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94h-km-Gte" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="-581"/>
+        </scene>
+        <!--Set Data View Controller-->
+        <scene sceneID="YaM-iE-t6r">
+            <objects>
+                <viewController id="fQL-ba-vBm" customClass="SetDataViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GLA-zM-t1J"/>
+                        <viewControllerLayoutGuide type="bottom" id="kFU-tL-SsT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="etV-pb-Om0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-jJ-YRV">
+                                <rect key="frame" x="40" y="83" width="240" height="88"/>
+                                <animations/>
+                                <string key="text">first fish and 10 seaweed as prize. You will get more after you consist to use this app.Remember to feed them and clean the tank.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yv-8R-mqG">
+                                <rect key="frame" x="68" y="426" width="184" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start to change your habit!"/>
+                                <connections>
+                                    <action selector="setDataAct:" destination="2Yv-Lj-0ye" eventType="touchUpInside" id="uFI-BM-Zqs"/>
+                                    <segue destination="T2s-oG-EcD" kind="unwind" unwindAction="toSelectTimeViewController:" id="i9r-mp-SAV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ds-ig-rOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="T2s-oG-EcD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="-583"/>
         </scene>
         <!--Select Time View Controller-->
         <scene sceneID="ixA-x7-bQW">
@@ -106,8 +219,8 @@
                                     <action selector="moreTimeAction:" destination="j57-Cu-fD6" eventType="touchUpInside" id="Uux-W2-4Dg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icj-bC-ax2">
-                                <rect key="frame" x="125" y="536" width="70" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icj-bC-ax2">
+                                <rect key="frame" x="125" y="536" width="71" height="30"/>
                                 <animations/>
                                 <state key="normal" title="20s Demo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -653,8 +766,8 @@
                                     <segue destination="NKQ-CY-zyl" kind="modal" identifier="GotoSelFishSegue" id="r9t-eC-BaC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE0-Zp-DB6">
-                                <rect key="frame" x="140" y="368" width="40" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE0-Zp-DB6">
+                                <rect key="frame" x="139" y="368" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -955,7 +1068,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj9-y0-uTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="-660"/>
+            <point key="canvasLocation" x="1854" y="-600"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f5n-WO-cFz">
@@ -1029,7 +1142,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apT-UV-Ozb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Sie-SB-kYU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="-660"/>
+            <point key="canvasLocation" x="1854" y="118"/>
         </scene>
         <!--Store1 View Controller-->
         <scene sceneID="0eG-qr-CxC">
@@ -1464,8 +1577,8 @@
                                     <segue destination="Kr5-YW-Ddr" kind="modal" id="WXC-HQ-KeV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqL-BW-SW6">
-                                <rect key="frame" x="140" y="368" width="40" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqL-BW-SW6">
+                                <rect key="frame" x="139" y="368" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1790,10 +1903,10 @@
         <image name="win" width="487" height="487"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YHv-2w-sV2"/>
         <segue reference="OHF-XC-8gY"/>
         <segue reference="4Tn-uA-CyM"/>
-        <segue reference="kIO-uA-Taz"/>
-        <segue reference="8Pe-uM-YG9"/>
+        <segue reference="XkB-Bv-X11"/>
+        <segue reference="Rrp-Hx-Fqt"/>
+        <segue reference="N9g-BE-c4M"/>
     </inferredMetricsTieBreakers>
 </document>

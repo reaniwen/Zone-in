@@ -11,8 +11,14 @@ import UIKit
 class BuyOneViewController: UIViewController {
     
     var prize: Prizes = .Others
+    var money = 0
     @IBOutlet weak var moneyLabel: UILabel!
 
+    
+    override func viewDidAppear(animated: Bool) {
+        //refresh money
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

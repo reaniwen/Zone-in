@@ -22,6 +22,7 @@ enum Prizes: Int {
         case .Others: return "Others"
         }
     }
+    
 }
 enum FishClass: Int {
     case BabyFish = 0
@@ -36,3 +37,5 @@ enum FishClass: Int {
         }
     }
 }
+
+//let possiblePlanet = Planet(rawValue: 7)

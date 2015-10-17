@@ -31,7 +31,6 @@ class SelectTimeViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         //判断是否第一次启动：
-        self.performSegueWithIdentifier("FirstTimeSegue", sender: self)
         if((NSUserDefaults.standardUserDefaults().boolForKey("IsFirstLaunch") as Bool!) == false){
             //第一次启动，播放引导页面
             print("第一次启动")
@@ -64,11 +63,20 @@ class SelectTimeViewController: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "DemoTimerSegue" {
+//        if segue.identifier == "DemoTimerSegue" {
+//            if let destinationVC = segue.destinationViewController as? TimerViewController {
+//                //only could change vark, not UI element
+//                destinationVC.counter = 20
+//                destinationVC.prize = Prize.Fish
+//                destinationVC.sharedData.isFailed = false
+//                destinationVC.sharedData.isLocked = false
+//            }
+//        }
+        if segue.identifier == "StartTimerSegue" {
             if let destinationVC = segue.destinationViewController as? TimerViewController {
                 //only could change vark, not UI element
-                destinationVC.counter = 20
-                destinationVC.prize = Prize.Fish
+                destinationVC.counter = sharedData.time * 60
+                destinationVC.prize = Prize.Seaweed
                 destinationVC.sharedData.isFailed = false
                 destinationVC.sharedData.isLocked = false
             }

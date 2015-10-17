@@ -23,14 +23,17 @@ class Store1ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         startCounting(counter)
-
+        
         
         view.addSubview(babyFish.image)
         view.addSubview(adultFish.image)
         view.addSubview(sharkFish.image)
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+
     }
 
     

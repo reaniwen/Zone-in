@@ -470,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Luyi Zhou (Q4562SR374)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Caixia Xia (Z8NERJ796V)";
 				DEFINES_MODULE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Zone'in/Info.plist";
@@ -489,7 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Luyi Zhou (Q4562SR374)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Caixia Xia (Z8NERJ796V)";
 				DEFINES_MODULE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				INFOPLIST_FILE = "Zone'in/Info.plist";

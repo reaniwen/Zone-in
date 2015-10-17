@@ -17,6 +17,9 @@ class BuyOneViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         //refresh money
+        money = NSUserDefaults.standardUserDefaults().integerForKey("moneyContained") as Int
+        print(NSUserDefaults.standardUserDefaults().integerForKey("moneyContained"))
+        moneyLabel.text = "\(money)"
     }
     
     override func viewDidLoad() {

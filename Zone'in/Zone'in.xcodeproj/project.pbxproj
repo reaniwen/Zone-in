@@ -11,7 +11,7 @@
 		174449B51AE027170012D881 /* StorePageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B41AE027170012D881 /* StorePageOneViewController.swift */; };
 		174449B71AE0840A0012D881 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B61AE0840A0012D881 /* Prize.swift */; };
 		174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */; };
-		176923981BCC95F60094F31B /* CheckFirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176923971BCC95F60094F31B /* CheckFirstLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		176923981BCC95F60094F31B /* __CheckFirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176923971BCC95F60094F31B /* __CheckFirstLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		177145F61AC0CB380052809F /* Store1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177145F51AC0CB380052809F /* Store1ViewController.swift */; };
 		1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775F2A31AD31E0500D2913A /* QuitViewController.swift */; };
 		1789BB621AE0BEC500BAE753 /* StorePageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */; };
@@ -33,6 +33,8 @@
 		17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */; };
 		17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */; };
 		17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC31AC5175300A3586E /* TimerViewController.swift */; };
+		17D4D9E81BD33BBE005EE233 /* IntroTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4D9E71BD33BBE005EE233 /* IntroTimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		17D4D9EA1BD33C0E005EE233 /* IntroCountingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4D9E91BD33C0E005EE233 /* IntroCountingViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		17D741A71AE47F98000B4CD7 /* ChooseFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */; };
 		17D741A91AE47FA4000B4CD7 /* ConFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A81AE47FA4000B4CD7 /* ConFishViewController.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +54,7 @@
 		174449B41AE027170012D881 /* StorePageOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageOneViewController.swift; sourceTree = "<group>"; };
 		174449B61AE0840A0012D881 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPropViewController.swift; sourceTree = "<group>"; };
-		176923971BCC95F60094F31B /* CheckFirstLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckFirstLoginViewController.swift; sourceTree = "<group>"; };
+		176923971BCC95F60094F31B /* __CheckFirstLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = __CheckFirstLoginViewController.swift; sourceTree = "<group>"; };
 		177145F51AC0CB380052809F /* Store1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store1ViewController.swift; sourceTree = "<group>"; };
 		1775F2A31AD31E0500D2913A /* QuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
 		1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageTwoViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,8 @@
 		17C75FBF1AC5170F00A3586E /* SelectTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		17C75FC11AC5172A00A3586E /* SelectPrizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPrizeViewController.swift; sourceTree = "<group>"; };
 		17C75FC31AC5175300A3586E /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		17D4D9E71BD33BBE005EE233 /* IntroTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroTimerViewController.swift; sourceTree = "<group>"; };
+		17D4D9E91BD33C0E005EE233 /* IntroCountingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCountingViewController.swift; sourceTree = "<group>"; };
 		17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFishViewController.swift; sourceTree = "<group>"; };
 		17D741A81AE47FA4000B4CD7 /* ConFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConFishViewController.swift; path = ../ConFishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +116,10 @@
 		17C2FCC81BD08C7300F6297F /* PrepGroup */ = {
 			isa = PBXGroup;
 			children = (
-				176923971BCC95F60094F31B /* CheckFirstLoginViewController.swift */,
+				176923971BCC95F60094F31B /* __CheckFirstLoginViewController.swift */,
+				179AE2811BCF332B009628E5 /* FirstTimeViewController.swift */,
+				17D4D9E71BD33BBE005EE233 /* IntroTimerViewController.swift */,
+				17D4D9E91BD33C0E005EE233 /* IntroCountingViewController.swift */,
 				17C2FCC91BD08F4A00F6297F /* SetDataViewController.swift */,
 			);
 			name = PrepGroup;
@@ -144,7 +151,6 @@
 				17C4F1951AA97A3500CAF74F /* Singleton.swift */,
 				174449B61AE0840A0012D881 /* Prize.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
-				179AE2811BCF332B009628E5 /* FirstTimeViewController.swift */,
 				179AE27F1BCF323E009628E5 /* testViewController.swift */,
 				17C2FCC81BD08C7300F6297F /* PrepGroup */,
 				17D741A41AE479AE000B4CD7 /* CoreGroup */,
@@ -334,16 +340,18 @@
 				1789BB661AE1C68600BAE753 /* BuyTwoViewController.swift in Sources */,
 				177145F61AC0CB380052809F /* Store1ViewController.swift in Sources */,
 				1789BB681AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift in Sources */,
+				17D4D9EA1BD33C0E005EE233 /* IntroCountingViewController.swift in Sources */,
 				179AE2801BCF323E009628E5 /* testViewController.swift in Sources */,
 				17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */,
 				174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */,
 				174449B71AE0840A0012D881 /* Prize.swift in Sources */,
 				17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */,
-				176923981BCC95F60094F31B /* CheckFirstLoginViewController.swift in Sources */,
+				176923981BCC95F60094F31B /* __CheckFirstLoginViewController.swift in Sources */,
 				17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */,
 				17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */,
 				17C4F1961AA97A3500CAF74F /* Singleton.swift in Sources */,
 				1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */,
+				17D4D9E81BD33BBE005EE233 /* IntroTimerViewController.swift in Sources */,
 				17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */,
 				17D741A71AE47F98000B4CD7 /* ChooseFishViewController.swift in Sources */,
 			);

@@ -35,6 +35,7 @@
 		17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C75FC31AC5175300A3586E /* TimerViewController.swift */; };
 		17D4D9E81BD33BBE005EE233 /* IntroTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4D9E71BD33BBE005EE233 /* IntroTimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		17D4D9EA1BD33C0E005EE233 /* IntroCountingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4D9E91BD33C0E005EE233 /* IntroCountingViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		17D4D9EC1BD3454D005EE233 /* FishATools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4D9EB1BD3454D005EE233 /* FishATools.swift */; settings = {ASSET_TAGS = (); }; };
 		17D741A71AE47F98000B4CD7 /* ChooseFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */; };
 		17D741A91AE47FA4000B4CD7 /* ConFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D741A81AE47FA4000B4CD7 /* ConFishViewController.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		17C75FC31AC5175300A3586E /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		17D4D9E71BD33BBE005EE233 /* IntroTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroTimerViewController.swift; sourceTree = "<group>"; };
 		17D4D9E91BD33C0E005EE233 /* IntroCountingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroCountingViewController.swift; sourceTree = "<group>"; };
+		17D4D9EB1BD3454D005EE233 /* FishATools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishATools.swift; sourceTree = "<group>"; };
 		17D741A61AE47F98000B4CD7 /* ChooseFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFishViewController.swift; sourceTree = "<group>"; };
 		17D741A81AE47FA4000B4CD7 /* ConFishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConFishViewController.swift; path = ../ConFishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 				17C4F16F1AA9270500CAF74F /* AppDelegate.swift */,
 				17C4F1951AA97A3500CAF74F /* Singleton.swift */,
 				174449B61AE0840A0012D881 /* Prize.swift */,
+				17D4D9EB1BD3454D005EE233 /* FishATools.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
 				179AE27F1BCF323E009628E5 /* testViewController.swift */,
 				17C2FCC81BD08C7300F6297F /* PrepGroup */,
@@ -343,6 +346,7 @@
 				17D4D9EA1BD33C0E005EE233 /* IntroCountingViewController.swift in Sources */,
 				179AE2801BCF323E009628E5 /* testViewController.swift in Sources */,
 				17C75FC01AC5170F00A3586E /* SelectTimeViewController.swift in Sources */,
+				17D4D9EC1BD3454D005EE233 /* FishATools.swift in Sources */,
 				174449B91AE0AA390012D881 /* ConfirmPropViewController.swift in Sources */,
 				174449B71AE0840A0012D881 /* Prize.swift in Sources */,
 				17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */,

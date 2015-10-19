@@ -27,7 +27,7 @@ class FishTools{
     init(toolName:String, toolPrice:Int, toolImage:String){
         self.toolName = toolName
         self.toolPrice = toolPrice
-        self.toolImageStr = String
+        self.toolImageStr = toolImage
     }
     
 }

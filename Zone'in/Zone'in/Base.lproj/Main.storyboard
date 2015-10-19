@@ -14,6 +14,8 @@
             <string>Bauhaus93</string>
             <string>Bauhaus93</string>
             <string>Bauhaus93</string>
+            <string>Bauhaus93</string>
+            <string>Bauhaus93</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -128,7 +130,7 @@
                                 <animations/>
                                 <state key="normal" image="1.ok button"/>
                                 <connections>
-                                    <segue destination="2Yv-Lj-0ye" kind="modal" id="Pfq-aS-df7"/>
+                                    <segue destination="2Yv-Lj-0ye" kind="modal" identifier="IntroCountingSegue" id="Pfq-aS-df7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="499" y="-578"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro Count View Controller-->
         <scene sceneID="Ijs-7m-SoX">
             <objects>
-                <viewController id="2Yv-Lj-0ye" sceneMemberID="viewController">
+                <viewController id="2Yv-Lj-0ye" customClass="IntroCountViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FBC-43-KVW"/>
                         <viewControllerLayoutGuide type="bottom" id="hVX-Sl-fLp"/>
@@ -156,24 +158,132 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="you will get your prize after 20s." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-ow-V1a">
-                                <rect key="frame" x="40" y="75" width="240" height="37"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="you will get your prize after 20s." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-ow-V1a">
+                                <rect key="frame" x="40" y="37" width="240" height="37"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNN-v5-Xgb">
-                                <rect key="frame" x="137" y="400" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4Z-bb-oFX" userLabel="QuitButton">
+                                <rect key="frame" x="254" y="508" width="66" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0JK-qR-3ne"/>
+                                    <constraint firstAttribute="width" constant="66" id="wMZ-cV-jNf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="QUITicon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg of NSTimer" translatesAutoresizingMaskIntoConstraints="NO" id="tf6-YR-Y0s">
+                                <rect key="frame" x="34" y="93" width="252" height="144"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tf6-YR-Y0s" secondAttribute="height" multiplier="7:4" id="eON-lo-9bJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="haG-VG-J4s" userLabel="TankImageView">
+                                <rect key="frame" x="60" y="288" width="200" height="170"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="haG-VG-J4s" secondAttribute="height" multiplier="20:17" id="rk9-wx-i1S"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="doq-Ao-HVH" userLabel="FishImageView">
+                                <rect key="frame" x="106" y="354" width="137" height="112"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="doq-Ao-HVH" secondAttribute="height" multiplier="137:112" id="eo1-gF-RVk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-sA-C4S" userLabel="SeaweedImageView">
+                                <rect key="frame" x="106" y="312" width="120" height="121"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rg6-sA-C4S" secondAttribute="height" multiplier="120:121" id="RyC-P4-Hd7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-2n-IEX" userLabel="Secs">
+                                <rect key="frame" x="167" y="163" width="33" height="36"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="30P-Kb-VKW"/>
+                                    <constraint firstAttribute="height" constant="36" id="EKo-rN-jeV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXf-ru-vVj" userLabel="Mins">
+                                <rect key="frame" x="121" y="163" width="33" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-4Q-owH" userLabel="WaterImageView">
+                                <rect key="frame" x="60" y="288" width="200" height="170"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ocl-4Q-owH" secondAttribute="height" multiplier="20:17" id="FES-uv-JEB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNN-v5-Xgb">
+                                <rect key="frame" x="137" y="538" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="fQL-ba-vBm" kind="modal" id="52Y-L8-fze"/>
+                                    <segue destination="fQL-ba-vBm" kind="modal" identifier="FinishCountSegue" id="52Y-L8-fze"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g4Z-bb-oFX" secondAttribute="trailing" id="4Iv-Re-BYR"/>
+                            <constraint firstItem="rg6-sA-C4S" firstAttribute="centerX" secondItem="haG-VG-J4s" secondAttribute="centerX" constant="6" id="DcZ-wO-Oc6"/>
+                            <constraint firstItem="g4Z-bb-oFX" firstAttribute="top" secondItem="Ocl-4Q-owH" secondAttribute="bottom" constant="50" id="FCS-IO-Z1C"/>
+                            <constraint firstItem="2YQ-ow-V1a" firstAttribute="leading" secondItem="mA2-UQ-Vvb" secondAttribute="leadingMargin" constant="24" id="Fak-dO-NIO"/>
+                            <constraint firstItem="doq-Ao-HVH" firstAttribute="width" secondItem="doq-Ao-HVH" secondAttribute="height" multiplier="137:112" id="GS4-5O-uVL"/>
+                            <constraint firstItem="rg6-sA-C4S" firstAttribute="leading" secondItem="doq-Ao-HVH" secondAttribute="leading" id="MHa-Ec-JJN"/>
+                            <constraint firstItem="doq-Ao-HVH" firstAttribute="centerX" secondItem="haG-VG-J4s" secondAttribute="centerX" constant="14.5" id="Mwo-sq-Wxu"/>
+                            <constraint firstItem="doq-Ao-HVH" firstAttribute="centerY" secondItem="haG-VG-J4s" secondAttribute="centerY" constant="37" id="Ndz-TY-M9P"/>
+                            <constraint firstItem="rg6-sA-C4S" firstAttribute="width" secondItem="haG-VG-J4s" secondAttribute="height" multiplier="12:17" id="SaB-Nv-4bk"/>
+                            <constraint firstItem="rg6-sA-C4S" firstAttribute="centerY" secondItem="haG-VG-J4s" secondAttribute="centerY" constant="-0.5" id="TBZ-ed-smx"/>
+                            <constraint firstItem="Ocl-4Q-owH" firstAttribute="centerX" secondItem="SNN-v5-Xgb" secondAttribute="centerX" id="U6t-XC-JGI"/>
+                            <constraint firstItem="tf6-YR-Y0s" firstAttribute="top" secondItem="FBC-43-KVW" secondAttribute="bottom" constant="73" id="X5e-s7-95U"/>
+                            <constraint firstItem="tf6-YR-Y0s" firstAttribute="centerX" secondItem="haG-VG-J4s" secondAttribute="centerX" id="ZKt-Ow-Zmb"/>
+                            <constraint firstItem="haG-VG-J4s" firstAttribute="width" secondItem="haG-VG-J4s" secondAttribute="height" multiplier="20:17" id="a6G-O5-Q9z"/>
+                            <constraint firstItem="g4Z-bb-oFX" firstAttribute="bottom" secondItem="hVX-Sl-fLp" secondAttribute="top" id="aQ5-Zu-Vxr"/>
+                            <constraint firstItem="Ocl-4Q-owH" firstAttribute="centerX" secondItem="mA2-UQ-Vvb" secondAttribute="centerX" id="acG-5W-bXa"/>
+                            <constraint firstItem="tf6-YR-Y0s" firstAttribute="centerX" secondItem="ZXf-ru-vVj" secondAttribute="centerX" constant="23" id="avO-ZL-qrE"/>
+                            <constraint firstItem="2YQ-ow-V1a" firstAttribute="centerX" secondItem="tf6-YR-Y0s" secondAttribute="centerX" id="eYW-fp-g6U"/>
+                            <constraint firstItem="EZ9-2n-IEX" firstAttribute="width" secondItem="ZXf-ru-vVj" secondAttribute="width" id="eZg-Yl-nb9"/>
+                            <constraint firstItem="rg6-sA-C4S" firstAttribute="width" secondItem="rg6-sA-C4S" secondAttribute="height" multiplier="120:121" id="ilR-68-rTs"/>
+                            <constraint firstItem="doq-Ao-HVH" firstAttribute="width" secondItem="haG-VG-J4s" secondAttribute="height" multiplier="137:170" id="kMm-Ml-eT5"/>
+                            <constraint firstItem="2YQ-ow-V1a" firstAttribute="centerX" secondItem="mA2-UQ-Vvb" secondAttribute="centerX" id="n3j-YF-wB9"/>
+                            <constraint firstItem="Ocl-4Q-owH" firstAttribute="top" secondItem="tf6-YR-Y0s" secondAttribute="bottom" constant="51" id="oIO-N2-270"/>
+                            <constraint firstItem="2YQ-ow-V1a" firstAttribute="top" secondItem="FBC-43-KVW" secondAttribute="bottom" constant="17" id="pEh-wE-QTo"/>
+                            <constraint firstItem="haG-VG-J4s" firstAttribute="width" secondItem="Ocl-4Q-owH" secondAttribute="width" id="pNj-iS-KsQ"/>
+                            <constraint firstItem="Ocl-4Q-owH" firstAttribute="width" secondItem="Ocl-4Q-owH" secondAttribute="height" multiplier="20:17" id="pNl-AT-vJB"/>
+                            <constraint firstItem="EZ9-2n-IEX" firstAttribute="centerX" secondItem="tf6-YR-Y0s" secondAttribute="centerX" constant="23" id="qnj-bU-rKi"/>
+                            <constraint firstItem="EZ9-2n-IEX" firstAttribute="height" secondItem="ZXf-ru-vVj" secondAttribute="height" id="rLv-hW-4w3"/>
+                            <constraint firstItem="haG-VG-J4s" firstAttribute="top" secondItem="tf6-YR-Y0s" secondAttribute="bottom" constant="51" id="sau-H6-knK"/>
+                            <constraint firstItem="tf6-YR-Y0s" firstAttribute="top" secondItem="2YQ-ow-V1a" secondAttribute="bottom" constant="19" id="t66-9q-oss"/>
+                            <constraint firstItem="tf6-YR-Y0s" firstAttribute="width" secondItem="tf6-YR-Y0s" secondAttribute="height" multiplier="7:4" id="vWi-tw-Twj"/>
+                            <constraint firstItem="EZ9-2n-IEX" firstAttribute="bottom" secondItem="ZXf-ru-vVj" secondAttribute="bottom" id="yM6-gq-J6X"/>
+                            <constraint firstItem="EZ9-2n-IEX" firstAttribute="centerY" secondItem="tf6-YR-Y0s" secondAttribute="centerY" constant="16" id="ylP-Yw-AXy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SeaweedImage" destination="rg6-sA-C4S" id="Wsg-3b-lXZ"/>
+                        <outlet property="fishImage" destination="doq-Ao-HVH" id="WeK-Aj-kA6"/>
+                        <outlet property="minsLabel" destination="ZXf-ru-vVj" id="jfS-oT-CPh"/>
+                        <outlet property="seaweedImage" destination="rg6-sA-C4S" id="zLI-0j-KKB"/>
+                        <outlet property="secsLabel" destination="EZ9-2n-IEX" id="HeX-DH-a2f"/>
+                        <outlet property="tankImage" destination="haG-VG-J4s" id="Ic6-YA-hW4"/>
+                        <outlet property="waterImage" destination="Ocl-4Q-owH" id="uc7-RH-Tat"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94h-km-Gte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1946,11 +2056,11 @@
         <image name="win" width="487" height="487"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kIO-uA-Taz"/>
-        <segue reference="T6h-1B-bWP"/>
+        <segue reference="YHv-2w-sV2"/>
         <segue reference="OHF-XC-8gY"/>
         <segue reference="TRE-wM-RYr"/>
+        <segue reference="T6h-1B-bWP"/>
+        <segue reference="kIO-uA-Taz"/>
         <segue reference="Rrp-Hx-Fqt"/>
-        <segue reference="YHv-2w-sV2"/>
     </inferredMetricsTieBreakers>
 </document>

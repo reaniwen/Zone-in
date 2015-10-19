@@ -21,6 +21,17 @@ class IntroTimerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "IntroCountingSegue" {
+            if let destinationVC = segue.destinationViewController as? TimerViewController {
+                //only could change vark, not UI element
+                destinationVC.counter = 20
+                destinationVC.prize = Prize.Fish
+                destinationVC.sharedData.isFailed = false
+                destinationVC.sharedData.isLocked = false
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -31,5 +42,7 @@ class IntroTimerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

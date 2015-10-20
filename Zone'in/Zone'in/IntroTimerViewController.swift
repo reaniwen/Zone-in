@@ -10,8 +10,14 @@ import UIKit
 
 class IntroTimerViewController: UIViewController {
 
+    @IBOutlet weak var nameBlahLabel: UITextView!
+    var name = ""
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateName(name)
 
         // Do any additional setup after loading the view.
     }
@@ -21,9 +27,13 @@ class IntroTimerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func updateName(name:String){
+        nameBlahLabel.text = "Ok \(name), this will be the first step, you could choose more or less time with these two buttons."
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "IntroCountingSegue" {
-            if let destinationVC = segue.destinationViewController as? TimerViewController {
+            if let destinationVC = segue.destinationViewController as? IntroCountViewController {
                 //only could change vark, not UI element
                 destinationVC.counter = 20
                 destinationVC.prize = Prize.Fish

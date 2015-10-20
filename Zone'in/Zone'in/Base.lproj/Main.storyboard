@@ -57,13 +57,16 @@
                                 <state key="normal" title="Take the tutorial"/>
                                 <connections>
                                     <action selector="testSegue:" destination="o4x-GP-5Sl" eventType="touchUpInside" id="6mT-fj-c5y"/>
-                                    <segue destination="Rwz-ar-PM2" kind="modal" id="eUi-Ya-T47"/>
+                                    <segue destination="Rwz-ar-PM2" kind="modal" identifier="IntroTimerSegue" id="eUi-Ya-T47"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="NameText" destination="s6K-9K-3vq" id="RFS-a5-G6c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3r-iY-DHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +144,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="f4p-yf-cDg"/>
+                    <connections>
+                        <outlet property="nameBlahLabel" destination="p7Q-co-grJ" id="s1G-DK-p6v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqn-MI-Ug3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,9 +308,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-jJ-YRV">
-                                <rect key="frame" x="40" y="83" width="240" height="88"/>
+                                <rect key="frame" x="40" y="83" width="240" height="100"/>
                                 <animations/>
-                                <string key="text">first fish and 10 seaweed as prize. You will get more after you consist to use this app.Remember to feed them and clean the tank.</string>
+                                <string key="text">OK! you get your first fish and also 10 seaweed as prize. You will get more after you consist to use this app.Remember to feed them and clean the tank.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1390,7 +1396,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="32n-Je-jmQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="32n-Je-jmQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -1434,7 +1440,7 @@
                                     <segue destination="FlE-eI-f80" kind="modal" id="8Pe-uM-YG9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12.1.seaweed" translatesAutoresizingMaskIntoConstraints="NO" id="EfS-eS-ycn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EfS-eS-ycn">
                                 <rect key="frame" x="80" y="174" width="161" height="161"/>
                                 <animations/>
                                 <constraints>
@@ -2025,7 +2031,6 @@
         <image name="10.leftMoreIcon" width="118" height="107"/>
         <image name="10.rightMoreIcon" width="118" height="107"/>
         <image name="10.treasureChest" width="314" height="243"/>
-        <image name="12.1.seaweed" width="225" height="225"/>
         <image name="12.use" width="187" height="207"/>
         <image name="18.1.babyFish" width="268" height="268"/>
         <image name="18.2.adultFish" width="268" height="268"/>
@@ -2056,11 +2061,11 @@
         <image name="win" width="487" height="487"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YHv-2w-sV2"/>
         <segue reference="OHF-XC-8gY"/>
-        <segue reference="TRE-wM-RYr"/>
         <segue reference="T6h-1B-bWP"/>
+        <segue reference="TRE-wM-RYr"/>
         <segue reference="kIO-uA-Taz"/>
-        <segue reference="Rrp-Hx-Fqt"/>
+        <segue reference="N9g-BE-c4M"/>
+        <segue reference="8Pe-uM-YG9"/>
     </inferredMetricsTieBreakers>
 </document>

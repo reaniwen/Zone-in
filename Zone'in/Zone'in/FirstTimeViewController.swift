@@ -10,10 +10,11 @@ import UIKit
 
 class FirstTimeViewController: UIViewController {
 
+    @IBOutlet weak var NameText: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
 
         // Do any additional setup after loading the view.
     }
@@ -29,9 +30,15 @@ class FirstTimeViewController: UIViewController {
 //        self.performSegueWithIdentifier("totimerSegue", sender: self)
     }
     
-    func timeToMoveOn() {
-        self.performSegueWithIdentifier("FirstTimeSegue", sender: self)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "IntroTimerSegue" {
+            if let destinationVC = segue.destinationViewController as? IntroTimerViewController{
+                destinationVC.name = NameText.text! as String
+            }
+        }
     }
+    
+    
 
     /*
     // MARK: - Navigation

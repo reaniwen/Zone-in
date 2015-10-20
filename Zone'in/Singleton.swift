@@ -22,6 +22,9 @@ class Singleton: NSObject {
     var sharkWithHat: Bool = false
     var sharkWithPipe: Bool = false
     
+    let fish1: FishKind = FishKind(fishName: "fish1",imageString: "fishimage1")
+    let tool1: ToolKind = ToolKind(toolName: "tool1", toolPrice: 1, toolImage: "toolimage1")
+    
     
     class var sharedInstance: Singleton {
         struct Static {

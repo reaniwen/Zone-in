@@ -1,14 +1,14 @@
 //
-//  FishAPrize.swift
+//  FishToolData.swift
 //  Zone'in
 //
-//  Created by Rean on 10/17/15.
+//  Created by Rean on 10/19/15.
 //  Copyright © 2015 Rean. All rights reserved.
 //
 
 import Foundation
 
-class Fish{
+class FishKind{
     var name:String = ""
     var imageString = ""
     
@@ -16,10 +16,9 @@ class Fish{
         self.name = fishName
         self.imageString = imageString
     }
-    
 }
 
-class FishTools{
+class ToolKind{
     var toolName:String = ""
     var toolPrice:Int = 0
     var toolImageStr:String = ""
@@ -29,5 +28,4 @@ class FishTools{
         self.toolPrice = toolPrice
         self.toolImageStr = toolImage
     }
-    
 }

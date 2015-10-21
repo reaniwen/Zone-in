@@ -11,6 +11,7 @@ import UIKit
 class IntroTimerViewController: UIViewController {
 
     @IBOutlet weak var nameBlahLabel: UITextView!
+    @IBOutlet weak var testButton: UIButton!
     var name = ""
 
     
@@ -30,6 +31,11 @@ class IntroTimerViewController: UIViewController {
     func updateName(name:String){
         nameBlahLabel.text = "Ok \(name), this will be the first step, you could choose more or less time with these two buttons."
     }
+    
+    @IBAction func testvisible(sender: AnyObject) {
+        testButton.hidden = true
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "IntroCountingSegue" {

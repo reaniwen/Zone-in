@@ -11,6 +11,8 @@ import UIKit
 class FirstTimeViewController: UIViewController {
 
     @IBOutlet weak var NameText: UITextField!
+    @IBOutlet weak var promptLabel: UILabel!
+    var userName: String = ""
     
     
     override func viewDidLoad() {
@@ -18,7 +20,6 @@ class FirstTimeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
     
     override func didReceiveMemoryWarning() {
@@ -26,8 +27,13 @@ class FirstTimeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func testSegue(sender: AnyObject) {
-//        self.performSegueWithIdentifier("totimerSegue", sender: self)
+    @IBAction func toIntroTimerVCAct(sender: AnyObject) {
+        if NameText.text == "" {
+            promptLabel.text = "Oops! Please type in a name."
+        }else {
+            userName = NameText.text! as String
+            self.performSegueWithIdentifier("IntroTimerSegue", sender: self)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

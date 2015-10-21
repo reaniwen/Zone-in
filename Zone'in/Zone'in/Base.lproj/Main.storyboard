@@ -56,16 +56,24 @@
                                 <animations/>
                                 <state key="normal" title="Take the tutorial"/>
                                 <connections>
-                                    <action selector="testSegue:" destination="o4x-GP-5Sl" eventType="touchUpInside" id="6mT-fj-c5y"/>
-                                    <segue destination="Rwz-ar-PM2" kind="modal" identifier="IntroTimerSegue" id="eUi-Ya-T47"/>
+                                    <action selector="toIntroTimerVCAct:" destination="o4x-GP-5Sl" eventType="touchUpInside" id="LFG-w0-9xi"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5D-DY-qMk">
+                                <rect key="frame" x="20" y="377" width="280" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="NameText" destination="s6K-9K-3vq" id="RFS-a5-G6c"/>
+                        <outlet property="promptLabel" destination="p5D-DY-qMk" id="sNi-uz-AI7"/>
+                        <segue destination="Rwz-ar-PM2" kind="modal" identifier="IntroTimerSegue" id="EhW-ge-2Nb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3r-iY-DHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,6 +144,14 @@
                                     <segue destination="2Yv-Lj-0ye" kind="modal" identifier="IntroCountingSegue" id="Pfq-aS-df7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-3w-B26">
+                                <rect key="frame" x="111" y="370" width="91" height="88"/>
+                                <animations/>
+                                <state key="normal" title="Button" image="1.less"/>
+                                <connections>
+                                    <action selector="testvisible:" destination="Rwz-ar-PM2" eventType="touchUpInside" id="zxp-k0-2DT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,6 +162,7 @@
                     <navigationItem key="navigationItem" id="f4p-yf-cDg"/>
                     <connections>
                         <outlet property="nameBlahLabel" destination="p7Q-co-grJ" id="s1G-DK-p6v"/>
+                        <outlet property="testButton" destination="ldB-3w-B26" id="egG-fB-Clp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqn-MI-Ug3" userLabel="First Responder" sceneMemberID="firstResponder"/>

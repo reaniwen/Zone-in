@@ -127,11 +127,11 @@
 		17C2FCC81BD08C7300F6297F /* PrepGroup */ = {
 			isa = PBXGroup;
 			children = (
-				176923971BCC95F60094F31B /* __CheckFirstLoginViewController.swift */,
 				179AE2811BCF332B009628E5 /* FirstTimeViewController.swift */,
 				17D4D9E71BD33BBE005EE233 /* IntroTimerViewController.swift */,
 				17D4D9E91BD33C0E005EE233 /* IntroCountViewController.swift */,
 				17C2FCC91BD08F4A00F6297F /* SetDataViewController.swift */,
+				176923971BCC95F60094F31B /* __CheckFirstLoginViewController.swift */,
 			);
 			name = PrepGroup;
 			sourceTree = "<group>";

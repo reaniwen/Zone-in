@@ -11,15 +11,19 @@ import UIKit
 class StorePageTwoViewController: UIViewController {
     var prize: Prizes = Prizes.Others
 
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var treasureChestImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loadImage(){
+        backgroundImage.image = UIImage(named: "10.background")
+        treasureChestImage.image = UIImage(named: "10.treasureChest")
     }
     
     @IBAction func pillAct(sender: AnyObject) {

@@ -30,8 +30,6 @@ class TimerViewController: UIViewController {
         estCounter = counter / 20
         startCounting(counter)
         updateTankImage(0)
-//        var image = UIImage(named: "3.1")
-//        fishTankImage.image = image
     }
     
     func startCounting(counter: Int){

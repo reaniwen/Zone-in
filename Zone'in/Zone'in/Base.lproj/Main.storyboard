@@ -362,7 +362,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.BackgroundofTimer" translatesAutoresizingMaskIntoConstraints="NO" id="Bp2-zx-dhs" userLabel="BackgroundImage View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bp2-zx-dhs" userLabel="BackgroundImage View">
                                 <rect key="frame" x="16" y="134" width="288" height="164"/>
                                 <animations/>
                                 <constraints>
@@ -375,21 +375,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6iq-bA-6Cg" secondAttribute="height" multiplier="93:70" id="8ZA-lh-18m"/>
                                 </constraints>
-                                <state key="normal" image="1.more">
+                                <state key="normal" title="more">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="moreTimeAction:" destination="j57-Cu-fD6" eventType="touchUpInside" id="Uux-W2-4Dg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icj-bC-ax2">
-                                <rect key="frame" x="125" y="536" width="71" height="30"/>
-                                <animations/>
-                                <state key="normal" title="20s Demo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="s1d-Xv-FQf" kind="modal" identifier="DemoTimerSegue" id="4Tn-uA-CyM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohd-Iq-Lid" userLabel="LessTimeButton">
@@ -398,7 +388,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ohd-Iq-Lid" secondAttribute="height" multiplier="93:70" id="zXE-yp-nip"/>
                                 </constraints>
-                                <state key="normal" image="1.less">
+                                <state key="normal" title="less">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -458,7 +448,6 @@
                             <constraint firstItem="Bp2-zx-dhs" firstAttribute="top" secondItem="nen-tq-keZ" secondAttribute="bottom" constant="114" id="9mL-cd-JhN"/>
                             <constraint firstItem="Bp2-zx-dhs" firstAttribute="top" secondItem="6iq-bA-6Cg" secondAttribute="top" constant="39" id="Fjf-BT-5IY"/>
                             <constraint firstItem="iRZ-9K-maG" firstAttribute="width" secondItem="iKZ-G2-spQ" secondAttribute="width" multiplier="37:200" id="Gy7-0s-VJo"/>
-                            <constraint firstAttribute="centerX" secondItem="icj-bC-ax2" secondAttribute="centerX" id="Kgq-F6-P2s"/>
                             <constraint firstItem="Ohd-Iq-Lid" firstAttribute="top" secondItem="Bp2-zx-dhs" secondAttribute="bottom" constant="-17" id="MY5-bw-pKm"/>
                             <constraint firstAttribute="centerX" secondItem="Ohd-Iq-Lid" secondAttribute="centerX" id="NOk-Kc-Zp1"/>
                             <constraint firstItem="iRZ-9K-maG" firstAttribute="bottom" secondItem="Sl8-CS-orF" secondAttribute="top" id="PlK-Xk-5Ps"/>
@@ -472,7 +461,6 @@
                             <constraint firstItem="iRZ-9K-maG" firstAttribute="leading" secondItem="iKZ-G2-spQ" secondAttribute="leading" id="sJg-aG-G5t"/>
                             <constraint firstAttribute="centerX" secondItem="LhJ-SU-g6r" secondAttribute="centerX" id="tcj-pt-Tt3"/>
                             <constraint firstAttribute="centerX" secondItem="Klj-RS-DNG" secondAttribute="centerX" constant="-2" id="yrD-pH-fP5"/>
-                            <constraint firstItem="Sl8-CS-orF" firstAttribute="top" secondItem="icj-bC-ax2" secondAttribute="bottom" constant="2" id="ytC-hk-uC3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hSA-V2-KDG"/>
@@ -792,7 +780,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="cD8-2W-fro">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cD8-2W-fro">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -809,7 +797,7 @@
                                     <action selector="close" destination="cRL-lX-y9T" eventType="touchUpInside" id="WTi-hl-hyT"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.treasureChest" translatesAutoresizingMaskIntoConstraints="NO" id="qY8-3g-PY4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qY8-3g-PY4">
                                 <rect key="frame" x="0.0" y="440" width="163" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -854,13 +842,6 @@
                                     <segue destination="RZ5-D1-g5l" kind="unwind" unwindAction="toStoreViewController:" id="QG1-C9-nl8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0X-y6-dyG">
-                                <rect key="frame" x="103" y="46" width="114" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -884,6 +865,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="cD8-2W-fro" id="lqe-lP-muN"/>
+                        <outlet property="treasureChestImage" destination="qY8-3g-PY4" id="hqw-hi-pR6"/>
                         <segue destination="npy-0G-oiZ" kind="modal" identifier="selPage2Segue" id="YHv-2w-sV2"/>
                     </connections>
                 </viewController>
@@ -904,7 +887,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="HHu-nZ-a3a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HHu-nZ-a3a">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -1324,10 +1307,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9.background" translatesAutoresizingMaskIntoConstraints="NO" id="leR-pU-Q0o">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAi-fB-d96">
                                 <rect key="frame" x="0.0" y="520" width="59" height="48"/>
                                 <animations/>
@@ -1367,13 +1346,10 @@
                                     <segue destination="FlE-eI-f80" kind="modal" id="Rrp-Hx-Fqt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9.background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjT-7V-jie">
-                                <rect key="frame" x="107" y="39" width="106" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="leR-pU-Q0o">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1395,6 +1371,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="leB-g9-LT1"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="leR-pU-Q0o" id="Rx8-Gq-pcd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhD-cw-nGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iKM-od-ust" userLabel="Exit" sceneMemberID="exit"/>
@@ -1877,11 +1856,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.background" translatesAutoresizingMaskIntoConstraints="NO" id="7XR-cv-t76">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7XR-cv-t76">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.treasureChest" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-jQ-cHk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-jQ-cHk">
                                 <rect key="frame" x="0.0" y="440" width="163" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -1987,13 +1966,6 @@
                                     <segue destination="cRL-lX-y9T" kind="modal" modalTransitionStyle="crossDissolve" id="Y5y-Q2-EX5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.background" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4U1-LU-oHK">
-                                <rect key="frame" x="103" y="33" width="114" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2018,6 +1990,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="SGZ-nb-vh6"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="7XR-cv-t76" id="FjQ-Zj-4YD"/>
+                        <outlet property="treasureChestImage" destination="M3m-jQ-cHk" id="2ru-Q5-BnI"/>
                         <segue destination="npy-0G-oiZ" kind="modal" identifier="selPage1Segue" id="N9g-BE-c4M"/>
                     </connections>
                 </viewController>
@@ -2040,7 +2014,6 @@
         <image name="10.background" width="640" height="1136"/>
         <image name="10.leftMoreIcon" width="118" height="107"/>
         <image name="10.rightMoreIcon" width="118" height="107"/>
-        <image name="10.treasureChest" width="314" height="243"/>
         <image name="12.1.seaweed" width="225" height="225"/>
         <image name="12.use" width="187" height="207"/>
         <image name="18.1.babyFish" width="268" height="268"/>
@@ -2072,11 +2045,10 @@
         <image name="win" width="487" height="487"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YHv-2w-sV2"/>
+        <segue reference="Rrp-Hx-Fqt"/>
         <segue reference="OHF-XC-8gY"/>
         <segue reference="TRE-wM-RYr"/>
-        <segue reference="T6h-1B-bWP"/>
         <segue reference="kIO-uA-Taz"/>
-        <segue reference="8Pe-uM-YG9"/>
+        <segue reference="YHv-2w-sV2"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,7 @@ class ConfirmPropViewController: UIViewController {
 
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var prizeImage: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     var testText: String = ""
     var prize: Prizes = .Others
@@ -23,6 +24,8 @@ class ConfirmPropViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadImage()
+        
         let seaWeed:UIImage = UIImage(named: "12.1.seaweed")!
         let cleaningSet:UIImage = UIImage(named: "12.2.cleaningSet")!
         let funnyHat:UIImage = UIImage(named: "12.3.funnyHat")!
@@ -36,13 +39,11 @@ class ConfirmPropViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loadImage(){
+        backgroundImage.image = UIImage(named: "10.background")
     }
     
     func updateTestLabel(){
-        
         testLabel.text = testText
     }
     

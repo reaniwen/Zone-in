@@ -20,30 +20,24 @@ class Store1ViewController: UIViewController {
     let adultFish: fishImage = fishImage(image: UIImageView(), length: CGFloat(149), height: CGFloat(81))
     let sharkFish: fishImage = fishImage(image: UIImageView(), length: CGFloat(141), height: CGFloat(92))
 
+    @IBOutlet weak var backgroundImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         startCounting(counter)
         
-        
         view.addSubview(babyFish.image)
         view.addSubview(adultFish.image)
         view.addSubview(sharkFish.image)
+        
+        loadImage()
     }
     
-    override func viewDidAppear(animated: Bool) {
-
+    func loadImage(){
+        backgroundImage.image = UIImage(named: "9.background")
     }
 
-    
-    @IBAction func close(){
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-
-    @IBAction func testFishAct(sender: AnyObject) {
-    }
     
     func startCounting(counter: Int){
         if !timer.valid{
@@ -135,10 +129,6 @@ class Store1ViewController: UIViewController {
         fishImage.layer.addAnimation(anim, forKey: "animate position along path")
     }
     
-
-    @IBAction func toStoreViewController(segue:UIStoryboardSegue) {
-        
-    }
 }
 
 class fishImage {

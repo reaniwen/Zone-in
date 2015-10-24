@@ -16,7 +16,6 @@ class SelectTimeViewController: UIViewController {
     @IBOutlet weak var moreTimeBtn: UIButton!
     @IBOutlet weak var lessTimeBtn: UIButton!
     
-    @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
 
     var time: Int = 30
@@ -30,14 +29,12 @@ class SelectTimeViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        //判断是否第一次启动：
+        //check if it is first launch
         if((NSUserDefaults.standardUserDefaults().boolForKey("IsFirstLaunch") as Bool!) == false){
-            //第一次启动，播放引导页面
-            print("第一次启动")
-            //设置为非第一次启动
+            //first launch
             self.performSegueWithIdentifier("FirstTimeSegue", sender: self)
         }else{
-            print("不是第一次启动")
+            print("not first launch")
         }
         
     }
@@ -73,7 +70,7 @@ class SelectTimeViewController: UIViewController {
 //            }
 //        }
         if segue.identifier == "StartTimerSegue" {
-            if let destinationVC = segue.destinationViewController as? TimerViewController {
+            if let destinationVC = segue.destinationViewController as? TimerViewController{
                 //only could change vark, not UI element
                 destinationVC.counter = sharedData.time * 60
                 destinationVC.prize = Prize.Seaweed
@@ -85,20 +82,11 @@ class SelectTimeViewController: UIViewController {
     
     func loadImage() {
         backTimerImage.image = UIImage(named: "1.BackgroundofTimer")
-//        moreTimeBtn.imageView?.image = UIImage(named: "1.more")
         moreTimeBtn.setImage(UIImage(named: "1.more"), forState: UIControlState.Normal)
-//        lessTimeBtn.imageView?.image = UIImage(named: "1.less")
         lessTimeBtn.setImage(UIImage(named: "1.less"), forState: .Normal)
     
     }
-    
-    @IBAction func toSelectTimeViewController(segue:UIStoryboardSegue) {
-        
-    }
-    
-    @IBAction func test(sender: AnyObject) {
-        self.performSegueWithIdentifier("testSegue", sender: self)
-    }
+
     
     //this is the demo for prepareForSegue
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

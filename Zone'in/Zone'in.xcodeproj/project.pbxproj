@@ -52,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		1733644E1AE2263E00AD0176 /* WinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		173BD4F91BDBFD080094410D /* Zone_in-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Zone_in-Swift.h"; path = "../Zone_in-Swift.h"; sourceTree = "<group>"; };
 		174449B41AE027170012D881 /* StorePageOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageOneViewController.swift; sourceTree = "<group>"; };
 		174449B61AE0840A0012D881 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPropViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 				17C4F1781AA9270600CAF74F /* LaunchScreen.xib */,
 				17C4F16D1AA9270500CAF74F /* Supporting Files */,
 				17C4F18F1AA96B5B00CAF74F /* Zone'in-Bridging-Header.h */,
+				173BD4F91BDBFD080094410D /* Zone_in-Swift.h */,
 			);
 			path = "Zone'in";
 			sourceTree = "<group>";

@@ -32,7 +32,13 @@ class SelectTimeViewController: UIViewController {
         //check if it is first launch
         if((NSUserDefaults.standardUserDefaults().boolForKey("IsFirstLaunch") as Bool!) == false){
             //first launch
-            self.performSegueWithIdentifier("FirstTimeSegue", sender: self)
+//            self.performSegueWithIdentifier("FirstTimeSegue", sender: self)
+            let sb = UIStoryboard(name: "Intro", bundle: nil)
+            let vc = sb.instantiateInitialViewController()
+            
+            if let vc = vc {
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
         }else{
             print("not first launch")
         }
@@ -87,6 +93,19 @@ class SelectTimeViewController: UIViewController {
     
     }
 
+    @IBAction func jumpStoryboardAct(sender: AnyObject) {
+        let sb = UIStoryboard(name: "Intro", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+        
+        if let vc = vc {
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func unwindToMainMenu(sender: UIStoryboardSegue) {
+//        let sourceVC = sender.sourceViewController
+    }
+    
     
     //this is the demo for prepareForSegue
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

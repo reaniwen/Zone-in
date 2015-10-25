@@ -86,7 +86,7 @@ class IntroCountViewController: UIViewController {
 //        }
         if prize == .Fish {
             fishImage.hidden = false
-            seaweedImage.hidden = true
+//            seaweedImage.hidden = true
             if counter % 2 == 1 {
                 fishImage.image = UIImage(named: "f_babyfish1")?.imageRotatedByDegrees(20, flip: false)
                 //            rotatedPhoto = rotatedPhoto?.imageRotatedByDegrees(90, flip: false)

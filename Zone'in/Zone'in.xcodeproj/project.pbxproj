@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1717B43A1BDC0564000306DD /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1717B4391BDC0564000306DD /* Intro.storyboard */; settings = {ASSET_TAGS = (); }; };
+		1717B43C1BDC672E000306DD /* test1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717B43B1BDC672E000306DD /* test1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1717B43E1BDC6738000306DD /* test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717B43D1BDC6738000306DD /* test2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733644E1AE2263E00AD0176 /* WinViewController.swift */; };
 		174449B51AE027170012D881 /* StorePageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B41AE027170012D881 /* StorePageOneViewController.swift */; };
 		174449B71AE0840A0012D881 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B61AE0840A0012D881 /* Prize.swift */; };
@@ -51,8 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1717B4391BDC0564000306DD /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		1717B43B1BDC672E000306DD /* test1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test1ViewController.swift; sourceTree = "<group>"; };
+		1717B43D1BDC6738000306DD /* test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test2ViewController.swift; sourceTree = "<group>"; };
 		1733644E1AE2263E00AD0176 /* WinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
-		173BD4F91BDBFD080094410D /* Zone_in-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Zone_in-Swift.h"; path = "../Zone_in-Swift.h"; sourceTree = "<group>"; };
+		173BD4F91BDBFD080094410D /* 123Zone_in-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "123Zone_in-Swift.h"; path = "../123Zone_in-Swift.h"; sourceTree = "<group>"; };
 		174449B41AE027170012D881 /* StorePageOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageOneViewController.swift; sourceTree = "<group>"; };
 		174449B61AE0840A0012D881 /* Prize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prize.swift; sourceTree = "<group>"; };
 		174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmPropViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 		17C2FCC81BD08C7300F6297F /* PrepGroup */ = {
 			isa = PBXGroup;
 			children = (
+				1717B4391BDC0564000306DD /* Intro.storyboard */,
+				1717B43B1BDC672E000306DD /* test1ViewController.swift */,
+				1717B43D1BDC6738000306DD /* test2ViewController.swift */,
 				179AE2811BCF332B009628E5 /* FirstTimeViewController.swift */,
 				17D4D9E71BD33BBE005EE233 /* IntroTimerViewController.swift */,
 				17D4D9E91BD33C0E005EE233 /* IntroCountViewController.swift */,
@@ -174,7 +183,7 @@
 				17C4F1781AA9270600CAF74F /* LaunchScreen.xib */,
 				17C4F16D1AA9270500CAF74F /* Supporting Files */,
 				17C4F18F1AA96B5B00CAF74F /* Zone'in-Bridging-Header.h */,
-				173BD4F91BDBFD080094410D /* Zone_in-Swift.h */,
+				173BD4F91BDBFD080094410D /* 123Zone_in-Swift.h */,
 			);
 			path = "Zone'in";
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 				17C4F17A1AA9270600CAF74F /* LaunchScreen.xib in Resources */,
 				17B4791D1AD6266F002DAB65 /* Bauhaus93.ttf in Resources */,
 				17C4F1771AA9270500CAF74F /* Images.xcassets in Resources */,
+				1717B43A1BDC0564000306DD /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				179AE2821BCF332B009628E5 /* FirstTimeViewController.swift in Sources */,
+				1717B43E1BDC6738000306DD /* test2ViewController.swift in Sources */,
 				1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */,
 				17D741A91AE47FA4000B4CD7 /* ConFishViewController.swift in Sources */,
 				1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */,
@@ -368,6 +379,7 @@
 				17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */,
 				17D741A71AE47F98000B4CD7 /* ChooseFishViewController.swift in Sources */,
 				1797BC771BD5DD6300817184 /* FishToolData.swift in Sources */,
+				1717B43C1BDC672E000306DD /* test1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +516,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Zone'in/Zone'in-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -523,6 +536,7 @@
 				PROVISIONING_PROFILE = "35dd45c5-bf6b-4e0b-b074-3c46e8b2d0bf";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Zone'in/Zone'in-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

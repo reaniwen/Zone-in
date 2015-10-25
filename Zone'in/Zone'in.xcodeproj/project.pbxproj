@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1717B43A1BDC0564000306DD /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1717B4391BDC0564000306DD /* Intro.storyboard */; settings = {ASSET_TAGS = (); }; };
-		1717B43C1BDC672E000306DD /* test1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717B43B1BDC672E000306DD /* test1ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		1717B43E1BDC6738000306DD /* test2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717B43D1BDC6738000306DD /* test2ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733644E1AE2263E00AD0176 /* WinViewController.swift */; };
 		174449B51AE027170012D881 /* StorePageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B41AE027170012D881 /* StorePageOneViewController.swift */; };
 		174449B71AE0840A0012D881 /* Prize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174449B61AE0840A0012D881 /* Prize.swift */; };
@@ -17,6 +15,8 @@
 		176923981BCC95F60094F31B /* __CheckFirstLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176923971BCC95F60094F31B /* __CheckFirstLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		177145F61AC0CB380052809F /* Store1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177145F51AC0CB380052809F /* Store1ViewController.swift */; };
 		1775F2A41AD31E0500D2913A /* QuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1775F2A31AD31E0500D2913A /* QuitViewController.swift */; };
+		178270921BDCA1D300A50FB2 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178270911BDCA1D300A50FB2 /* Store.storyboard */; settings = {ASSET_TAGS = (); }; };
+		178270941BDCA1E500A50FB2 /* Purchase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178270931BDCA1E500A50FB2 /* Purchase.storyboard */; settings = {ASSET_TAGS = (); }; };
 		1789BB621AE0BEC500BAE753 /* StorePageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */; };
 		1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */; };
 		1789BB661AE1C68600BAE753 /* BuyTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */; };
@@ -55,8 +55,6 @@
 
 /* Begin PBXFileReference section */
 		1717B4391BDC0564000306DD /* Intro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
-		1717B43B1BDC672E000306DD /* test1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test1ViewController.swift; sourceTree = "<group>"; };
-		1717B43D1BDC6738000306DD /* test2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test2ViewController.swift; sourceTree = "<group>"; };
 		1733644E1AE2263E00AD0176 /* WinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
 		173BD4F91BDBFD080094410D /* 123Zone_in-Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "123Zone_in-Swift.h"; path = "../123Zone_in-Swift.h"; sourceTree = "<group>"; };
 		174449B41AE027170012D881 /* StorePageOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageOneViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +63,8 @@
 		176923971BCC95F60094F31B /* __CheckFirstLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = __CheckFirstLoginViewController.swift; sourceTree = "<group>"; };
 		177145F51AC0CB380052809F /* Store1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store1ViewController.swift; sourceTree = "<group>"; };
 		1775F2A31AD31E0500D2913A /* QuitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
+		178270911BDCA1D300A50FB2 /* Store.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		178270931BDCA1E500A50FB2 /* Purchase.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Purchase.storyboard; sourceTree = "<group>"; };
 		1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorePageTwoViewController.swift; sourceTree = "<group>"; };
 		1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyOneViewController.swift; sourceTree = "<group>"; };
 		1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyTwoViewController.swift; sourceTree = "<group>"; };
@@ -114,13 +114,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1797BC731BD5D8E600817184 /* DataGroup */ = {
+		1797BC731BD5D8E600817184 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				174449B61AE0840A0012D881 /* Prize.swift */,
 				1797BC761BD5DD6300817184 /* FishToolData.swift */,
 			);
-			name = DataGroup;
+			name = Data;
 			sourceTree = "<group>";
 		};
 		17B479151AD623F4002DAB65 /* res */ = {
@@ -135,8 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				1717B4391BDC0564000306DD /* Intro.storyboard */,
-				1717B43B1BDC672E000306DD /* test1ViewController.swift */,
-				1717B43D1BDC6738000306DD /* test2ViewController.swift */,
 				179AE2811BCF332B009628E5 /* FirstTimeViewController.swift */,
 				17D4D9E71BD33BBE005EE233 /* IntroTimerViewController.swift */,
 				17D4D9E91BD33C0E005EE233 /* IntroCountViewController.swift */,
@@ -172,7 +170,7 @@
 				17C4F1951AA97A3500CAF74F /* Singleton.swift */,
 				17C4F1731AA9270500CAF74F /* Main.storyboard */,
 				179AE27F1BCF323E009628E5 /* testViewController.swift */,
-				1797BC731BD5D8E600817184 /* DataGroup */,
+				1797BC731BD5D8E600817184 /* Data */,
 				17C2FCC81BD08C7300F6297F /* PrepGroup */,
 				17D741A41AE479AE000B4CD7 /* CoreGroup */,
 				17D741A51AE479B9000B4CD7 /* StoreGroup */,
@@ -216,6 +214,7 @@
 		17D741A31AE4798C000B4CD7 /* PurchaseGroup */ = {
 			isa = PBXGroup;
 			children = (
+				178270931BDCA1E500A50FB2 /* Purchase.storyboard */,
 				1789BB631AE1C66000BAE753 /* BuyOneViewController.swift */,
 				1789BB651AE1C68600BAE753 /* BuyTwoViewController.swift */,
 				1789BB671AE1C6A100BAE753 /* ConfirmPurchaseViewController.swift */,
@@ -238,6 +237,7 @@
 		17D741A51AE479B9000B4CD7 /* StoreGroup */ = {
 			isa = PBXGroup;
 			children = (
+				178270911BDCA1D300A50FB2 /* Store.storyboard */,
 				177145F51AC0CB380052809F /* Store1ViewController.swift */,
 				174449B41AE027170012D881 /* StorePageOneViewController.swift */,
 				1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */,
@@ -330,10 +330,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178270921BDCA1D300A50FB2 /* Store.storyboard in Resources */,
 				17C4F1751AA9270500CAF74F /* Main.storyboard in Resources */,
 				17C4F17A1AA9270600CAF74F /* LaunchScreen.xib in Resources */,
 				17B4791D1AD6266F002DAB65 /* Bauhaus93.ttf in Resources */,
 				17C4F1771AA9270500CAF74F /* Images.xcassets in Resources */,
+				178270941BDCA1E500A50FB2 /* Purchase.storyboard in Resources */,
 				1717B43A1BDC0564000306DD /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				179AE2821BCF332B009628E5 /* FirstTimeViewController.swift in Sources */,
-				1717B43E1BDC6738000306DD /* test2ViewController.swift in Sources */,
 				1733644F1AE2263E00AD0176 /* WinViewController.swift in Sources */,
 				17D741A91AE47FA4000B4CD7 /* ConFishViewController.swift in Sources */,
 				1789BB641AE1C66000BAE753 /* BuyOneViewController.swift in Sources */,
@@ -379,7 +380,6 @@
 				17C4F1701AA9270500CAF74F /* AppDelegate.swift in Sources */,
 				17D741A71AE47F98000B4CD7 /* ChooseFishViewController.swift in Sources */,
 				1797BC771BD5DD6300817184 /* FishToolData.swift in Sources */,
-				1717B43C1BDC672E000306DD /* test1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

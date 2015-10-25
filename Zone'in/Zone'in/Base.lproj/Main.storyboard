@@ -10,279 +10,9 @@
             <string>Bauhaus93</string>
             <string>Bauhaus93</string>
             <string>Bauhaus93</string>
-            <string>Bauhaus93</string>
-            <string>Bauhaus93</string>
-            <string>Bauhaus93</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="KVE-lf-s8P">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z3r-iY-DHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="o4x-GP-5Sl" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xTT-Kr-zqa"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZV1-wt-vMb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="l6V-RT-cCx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6K-9K-3vq">
-                                <rect key="frame" x="112" y="217" width="97" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type in your nickname and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie4-Li-3uh">
-                                <rect key="frame" x="58" y="76" width="205" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start the jounry to change your habit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yae-t1-kaB">
-                                <rect key="frame" x="20" y="105" width="281" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRS-uu-emA">
-                                <rect key="frame" x="105" y="303" width="111" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Take the tutorial"/>
-                                <connections>
-                                    <action selector="toIntroTimerVCAct:" destination="o4x-GP-5Sl" eventType="touchUpInside" id="LFG-w0-9xi"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5D-DY-qMk">
-                                <rect key="frame" x="20" y="377" width="280" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="NameText" destination="s6K-9K-3vq" id="RFS-a5-G6c"/>
-                        <outlet property="promptLabel" destination="p5D-DY-qMk" id="sNi-uz-AI7"/>
-                        <segue destination="Rwz-ar-PM2" kind="modal" identifier="IntroTimerSegue" id="EhW-ge-2Nb"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="112" y="-578"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="6sq-Si-fLO">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kqn-MI-Ug3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Rwz-ar-PM2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3Ke-VP-xsO"/>
-                        <viewControllerLayoutGuide type="bottom" id="bfd-fF-bXy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ecC-y0-UH6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="But Lets' try 20s first by press &quot;OK&quot; button" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jT4-jW-jh5">
-                                <rect key="frame" x="40" y="329" width="240" height="53"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You can view your acq by pressing here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l13-If-rpa">
-                                <rect key="frame" x="40" y="466" width="240" height="50"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.BackgroundofTimer" translatesAutoresizingMaskIntoConstraints="NO" id="Yvz-kM-tAF">
-                                <rect key="frame" x="40" y="152" width="240" height="128"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.more" translatesAutoresizingMaskIntoConstraints="NO" id="kKv-k4-0Qv">
-                                <rect key="frame" x="119" y="82" width="83" height="76"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.less" translatesAutoresizingMaskIntoConstraints="NO" id="iki-3Q-LBS">
-                                <rect key="frame" x="119" y="260" width="83" height="76"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Store" translatesAutoresizingMaskIntoConstraints="NO" id="be9-7z-eYo">
-                                <rect key="frame" x="0.0" y="516" width="61" height="52"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-m5-K07">
-                                <rect key="frame" x="105" y="171" width="110" height="90"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="80"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlF-7L-EHD">
-                                <rect key="frame" x="128" y="381" width="64" height="66"/>
-                                <animations/>
-                                <state key="normal" image="1.ok button"/>
-                                <connections>
-                                    <segue destination="2Yv-Lj-0ye" kind="modal" identifier="IntroCountingSegue" id="Pfq-aS-df7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-3w-B26">
-                                <rect key="frame" x="200" y="370" width="91" height="88"/>
-                                <animations/>
-                                <state key="normal" title="Button" image="1.less"/>
-                                <connections>
-                                    <action selector="testvisible:" destination="Rwz-ar-PM2" eventType="touchUpInside" id="zxp-k0-2DT"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ok 'Name', this will be the first step, you could choose more or less time with these two buttons." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p7Q-co-grJ">
-                                <rect key="frame" x="40" y="0.0" width="240" height="66"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="f4p-yf-cDg"/>
-                    <connections>
-                        <outlet property="nameBlahLabel" destination="p7Q-co-grJ" id="s1G-DK-p6v"/>
-                        <outlet property="testButton" destination="ldB-3w-B26" id="egG-fB-Clp"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="506" y="-578"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Ijs-7m-SoX">
-            <objects>
-                <viewController id="2Yv-Lj-0ye" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Cx-xv-jhU"/>
-                        <viewControllerLayoutGuide type="bottom" id="nUo-8j-Bhw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mA2-UQ-Vvb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="you will get your prize after 20s." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-ow-V1a">
-                                <rect key="frame" x="40" y="37" width="240" height="37"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4Z-bb-oFX" userLabel="QuitButton">
-                                <rect key="frame" x="254" y="508" width="66" height="60"/>
-                                <animations/>
-                                <state key="normal" title="Button" image="QUITicon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bg of NSTimer" translatesAutoresizingMaskIntoConstraints="NO" id="tf6-YR-Y0s">
-                                <rect key="frame" x="34" y="93" width="252" height="144"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="haG-VG-J4s" userLabel="TankImageView">
-                                <rect key="frame" x="60" y="288" width="200" height="170"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doq-Ao-HVH" userLabel="FishImageView">
-                                <rect key="frame" x="106" y="354" width="137" height="112"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-sA-C4S" userLabel="SeaweedImageView">
-                                <rect key="frame" x="106" y="312" width="120" height="121"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-2n-IEX" userLabel="Secs">
-                                <rect key="frame" x="167" y="163" width="33" height="36"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXf-ru-vVj" userLabel="Mins">
-                                <rect key="frame" x="121" y="163" width="33" height="36"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-4Q-owH" userLabel="WaterImageView">
-                                <rect key="frame" x="60" y="288" width="200" height="170"/>
-                                <animations/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNN-v5-Xgb">
-                                <rect key="frame" x="137" y="538" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="fQL-ba-vBm" kind="modal" identifier="FinishCountSegue" id="52Y-L8-fze"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="SeaweedImage" destination="rg6-sA-C4S" id="Wsg-3b-lXZ"/>
-                        <outlet property="fishImage" destination="doq-Ao-HVH" id="WeK-Aj-kA6"/>
-                        <outlet property="minsLabel" destination="ZXf-ru-vVj" id="jfS-oT-CPh"/>
-                        <outlet property="seaweedImage" destination="rg6-sA-C4S" id="zLI-0j-KKB"/>
-                        <outlet property="secsLabel" destination="EZ9-2n-IEX" id="HeX-DH-a2f"/>
-                        <outlet property="tankImage" destination="haG-VG-J4s" id="Ic6-YA-hW4"/>
-                        <outlet property="waterImage" destination="Ocl-4Q-owH" id="uc7-RH-Tat"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="94h-km-Gte" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="918" y="-581"/>
-        </scene>
-        <!--Set Data View Controller-->
-        <scene sceneID="YaM-iE-t6r">
-            <objects>
-                <viewController id="fQL-ba-vBm" customClass="SetDataViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="alI-vD-gLb"/>
-                        <viewControllerLayoutGuide type="bottom" id="ymy-nU-RRB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="etV-pb-Om0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-jJ-YRV">
-                                <rect key="frame" x="40" y="83" width="240" height="100"/>
-                                <animations/>
-                                <string key="text">OK! you get your first fish and also 10 seaweed as prize. You will get more after you consist to use this app.Remember to feed them and clean the tank.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yv-8R-mqG">
-                                <rect key="frame" x="68" y="426" width="184" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Start to change your habit!"/>
-                                <connections>
-                                    <action selector="setDataAct:" destination="2Yv-Lj-0ye" eventType="touchUpInside" id="uFI-BM-Zqs"/>
-                                    <segue destination="T2s-oG-EcD" kind="unwind" unwindAction="toSelectTimeViewController:" id="i9r-mp-SAV"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ds-ig-rOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="T2s-oG-EcD" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1342" y="-583"/>
-        </scene>
         <!--Select Time View Controller-->
         <scene sceneID="ixA-x7-bQW">
             <objects>
@@ -346,14 +76,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-ND-Z4J">
-                                <rect key="frame" x="137" y="20" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="o4x-GP-5Sl" kind="modal" id="TRE-wM-RYr"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4V-lN-iZr">
                                 <rect key="frame" x="137" y="518" width="46" height="30"/>
                                 <animations/>
@@ -528,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTf-d4-0ei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="118"/>
+            <point key="canvasLocation" x="512" y="118"/>
         </scene>
         <!--Win View Controller-->
         <scene sceneID="zyC-Cr-CZh">
@@ -571,7 +293,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhW-wa-PzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1jC-pC-TQt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="118"/>
+            <point key="canvasLocation" x="967" y="118"/>
         </scene>
         <!--Store Page Two View Controller-->
         <scene sceneID="k9f-5m-72G">
@@ -880,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj9-y0-uTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="-600"/>
+            <point key="canvasLocation" x="1641" y="-683"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f5n-WO-cFz">
@@ -934,7 +656,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apT-UV-Ozb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Sie-SB-kYU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="118"/>
+            <point key="canvasLocation" x="1641" y="6"/>
         </scene>
         <!--Store1 View Controller-->
         <scene sceneID="0eG-qr-CxC">
@@ -1415,9 +1137,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.BackgroundofTimer" width="998" height="569"/>
-        <image name="1.less" width="161" height="153"/>
-        <image name="1.more" width="161" height="153"/>
         <image name="1.ok button" width="128" height="128"/>
         <image name="10.1.seaweed" width="225" height="225"/>
         <image name="10.2.cleaning set" width="225" height="225"/>
@@ -1458,9 +1177,9 @@
         <image name="win" width="487" height="487"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OHF-XC-8gY"/>
-        <segue reference="Rrp-Hx-Fqt"/>
         <segue reference="YHv-2w-sV2"/>
-        <segue reference="kIO-uA-Taz"/>
+        <segue reference="OHF-XC-8gY"/>
+        <segue reference="XkB-Bv-X11"/>
+        <segue reference="Rrp-Hx-Fqt"/>
     </inferredMetricsTieBreakers>
 </document>

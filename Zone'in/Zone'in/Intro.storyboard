@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="811" y="393"/>
         </scene>
-        <!--Test2 View Controller-->
+        <!--Set Data View Controller-->
         <scene sceneID="Dfe-UN-u55">
             <objects>
-                <viewController id="iCA-tE-qXT" customClass="test2ViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iCA-tE-qXT" customClass="SetDataViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9dt-VZ-Ldv"/>
                         <viewControllerLayoutGuide type="bottom" id="lww-qe-TfT"/>

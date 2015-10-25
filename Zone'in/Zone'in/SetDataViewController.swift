@@ -14,17 +14,10 @@ class SetDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setDefaultData()
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        setDefaultData()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setDefaultData(){

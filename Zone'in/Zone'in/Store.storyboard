@@ -21,11 +21,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="574"/>
                                 <animations/>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cv3-wp-goa">
-                                <rect key="frame" x="40" y="111" width="240" height="300"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2E-Bx-oSd">
+                                <rect key="frame" x="40" y="114" width="240" height="240"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="6Er-Qn-hOv" kind="embed" id="DzV-50-sfj"/>
+                                    <segue destination="5wb-u7-9sb" kind="embed" id="smP-en-cqF"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -94,27 +94,6 @@
             </objects>
             <point key="canvasLocation" x="2011" y="415"/>
         </scene>
-        <!--Store Sub View Controller-->
-        <scene sceneID="0Fo-0J-WSa">
-            <objects>
-                <viewController id="6Er-Qn-hOv" customClass="StoreSubViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Erf-6X-Aw9">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OsN-hI-wdE">
-                                <rect key="frame" x="101" y="227" width="39" height="37"/>
-                                <animations/>
-                            </pageControl>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wqK-rG-mp9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="786" y="955"/>
-        </scene>
         <!--Page View Controller-->
         <scene sceneID="LNr-Ve-Ml7">
             <objects>
@@ -135,32 +114,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsT-6N-Tyg">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="280"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7d4-S6-hsC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oO-od-wku">
+                                        <rect key="frame" x="35" y="52" width="46" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpN-eG-U2N">
-                                        <rect key="frame" x="166" y="27" width="46" height="30"/>
+                                        <rect key="frame" x="128" y="52" width="46" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-BE-KyU">
-                                        <rect key="frame" x="52" y="117" width="46" height="30"/>
+                                        <rect key="frame" x="35" y="137" width="46" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-Jc-UzR">
-                                        <rect key="frame" x="166" y="117" width="46" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oO-od-wku">
-                                        <rect key="frame" x="52" y="27" width="46" height="30"/>
+                                        <rect key="frame" x="128" y="137" width="46" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <animations/>
@@ -171,12 +150,27 @@
                         <outlet property="button2" destination="hpN-eG-U2N" id="EZS-QB-7Rk"/>
                         <outlet property="button3" destination="7P2-BE-KyU" id="aVn-c8-kK0"/>
                         <outlet property="button4" destination="WQ9-Jc-UzR" id="9DZ-1s-cGM"/>
-                        <outlet property="constraintView" destination="xsT-6N-Tyg" id="ahR-hQ-ndo"/>
+                        <outlet property="constraintView" destination="7d4-S6-hsC" id="w4c-GL-atr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTU-he-ubg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1471" y="1089"/>
+        </scene>
+        <!--Store Sub View Controller-->
+        <scene sceneID="Ed7-A3-Zda">
+            <objects>
+                <viewController id="5wb-u7-9sb" customClass="StoreSubViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bNZ-tB-cqe">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZZ-2T-hCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="1022"/>
         </scene>
     </scenes>
     <resources>

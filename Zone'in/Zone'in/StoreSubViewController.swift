@@ -84,7 +84,8 @@ class StoreSubViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return self.buttonTitles.count
+        print(self.buttonTitles.count)
+        return 2
     }
 
 }

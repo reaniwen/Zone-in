@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mVK-r0-7eg">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Store Parent View Controller-->
         <scene sceneID="HEb-AG-GGS">
             <objects>
-                <viewController id="mVK-r0-7eg" sceneMemberID="viewController">
+                <viewController id="mVK-r0-7eg" customClass="StoreParentViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uxO-7U-UgU"/>
                         <viewControllerLayoutGuide type="bottom" id="8Xb-tr-bsL"/>
@@ -22,7 +22,7 @@
                                 <animations/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cv3-wp-goa">
-                                <rect key="frame" x="40" y="111" width="240" height="256"/>
+                                <rect key="frame" x="40" y="111" width="240" height="300"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="6Er-Qn-hOv" kind="embed" id="DzV-50-sfj"/>
@@ -94,18 +94,14 @@
             </objects>
             <point key="canvasLocation" x="2011" y="415"/>
         </scene>
-        <!--View Controller-->
+        <!--Store Sub View Controller-->
         <scene sceneID="0Fo-0J-WSa">
             <objects>
-                <viewController id="6Er-Qn-hOv" sceneMemberID="viewController">
+                <viewController id="6Er-Qn-hOv" customClass="StoreSubViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Erf-6X-Aw9">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="256"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLN-NA-gR8">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
-                                <animations/>
-                            </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OsN-hI-wdE">
                                 <rect key="frame" x="101" y="227" width="39" height="37"/>
                                 <animations/>
@@ -117,7 +113,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqK-rG-mp9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="933"/>
+            <point key="canvasLocation" x="786" y="955"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="LNr-Ve-Ml7">
+            <objects>
+                <pageViewController storyboardIdentifier="StorePageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="yt7-ar-gDV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B06-hk-oOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="1089"/>
+        </scene>
+        <!--Store Content View Controller-->
+        <scene sceneID="Ab9-kK-JGQ">
+            <objects>
+                <viewController storyboardIdentifier="StoreContentVC" id="AJs-L0-bxv" customClass="StoreContentViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJG-dt-ThR"/>
+                        <viewControllerLayoutGuide type="bottom" id="TU4-Lg-AUh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lQc-3Z-6iR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsT-6N-Tyg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="280"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpN-eG-U2N">
+                                        <rect key="frame" x="166" y="27" width="46" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-BE-KyU">
+                                        <rect key="frame" x="52" y="117" width="46" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-Jc-UzR">
+                                        <rect key="frame" x="166" y="117" width="46" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oO-od-wku">
+                                        <rect key="frame" x="52" y="27" width="46" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="6oO-od-wku" id="WnG-Uh-YNP"/>
+                        <outlet property="button2" destination="hpN-eG-U2N" id="EZS-QB-7Rk"/>
+                        <outlet property="button3" destination="7P2-BE-KyU" id="aVn-c8-kK0"/>
+                        <outlet property="button4" destination="WQ9-Jc-UzR" id="9DZ-1s-cGM"/>
+                        <outlet property="constraintView" destination="xsT-6N-Tyg" id="ahR-hQ-ndo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTU-he-ubg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1471" y="1089"/>
         </scene>
     </scenes>
     <resources>

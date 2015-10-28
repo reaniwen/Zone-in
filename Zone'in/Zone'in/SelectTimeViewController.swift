@@ -102,6 +102,25 @@ class SelectTimeViewController: UIViewController {
         }
     }
     
+    @IBAction func jumpToTutorialAct(sender: AnyObject) {
+        let sb = UIStoryboard(name: "Intro", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+        
+        if let vc = vc {
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func jumpToStoreAct(sender: AnyObject) {
+        let sb = UIStoryboard(name: "Store", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+        
+        if let vc = vc {
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
+    
     @IBAction func unwindToMainMenu(sender: UIStoryboardSegue) {
 //        let sourceVC = sender.sourceViewController
     }

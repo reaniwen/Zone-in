@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Bauhaus93.ttf">
@@ -77,11 +77,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4V-lN-iZr">
-                                <rect key="frame" x="137" y="518" width="46" height="30"/>
+                                <rect key="frame" x="134" y="20" width="52" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Tutorial"/>
                                 <connections>
-                                    <action selector="jumpStoryboardAct:" destination="j57-Cu-fD6" eventType="touchUpInside" id="zkx-Qn-HfC"/>
+                                    <action selector="jumpToTutorialAct:" destination="j57-Cu-fD6" eventType="touchUpInside" id="uPc-fk-s8y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtD-UM-r5U">
+                                <rect key="frame" x="128" y="506" width="65" height="30"/>
+                                <animations/>
+                                <state key="normal" title="StoreTest"/>
+                                <connections>
+                                    <action selector="jumpToStoreAct:" destination="j57-Cu-fD6" eventType="touchUpInside" id="RH5-bh-SCB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -716,7 +724,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhD-cw-nGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iKM-od-ust" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="112" y="794"/>
+            <point key="canvasLocation" x="112" y="846"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XtX-bm-6i4">
@@ -1133,7 +1141,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aza-IJ-Kf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wvS-vR-Q6g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="534" y="702"/>
+            <point key="canvasLocation" x="529" y="740"/>
         </scene>
     </scenes>
     <resources>
@@ -1177,9 +1185,9 @@
         <image name="win" width="487" height="487"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YHv-2w-sV2"/>
         <segue reference="OHF-XC-8gY"/>
         <segue reference="XkB-Bv-X11"/>
         <segue reference="Rrp-Hx-Fqt"/>
+        <segue reference="N9g-BE-c4M"/>
     </inferredMetricsTieBreakers>
 </document>

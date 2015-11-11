@@ -26,7 +26,6 @@
 		179AE2821BCF332B009628E5 /* FirstTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179AE2811BCF332B009628E5 /* FirstTimeViewController.swift */; };
 		17B4791D1AD6266F002DAB65 /* Bauhaus93.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */; };
 		17B4791E1AD6268A002DAB65 /* Bauhaus93.ttf in Sources */ = {isa = PBXBuildFile; fileRef = 17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */; };
-		17B599CA1BE004C7002ED94D /* StoreParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B599C91BE004C7002ED94D /* StoreParentViewController.swift */; };
 		17B599CC1BE004DB002ED94D /* StoreContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B599CB1BE004DB002ED94D /* StoreContentViewController.swift */; };
 		17B599CE1BE004E7002ED94D /* StoreSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B599CD1BE004E7002ED94D /* StoreSubViewController.swift */; };
 		17C2FCCA1BD08F4A00F6297F /* SetDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C2FCC91BD08F4A00F6297F /* SetDataViewController.swift */; };
@@ -76,7 +75,6 @@
 		179AE27F1BCF323E009628E5 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		179AE2811BCF332B009628E5 /* FirstTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTimeViewController.swift; sourceTree = "<group>"; };
 		17B4791C1AD6266F002DAB65 /* Bauhaus93.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bauhaus93.ttf; sourceTree = "<group>"; };
-		17B599C91BE004C7002ED94D /* StoreParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreParentViewController.swift; sourceTree = "<group>"; };
 		17B599CB1BE004DB002ED94D /* StoreContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreContentViewController.swift; sourceTree = "<group>"; };
 		17B599CD1BE004E7002ED94D /* StoreSubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSubViewController.swift; sourceTree = "<group>"; };
 		17C2FCC91BD08F4A00F6297F /* SetDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetDataViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +234,7 @@
 				17C75FC31AC5175300A3586E /* TimerViewController.swift */,
 				1733644E1AE2263E00AD0176 /* WinViewController.swift */,
 				1775F2A31AD31E0500D2913A /* QuitViewController.swift */,
+				177145F51AC0CB380052809F /* Store1ViewController.swift */,
 			);
 			name = CoreGroup;
 			sourceTree = "<group>";
@@ -244,10 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				178270911BDCA1D300A50FB2 /* Store.storyboard */,
-				17B599C91BE004C7002ED94D /* StoreParentViewController.swift */,
 				17B599CD1BE004E7002ED94D /* StoreSubViewController.swift */,
 				17B599CB1BE004DB002ED94D /* StoreContentViewController.swift */,
-				177145F51AC0CB380052809F /* Store1ViewController.swift */,
 				174449B41AE027170012D881 /* StorePageOneViewController.swift */,
 				1789BB611AE0BEC500BAE753 /* StorePageTwoViewController.swift */,
 				174449B81AE0AA390012D881 /* ConfirmPropViewController.swift */,
@@ -382,7 +379,6 @@
 				174449B71AE0840A0012D881 /* Prize.swift in Sources */,
 				17B599CC1BE004DB002ED94D /* StoreContentViewController.swift in Sources */,
 				17C4F1921AA96B5B00CAF74F /* LockNotifierCallback.m in Sources */,
-				17B599CA1BE004C7002ED94D /* StoreParentViewController.swift in Sources */,
 				176923981BCC95F60094F31B /* __CheckFirstLoginViewController.swift in Sources */,
 				17C75FC21AC5172A00A3586E /* SelectPrizeViewController.swift in Sources */,
 				17C75FC41AC5175300A3586E /* TimerViewController.swift in Sources */,

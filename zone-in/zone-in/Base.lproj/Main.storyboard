@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Select TimeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SelectTimeVC" id="BYZ-38-t0r" customClass="SelectTimeVC" customModule="zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebb-gg-eIB">
+                                <rect key="frame" x="142" y="133" width="36" height="30"/>
+                                <state key="normal" title="More"/>
+                                <connections>
+                                    <action selector="moreTimeAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Moj-p0-pyT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESm-TT-lXh">
+                                <rect key="frame" x="144" y="283" width="32" height="30"/>
+                                <state key="normal" title="Less"/>
+                                <connections>
+                                    <action selector="lessTimeAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bDr-0Y-IVI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-1y-BgU">
+                                <rect key="frame" x="145" y="378" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="EB6-WS-xI6" kind="modal" identifier="toMainTimerSegue" id="Gos-dN-4cN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zm-JS-zwB">
+                                <rect key="frame" x="150" y="206" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="lessTimeBtn" destination="ESm-TT-lXh" id="a02-AG-CnA"/>
+                        <outlet property="moreTimeBtn" destination="ebb-gg-eIB" id="xXb-uq-bdx"/>
+                        <outlet property="timeLabel" destination="0Zm-JS-zwB" id="TcM-Mj-zOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64" y="464"/>
+        </scene>
+        <!--Main TimerVC-->
+        <scene sceneID="l0D-fs-oS4">
+            <objects>
+                <viewController id="EB6-WS-xI6" customClass="MainTimerVC" customModule="zone_in" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8op-IY-vrm"/>
+                        <viewControllerLayoutGuide type="bottom" id="a1P-wY-xEf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ves-mt-rjU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cf-V3-1QS">
+                                <rect key="frame" x="139" y="183" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRP-Hy-rLq">
+                                <rect key="frame" x="262" y="518" width="30" height="30"/>
+                                <state key="normal" title="quit"/>
+                                <connections>
+                                    <segue destination="crQ-Q7-u7X" kind="modal" id="YVf-q2-LT8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aZx-od-v7n"/>
+                    <connections>
+                        <outlet property="timeDemoLabel" destination="8Cf-V3-1QS" id="Nsa-dW-4DM"/>
+                        <segue destination="tH4-0I-slM" kind="modal" identifier="toSucceedSegue" id="8Gy-WO-Qza"/>
+                        <segue destination="YTf-uy-hXH" kind="modal" id="YTb-0d-3zF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wb-lt-rWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="464"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5T9-ma-qqp">
+            <objects>
+                <viewController id="crQ-Q7-u7X" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gSW-ok-TVa"/>
+                        <viewControllerLayoutGuide type="bottom" id="tdb-Dp-rck"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gUS-lf-5h2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Do you wanna quit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY9-1R-ucq">
+                                <rect key="frame" x="89" y="154" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU4-fo-QAN">
+                                <rect key="frame" x="97" y="312" width="30" height="30"/>
+                                <state key="normal" title="No!"/>
+                                <connections>
+                                    <segue destination="52c-ms-BW7" kind="unwind" unwindAction="backToTimer:" id="LWZ-vm-Flv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zY0-Pu-Ugy">
+                                <rect key="frame" x="173" y="312" width="71" height="30"/>
+                                <state key="normal" title="I said quit!"/>
+                                <connections>
+                                    <segue destination="YTf-uy-hXH" kind="modal" id="Oef-VD-pfY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hPy-QQ-dgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="52c-ms-BW7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="464"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CLN-L7-Uo1">
+            <objects>
+                <viewController id="YTf-uy-hXH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HHU-yY-5Om"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ub5-pT-ewm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B2R-7S-vDN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Failed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2X-Rq-J99">
+                                <rect key="frame" x="138" y="180" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUY-AW-2cA">
+                                <rect key="frame" x="143" y="358" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="IYK-d3-cPR" kind="unwind" unwindAction="backToTerminateTimer:" id="ghU-dK-t88"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1G-Rg-pEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IYK-d3-cPR" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="1201"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PAN-Nf-N9n">
+            <objects>
+                <viewController id="tH4-0I-slM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WuX-kr-Df4"/>
+                        <viewControllerLayoutGuide type="bottom" id="JTw-D4-u1J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bZj-S9-AWP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jh-Om-zBT">
+                                <rect key="frame" x="143" y="361" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="nhy-2g-4Z6" kind="unwind" unwindAction="backToTerminateTimer:" id="fkE-4d-Xja"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Succeed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crc-dG-DU0">
+                                <rect key="frame" x="127" y="178" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="si7-xZ-j5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nhy-2g-4Z6" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="1201"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YTb-0d-3zF"/>
+    </inferredMetricsTieBreakers>
+</document>

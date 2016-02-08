@@ -13,19 +13,38 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    var isLocked = false
+    var delegate: SyncTimerDelegate?
+    var count = 0
+    var lockTime = NSDate()
+    
+    
+    func setLock() {
+        self.isLocked = true
+        if let c = delegate?.getCurrentCount(){
+            count = c
+        }
+        lockTime = NSDate()
+        NSNotificationCenter.defaultCenter().postNotificationName("com.zonein.lockcomplete", object: self)
+    }
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         // add an observer to detect screen lock
-        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), nil, { (center, observer, name, object, userInfo) -> Void in
+        let observer = UnsafePointer<Void>(Unmanaged.passUnretained(self).toOpaque())
+        
+        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), observer, { (center, observer, name, object, userInfo) -> Void in
             NSLog(name as String)
             if (name as NSString).isEqualToString("com.apple.springboard.lockcomplete") {
-                print("screen locked")
-                // ToDo: set lock screen varible to identify the action of lock screen instead of background
+//                NSLog("Screen locked")
+                let mySelf = Unmanaged<AppDelegate>.fromOpaque(COpaquePointer(observer)).takeUnretainedValue()
+                mySelf.setLock()
             }
             }, "com.apple.springboard.lockcomplete", nil, CFNotificationSuspensionBehavior.DeliverImmediately)
+
         return true
     }
 
@@ -37,10 +56,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        
+        // This part is to check whether screen is locked or home button pressed
+        let state: UIApplicationState = UIApplication.sharedApplication().applicationState
+        if self.isLocked == true && state == UIApplicationState.Background{
+            // Screen locked
+            NSLog("Screen is locked")
+            self.isLocked = false
+            delegate?.setNewCount(self.count - Int(NSDate().timeIntervalSinceDate(self.lockTime)))
+            
+        }else if self.isLocked == false && state == UIApplicationState.Background{
+            
+            // Home button pressed
+            NSLog("Home button is pressed")
+            // Send notification about failed
+            NSNotificationCenter.defaultCenter().postNotificationName("com.zonein.homeButtonPressed", object: self)
+//            self.isFailed = true
+        }
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Select TimeVC-->
@@ -44,6 +44,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jp-7K-X4s">
+                                <rect key="frame" x="126" y="330" width="69" height="30"/>
+                                <state key="normal" title="to Tutorial"/>
+                                <connections>
+                                    <action selector="jumpToTutorialAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5V-en-rVB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -55,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="464"/>
+            <point key="canvasLocation" x="20" y="464"/>
         </scene>
         <!--Main TimerVC-->
         <scene sceneID="l0D-fs-oS4">
@@ -69,27 +76,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cf-V3-1QS">
-                                <rect key="frame" x="139" y="183" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRP-Hy-rLq">
                                 <rect key="frame" x="262" y="518" width="30" height="30"/>
                                 <state key="normal" title="quit"/>
                                 <connections>
-                                    <segue destination="crQ-Q7-u7X" kind="modal" id="YVf-q2-LT8"/>
+                                    <segue destination="crQ-Q7-u7X" kind="modal" identifier="toQuitSegue" id="YVf-q2-LT8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1A-Sk-3jC">
+                                <rect key="frame" x="111" y="104" width="36" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYt-bs-rSb">
+                                <rect key="frame" x="178" y="104" width="31" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="aZx-od-v7n"/>
                     <connections>
-                        <outlet property="timeDemoLabel" destination="8Cf-V3-1QS" id="Nsa-dW-4DM"/>
+                        <outlet property="minsLabel" destination="I1A-Sk-3jC" id="vjF-MW-v1m"/>
+                        <outlet property="secsLabel" destination="JYt-bs-rSb" id="5UI-Wa-VPT"/>
                         <segue destination="tH4-0I-slM" kind="modal" identifier="toSucceedSegue" id="8Gy-WO-Qza"/>
-                        <segue destination="YTf-uy-hXH" kind="modal" id="YTb-0d-3zF"/>
+                        <segue destination="YTf-uy-hXH" kind="modal" identifier="toFailedSegue" id="YTb-0d-3zF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wb-lt-rWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,7 +139,7 @@
                                 <rect key="frame" x="173" y="312" width="71" height="30"/>
                                 <state key="normal" title="I said quit!"/>
                                 <connections>
-                                    <segue destination="YTf-uy-hXH" kind="modal" id="Oef-VD-pfY"/>
+                                    <segue destination="YTf-uy-hXH" kind="modal" identifier="FinishQuitSegue" id="Oef-VD-pfY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,7 +149,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPy-QQ-dgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="52c-ms-BW7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="875" y="464"/>
+            <point key="canvasLocation" x="903" y="464"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CLN-L7-Uo1">
@@ -169,7 +183,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1G-Rg-pEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="IYK-d3-cPR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="875" y="1201"/>
+            <point key="canvasLocation" x="903" y="1201"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PAN-Nf-N9n">
@@ -207,6 +221,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YTb-0d-3zF"/>
+        <segue reference="Oef-VD-pfY"/>
     </inferredMetricsTieBreakers>
 </document>

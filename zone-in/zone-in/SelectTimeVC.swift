@@ -10,7 +10,7 @@ import UIKit
 
 class SelectTimeVC: UIViewController {
 
-    var time: Int = 30
+    var time: Int = 1
     
     @IBOutlet weak var moreTimeBtn: UIButton!
     @IBOutlet weak var lessTimeBtn: UIButton!
@@ -20,11 +20,23 @@ class SelectTimeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+
     }
     
     override func viewDidAppear(animated: Bool) {
-        // ToDo: first launch jump
+        // ToDo: first launch jump, jump to tutorial
     }
+    
+    @IBAction func jumpToTutorialAct(sender: AnyObject) {
+        let sb = UIStoryboard(name: "Tutorial", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+        
+        if let vc = vc {
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+    }
+    
     
     @IBAction func moreTimeAct(sender: AnyObject) {
         if time < 60 {
@@ -46,6 +58,7 @@ class SelectTimeVC: UIViewController {
     
     @IBAction func backToMain(segue: UIStoryboardSegue){
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.

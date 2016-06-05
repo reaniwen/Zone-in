@@ -25,13 +25,19 @@ class Store1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startCounting(counter)
+        startCounting(0)
         
         view.addSubview(babyFish.image)
         view.addSubview(adultFish.image)
         view.addSubview(sharkFish.image)
         
         loadImage()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        showOneFish(babyFish.image)
+        showOneFish(adultFish.image)
+        showOneFish(sharkFish.image)
     }
     
     func loadImage(){
@@ -49,9 +55,7 @@ class Store1ViewController: UIViewController {
     
     func updateTime(){
         if counter == 0{
-            showOneFish(babyFish.image)
-            showOneFish(adultFish.image)
-            showOneFish(sharkFish.image)
+
         }
         
         freshFishImage(counter)
@@ -109,8 +113,8 @@ class Store1ViewController: UIViewController {
         let randomYOffset = CGFloat( arc4random_uniform(150))
         
         let path = UIBezierPath()
-        path.moveToPoint(CGPoint(x: 0,y: 239 + randomYOffset))
-        path.addCurveToPoint(CGPoint(x: 317 + 107, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
+        path.moveToPoint(CGPoint(x: -50,y: 239 + randomYOffset))
+        path.addCurveToPoint(CGPoint(x: 317 + 157, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
         
         // create a new CAKeyframeAnimation that animates the objects position
         let anim = CAKeyframeAnimation(keyPath: "position")
@@ -144,6 +148,6 @@ class fishImage {
         self.image = image
         self.length = length
         self.height = height
-        image.frame = CGRectMake(0, yPosition, length, height)
+        image.frame = CGRectMake(-50, yPosition, length, height)
     }
 }

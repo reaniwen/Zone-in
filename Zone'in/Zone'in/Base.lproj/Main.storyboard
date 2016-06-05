@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j57-Cu-fD6">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -740,8 +740,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="5.Boooo" translatesAutoresizingMaskIntoConstraints="NO" id="U70-0B-hUa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.Boooo" translatesAutoresizingMaskIntoConstraints="NO" id="U70-0B-hUa">
                                 <rect key="frame" x="89" y="113" width="142" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U70-0B-hUa" secondAttribute="height" multiplier="142:23" id="e87-Jb-cD6"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.fishBone" translatesAutoresizingMaskIntoConstraints="NO" id="EDI-E4-4O0">
                                 <rect key="frame" x="75" y="182" width="208" height="163"/>
@@ -1136,24 +1139,6 @@
             </objects>
             <point key="canvasLocation" x="529" y="1590"/>
         </scene>
-        <!--Buy Two View Controller-->
-        <scene sceneID="VTa-kK-bAN">
-            <objects>
-                <viewController id="Gxe-eI-zUR" customClass="BuyTwoViewController" customModule="Zone_in" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Bda-Un-kbN"/>
-                        <viewControllerLayoutGuide type="bottom" id="0J9-gw-qmv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Lg-pj-s5F">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XU0-pe-agg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="967" y="1419"/>
-        </scene>
         <!--Confirm Purchase View Controller-->
         <scene sceneID="9ng-MI-WoU">
             <objects>
@@ -1497,8 +1482,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OHF-XC-8gY"/>
-        <segue reference="XkB-Bv-X11"/>
-        <segue reference="8Pe-uM-YG9"/>
+        <segue reference="kIO-uA-Taz"/>
         <segue reference="YHv-2w-sV2"/>
+        <segue reference="8Pe-uM-YG9"/>
     </inferredMetricsTieBreakers>
 </document>

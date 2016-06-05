@@ -28,7 +28,7 @@ class TutorialDemoVC: UIViewController {
     
     func startDemo(counter: Int) {
         if !self.timer.valid {
-            let aSelector: Selector = "runTimerDemo"
+            let aSelector: Selector = #selector(runTimerDemo)
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
         }
     }
@@ -42,7 +42,7 @@ class TutorialDemoVC: UIViewController {
             
         }
         
-        counter--
+        counter -= 1
     }
     
     func updateTimeLabels() {

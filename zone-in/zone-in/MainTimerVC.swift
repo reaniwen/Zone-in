@@ -10,10 +10,17 @@
 
 import UIKit
 
-class MainTimerVC: UIViewController, SyncTimerDelegate {
+class MainTimerVC: UIViewController {
+    
+    @IBOutlet weak var cloud: UIImageView!
+    @IBOutlet weak var tankImage: UIImageView!
+    @IBOutlet weak var seaweedImage: UIImageView!
+    @IBOutlet weak var waterImage: UIImageView!
+    
     
     var timer = NSTimer()
     var counter = 30 * 60
+    var estCounter: Int?
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -22,37 +29,50 @@ class MainTimerVC: UIViewController, SyncTimerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadImage()
 
         // Do any additional setup after loading the view.
+        estCounter = counter / 22
         startCounting(counter)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "homePressedAct", name: "com.zonein.homeButtonPressed", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(homePressedAct), name: "com.zonein.homeButtonPressed", object: nil)
         
         appDelegate.delegate = self
+    }
+    
+    func loadImage() {
+        cloud.image = UIImage(named: "2.cloud")
+        
+        tankImage.image = UIImage(named: "fishtank22")
+        waterImage.image = UIImage(named: "water22")
+        // Todo make seeweed image animate
+        seaweedImage.image = UIImage(named: "2.seaWeed")
+        
     }
 
     
     func startCounting(counter: Int) {
         if !self.timer.valid {
-            let aSelector: Selector = "updateTime"
+            let aSelector: Selector = #selector(updateTime)
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
         }
     }
     
     func updateTime() {
         updateTimeLabels()
+        updateTankImage()
         // Success
         if counter <= 0{
             // Todo: add prize
             timer.invalidate()
             self.performSegueWithIdentifier("toSucceedSegue", sender: self)
         }
-        
-        // Failed
+
         
         
         NSLog(String(self.counter))
-        self.counter--
+        self.counter -= 1
     }
     
     func updateTimeLabels(){
@@ -66,11 +86,22 @@ class MainTimerVC: UIViewController, SyncTimerDelegate {
         secsLabel.text = strSeconds
     }
     
+    func updateTankImage() {
+        if let estCounter = estCounter {
+            let num: Int = counter / estCounter
+            print(estCounter,num)
+            let currTankImage: UIImage = UIImage(named: "fishtank\(num)")!
+            let currWaterImage: UIImage = UIImage(named: "water\(num)")!
+            tankImage.image = currTankImage
+            waterImage.image = currWaterImage
+        }
+    }
+    
     func homePressedAct() {
         print("timer received that the home is pressed")
-        
-        // Todo change failed to jump to fail view controller
-        failed()
+
+        self.performSegueWithIdentifier("toFailedSegue", sender: self)
+//        failed()
     }
 
     
@@ -82,17 +113,9 @@ class MainTimerVC: UIViewController, SyncTimerDelegate {
         NSNotificationCenter.defaultCenter().removeObserver(self)
         
         // back to main menu
-        self.dismissViewControllerAnimated(false, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    func getCurrentCount() -> Int{
-        return self.counter
-    }
-    
-    func setNewCount(count: Int) {
-        print("change the count to \(count)")
-        self.counter = count
-    }
+
     
     
     // Back from hesitating
@@ -103,7 +126,6 @@ class MainTimerVC: UIViewController, SyncTimerDelegate {
     @IBAction func backToTerminateTimer(segue: UIStoryboardSegue) {
         failed()
     }
-    
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
@@ -126,8 +148,17 @@ class MainTimerVC: UIViewController, SyncTimerDelegate {
         // Pass the selected object to the new view controller.
     }
 */
+}
 
-
+extension MainTimerVC: SyncTimerDelegate {
+    func getCurrentCount() -> Int{
+        return self.counter
+    }
+    
+    func setNewCount(count: Int) {
+        print("change the count to \(count)")
+        self.counter = count
+    }
 }
 
 protocol SyncTimerDelegate{

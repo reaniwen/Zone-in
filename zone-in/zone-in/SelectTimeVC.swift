@@ -9,9 +9,12 @@
 import UIKit
 
 class SelectTimeVC: UIViewController {
-
-    var time: Int = 1
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    var time: Int = 30
+    
+    
+    @IBOutlet weak var cloudImage: UIImageView!
     @IBOutlet weak var moreTimeBtn: UIButton!
     @IBOutlet weak var lessTimeBtn: UIButton!
     
@@ -19,24 +22,52 @@ class SelectTimeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        loadImage()
 
     }
     
-    override func viewDidAppear(animated: Bool) {
-        // ToDo: first launch jump, jump to tutorial
+    func loadImage() {
+        cloudImage.image = UIImage(named: "1.setTimerCloud")
     }
     
+    override func viewDidAppear(animated: Bool) {
+        // first launch check, if first launch, jump to tutorial
+//        jumpToTutorial()
+    }
+    
+    // Todo: delete it after finish the tutorial views
     @IBAction func jumpToTutorialAct(sender: AnyObject) {
-        let sb = UIStoryboard(name: "Tutorial", bundle: nil)
-        let vc = sb.instantiateInitialViewController()
+        jumpToTutorial()
+    }
+    
+    func jumpToTutorial() {
+        let oldUser: Bool? = userDefaults.boolForKey("com.zonein.oldUser")
         
+        if (oldUser == nil || oldUser == false) {
+            let sb = UIStoryboard(name: "Tutorial", bundle: nil)
+            var vc: UIViewController?
+            if let _ = userDefaults.stringForKey("com.zonein.userName"){
+                vc = sb.instantiateViewControllerWithIdentifier("TutorialSetVC")
+            } else {
+                vc = sb.instantiateInitialViewController()
+            }
+            
+            if let vc = vc {
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+        }
+
+    }
+    
+    @IBAction func jumpToAquAct(sender: AnyObject) {
+        
+        let sb = UIStoryboard(name: "Aquarium", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
         if let vc = vc {
             self.presentViewController(vc, animated: true, completion: nil)
         }
     }
-    
     
     @IBAction func moreTimeAct(sender: AnyObject) {
         if time < 60 {

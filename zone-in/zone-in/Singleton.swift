@@ -12,10 +12,17 @@ class Singleton: NSObject {
     
     var isFailed: Bool = false
     
+    let dateFormat = NSDateFormatter()
+    
     class var sharedInstance: Singleton {
         struct Static {
             static let instance: Singleton = Singleton()
         }
         return Static.instance
+    }
+    
+    override init() {
+        super.init()
+        dateFormat.dateFormat = "yyyy-MM-dd"
     }
 }

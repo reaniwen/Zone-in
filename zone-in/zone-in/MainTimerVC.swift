@@ -23,6 +23,10 @@ class MainTimerVC: UIViewController {
     var estCounter: Int?
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let pref = NSUserDefaults.standardUserDefaults()
+    let singleton = Singleton.sharedInstance
+    
+    var thisTimeLength: Int = 0
     
     @IBOutlet weak var minsLabel: UILabel!
     @IBOutlet weak var secsLabel: UILabel!
@@ -34,11 +38,16 @@ class MainTimerVC: UIViewController {
 
         // Do any additional setup after loading the view.
         estCounter = counter / 22
+        if estCounter == 0 {
+            estCounter = 1
+        }
         startCounting(counter)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(homePressedAct), name: "com.zonein.homeButtonPressed", object: nil)
         
         appDelegate.delegate = self
+        
+        thisTimeLength = counter
     }
     
     func loadImage() {
@@ -64,12 +73,11 @@ class MainTimerVC: UIViewController {
         updateTankImage()
         // Success
         if counter <= 0{
-            // Todo: add prize
+            // Todo: update continus days and last used day
+            updateData()
             timer.invalidate()
             self.performSegueWithIdentifier("toSucceedSegue", sender: self)
         }
-
-        
         
         NSLog(String(self.counter))
         self.counter -= 1
@@ -109,13 +117,37 @@ class MainTimerVC: UIViewController {
         // stop the timer
         self.timer.invalidate()
         
-        // remove the observer
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-        
         // back to main menu
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
-
+    
+    func updateData() {
+        // check and update continues days
+        let yesterday = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: -1, toDate: NSDate(), options: NSCalendarOptions.init(rawValue: 0))
+        let yesterdayStr = singleton.dateFormat.stringFromDate(yesterday!)
+        let todayStr = singleton.dateFormat.stringFromDate(NSDate())
+        if let record = pref.stringForKey("com.zonein.lastUseDay") {
+            if record == yesterdayStr {
+                let continuesDays = pref.integerForKey("com.zonein.continusDays") + 1
+                pref.setInteger(continuesDays, forKey: "com.zonein.continusDays")
+                pref.setObject(todayStr, forKey: "com.zonein.lastUseDay")
+            } else if record == todayStr {
+                // do nothing
+            } else {
+                pref.setInteger(1, forKey: "com.zonein.continusDays")
+                pref.setObject(todayStr, forKey: "com.zonein.lastUseDay")
+            }
+        } else {
+            pref.setInteger(1, forKey: "com.zonein.continusDays")
+            pref.setObject(todayStr, forKey: "com.zonein.lastUseDay")
+        }
+        let totalLength = pref.integerForKey("com.zonein.totalLength") + thisTimeLength
+        pref.setInteger(totalLength, forKey: "com.zonein.totalLength")
+//        let continuesDay = String(pref.integerForKey("com.zonein.continusDays"))
+        // Update total times
+        let times = pref.integerForKey("com.zone.totalTimes") + 1
+        pref.setInteger(times, forKey: "com.zone.totalTimes")
+    }
     
     
     // Back from hesitating

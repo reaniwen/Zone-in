@@ -23,11 +23,7 @@ class SucceedVC: UIViewController {
         
         loadImage()
         
-        startCounting(counter)
-        
-        // Todo add data to userdefault
-        // update recent day of use
-        // update longest continues days
+//        startCounting(counter)
     }
     
     func loadImage() {

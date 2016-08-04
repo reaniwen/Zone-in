@@ -33,7 +33,7 @@ class SelectTimeVC: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         // first launch check, if first launch, jump to tutorial
-//        jumpToTutorial()
+        jumpToTutorial()
     }
     
     // Todo: delete it after finish the tutorial views
@@ -47,12 +47,13 @@ class SelectTimeVC: UIViewController {
         if (oldUser == nil || oldUser == false) {
             let sb = UIStoryboard(name: "Tutorial", bundle: nil)
             var vc: UIViewController?
-            if let _ = userDefaults.stringForKey("com.zonein.userName"){
-                vc = sb.instantiateViewControllerWithIdentifier("TutorialSetVC")
-            } else {
-                vc = sb.instantiateInitialViewController()
-            }
-            
+//            if let _ = userDefaults.stringForKey("com.zonein.userName"){
+//                vc = sb.instantiateViewControllerWithIdentifier("TutorialSetVC")
+//            } else {
+//                vc = sb.instantiateViewControllerWithIdentifier("TutorialNameVC")
+//            }
+            vc = sb.instantiateViewControllerWithIdentifier("TutorialNameVC")
+        
             if let vc = vc {
                 self.presentViewController(vc, animated: true, completion: nil)
             }
@@ -87,7 +88,7 @@ class SelectTimeVC: UIViewController {
         self.timeLabel.text = String(self.time)
     }
     
-    @IBAction func backToMain(segue: UIStoryboardSegue){
+    @IBAction func backToMain(segue: UIStoryboardSegue) {
     }
     
     
@@ -96,9 +97,13 @@ class SelectTimeVC: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "toMainTimerSegue" {
             if let destinationVC = segue.destinationViewController as? MainTimerVC {
-                destinationVC.counter = time * 60
+                destinationVC.counter = time * 60 // 5 //
             }
         }
+    }
+    
+    @IBAction func unwindToMain() {
+        
     }
 }
 

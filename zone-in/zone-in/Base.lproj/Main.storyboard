@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -38,7 +38,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ebb-gg-eIB" secondAttribute="height" multiplier="73:55" id="PfZ-lt-B3E"/>
                                 </constraints>
-                                <state key="normal" image="1.more.png"/>
+                                <state key="normal" image="1.more"/>
                                 <connections>
                                     <action selector="moreTimeAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Moj-p0-pyT"/>
                                 </connections>
@@ -48,7 +48,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ESm-TT-lXh" secondAttribute="height" multiplier="73:55" id="3e5-gZ-Pt5"/>
                                 </constraints>
-                                <state key="normal" image="1.less.png"/>
+                                <state key="normal" image="1.less"/>
                                 <connections>
                                     <action selector="lessTimeAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bDr-0Y-IVI"/>
                                 </connections>
@@ -58,7 +58,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lfy-1y-BgU" secondAttribute="height" multiplier="1:1" id="JLl-XP-ZcO"/>
                                 </constraints>
-                                <state key="normal" image="ok.png"/>
+                                <state key="normal" image="ok"/>
                                 <connections>
                                     <segue destination="EB6-WS-xI6" kind="modal" identifier="toMainTimerSegue" id="Gos-dN-4cN"/>
                                 </connections>
@@ -72,16 +72,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jp-7K-X4s">
-                                <rect key="frame" x="126" y="36" width="69" height="30"/>
-                                <state key="normal" title="to Tutorial"/>
-                                <connections>
-                                    <action selector="jumpToTutorialAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5V-en-rVB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04S-ld-T64">
-                                <rect key="frame" x="0.0" y="538" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04S-ld-T64">
+                                <rect key="frame" x="0.0" y="520" width="59" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="04S-ld-T64" secondAttribute="height" multiplier="59:48" id="lWW-u5-WsN"/>
+                                </constraints>
+                                <state key="normal" image="1.aquariumButton"/>
                                 <connections>
                                     <action selector="jumpToAquAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kyj-re-Tsv"/>
                                 </connections>
@@ -92,11 +88,13 @@
                             <constraint firstItem="ebb-gg-eIB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0qG-gR-fl0"/>
                             <constraint firstItem="ESm-TT-lXh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="389-Pm-ReH"/>
                             <constraint firstItem="ESm-TT-lXh" firstAttribute="top" secondItem="5Tj-H1-Wgb" secondAttribute="bottom" constant="-17" id="3x6-DA-29e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="04S-ld-T64" secondAttribute="bottom" id="4t0-MS-ytN"/>
                             <constraint firstItem="ESm-TT-lXh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="73:568" id="7MP-ju-tZS"/>
                             <constraint firstItem="5Tj-H1-Wgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A5M-Mn-v5Q"/>
                             <constraint firstItem="0Zm-JS-zwB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="110:568" id="E4h-uw-5rZ"/>
                             <constraint firstItem="0Zm-JS-zwB" firstAttribute="centerY" secondItem="5Tj-H1-Wgb" secondAttribute="centerY" constant="11" id="Fyc-O3-Aow"/>
                             <constraint firstItem="0Zm-JS-zwB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JAo-RW-0nQ"/>
+                            <constraint firstItem="04S-ld-T64" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="59:568" id="KTd-h6-ZZa"/>
                             <constraint firstItem="5Tj-H1-Wgb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="ShU-ht-Spq"/>
                             <constraint firstItem="ebb-gg-eIB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="73:568" id="W3M-Pc-4Be"/>
                             <constraint firstItem="lfy-1y-BgU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="35:284" id="WtS-g4-naw"/>
@@ -104,6 +102,7 @@
                             <constraint firstItem="ebb-gg-eIB" firstAttribute="top" secondItem="5Tj-H1-Wgb" secondAttribute="top" constant="-39" id="jmO-CP-BFI"/>
                             <constraint firstItem="5Tj-H1-Wgb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="36:71" id="koe-F5-XqD"/>
                             <constraint firstItem="lfy-1y-BgU" firstAttribute="top" secondItem="ESm-TT-lXh" secondAttribute="bottom" constant="66" id="vCi-x1-RbH"/>
+                            <constraint firstItem="04S-ld-T64" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vyW-Wk-jgP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -134,7 +133,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jRP-Hy-rLq" secondAttribute="height" multiplier="11:10" id="JDc-Ft-OzQ"/>
                                 </constraints>
-                                <state key="normal" title="quit" image="2.quit.png"/>
+                                <state key="normal" title="quit" image="2.quit"/>
                                 <connections>
                                     <segue destination="crQ-Q7-u7X" kind="modal" identifier="toQuitSegue" id="YVf-q2-LT8"/>
                                 </connections>
@@ -145,12 +144,6 @@
                                     <constraint firstAttribute="width" secondItem="BmT-2x-BvN" secondAttribute="height" multiplier="7:4" id="Gux-Tj-3mo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1A-Sk-3jC">
-                                <rect key="frame" x="121" y="163" width="33" height="36"/>
-                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYt-bs-rSb">
                                 <rect key="frame" x="167" y="163" width="33" height="36"/>
                                 <constraints>
@@ -175,12 +168,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQd-BO-oDS">
                                 <rect key="frame" x="60" y="288" width="200" height="170"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1A-Sk-3jC">
+                                <rect key="frame" x="121" y="163" width="33" height="36"/>
+                                <fontDescription key="fontDescription" name="Bauhaus93" family="Bauhaus 93" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JYt-bs-rSb" firstAttribute="centerY" secondItem="BmT-2x-BvN" secondAttribute="centerY" constant="16" id="0uk-ql-hzn"/>
                             <constraint firstItem="JYt-bs-rSb" firstAttribute="width" secondItem="BmT-2x-BvN" secondAttribute="height" multiplier="11:48" id="5fo-W0-P5D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jRP-Hy-rLq" secondAttribute="trailing" constant="-16" id="DLx-R2-zMy"/>
                             <constraint firstItem="EG4-OQ-KLa" firstAttribute="top" secondItem="BmT-2x-BvN" secondAttribute="bottom" constant="51" id="Duw-mJ-EPg"/>
                             <constraint firstItem="OQd-BO-oDS" firstAttribute="height" secondItem="EG4-OQ-KLa" secondAttribute="height" id="O7Y-61-9Mm"/>
                             <constraint firstItem="EG4-OQ-KLa" firstAttribute="width" secondItem="ves-mt-rjU" secondAttribute="height" multiplier="25:71" id="PIP-2J-cbD"/>
@@ -192,6 +190,7 @@
                             <constraint firstItem="jRP-Hy-rLq" firstAttribute="width" secondItem="ves-mt-rjU" secondAttribute="height" multiplier="33:284" id="ceB-RB-0mK"/>
                             <constraint firstItem="I1A-Sk-3jC" firstAttribute="width" secondItem="JYt-bs-rSb" secondAttribute="width" id="dG0-ea-Tpv"/>
                             <constraint firstItem="OQd-BO-oDS" firstAttribute="top" secondItem="EG4-OQ-KLa" secondAttribute="top" id="hD7-cl-bdg"/>
+                            <constraint firstAttribute="trailing" secondItem="jRP-Hy-rLq" secondAttribute="trailing" id="hLY-Na-gin"/>
                             <constraint firstItem="BmT-2x-BvN" firstAttribute="centerX" secondItem="I1A-Sk-3jC" secondAttribute="centerX" constant="23" id="i3d-6X-IvV"/>
                             <constraint firstItem="OQd-BO-oDS" firstAttribute="centerX" secondItem="ves-mt-rjU" secondAttribute="centerX" id="ilL-XC-c4y"/>
                             <constraint firstItem="fgv-la-Qvu" firstAttribute="centerX" secondItem="EG4-OQ-KLa" secondAttribute="centerX" constant="6" id="j0p-Hv-cjb"/>
@@ -236,28 +235,18 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mU4-fo-QAN" secondAttribute="height" multiplier="1:1" id="5zZ-7N-OVU"/>
                                 </constraints>
-                                <state key="normal" image="NO.png"/>
+                                <state key="normal" image="NO"/>
                                 <connections>
                                     <segue destination="52c-ms-BW7" kind="unwind" unwindAction="backToTimer:" id="LWZ-vm-Flv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zY0-Pu-Ugy">
-                                <rect key="frame" x="174" y="357" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="zY0-Pu-Ugy" secondAttribute="height" multiplier="1:1" id="5Sg-8n-UTG"/>
-                                </constraints>
-                                <state key="normal" image="quit.png"/>
-                                <connections>
-                                    <segue destination="YTf-uy-hXH" kind="modal" id="mxC-Ub-8nq"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quitCat.png" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-Wt-Gpg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quitCat" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-Wt-Gpg">
                                 <rect key="frame" x="259" y="326" width="61" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vdw-Wt-Gpg" secondAttribute="height" multiplier="61:134" id="0mF-7g-3fV"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quitFish.png" translatesAutoresizingMaskIntoConstraints="NO" id="QYv-Yf-Dg1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quitFish" translatesAutoresizingMaskIntoConstraints="NO" id="QYv-Yf-Dg1">
                                 <rect key="frame" x="0.0" y="346" width="54" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QYv-Yf-Dg1" secondAttribute="height" multiplier="27:46" id="Xtt-2G-xJQ"/>
@@ -269,11 +258,20 @@
                                 <color key="textColor" red="0.5450980392" green="0.3411764706" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zY0-Pu-Ugy">
+                                <rect key="frame" x="174" y="357" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zY0-Pu-Ugy" secondAttribute="height" multiplier="1:1" id="5Sg-8n-UTG"/>
+                                </constraints>
+                                <state key="normal" image="quit"/>
+                                <connections>
+                                    <segue destination="YTf-uy-hXH" kind="modal" id="mxC-Ub-8nq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mU4-fo-QAN" firstAttribute="centerX" secondItem="gUS-lf-5h2" secondAttribute="centerX" constant="-42" id="5Wz-ZK-acC"/>
-                            <constraint firstItem="QYv-Yf-Dg1" firstAttribute="leading" secondItem="gUS-lf-5h2" secondAttribute="leadingMargin" constant="-16" id="6zK-bu-3UL"/>
                             <constraint firstItem="mU4-fo-QAN" firstAttribute="centerY" secondItem="QYv-Yf-Dg1" secondAttribute="centerY" id="GPc-k2-wRA"/>
                             <constraint firstItem="zY0-Pu-Ugy" firstAttribute="width" secondItem="gUS-lf-5h2" secondAttribute="height" multiplier="70:568" id="K5Q-ES-J4Q"/>
                             <constraint firstItem="vdw-Wt-Gpg" firstAttribute="width" secondItem="gUS-lf-5h2" secondAttribute="height" multiplier="61:568" id="OSX-da-BE4"/>
@@ -283,9 +281,10 @@
                             <constraint firstItem="QYv-Yf-Dg1" firstAttribute="centerY" secondItem="vdw-Wt-Gpg" secondAttribute="centerY" id="eua-wb-axx"/>
                             <constraint firstItem="DJa-bg-a80" firstAttribute="centerX" secondItem="gUS-lf-5h2" secondAttribute="centerX" id="g8B-x6-dZu"/>
                             <constraint firstItem="zY0-Pu-Ugy" firstAttribute="centerY" secondItem="mU4-fo-QAN" secondAttribute="centerY" id="ju9-hS-tal"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vdw-Wt-Gpg" secondAttribute="trailing" constant="-16" id="lvD-LZ-kPt"/>
+                            <constraint firstItem="QYv-Yf-Dg1" firstAttribute="leading" secondItem="gUS-lf-5h2" secondAttribute="leading" id="lJR-py-ZHH"/>
                             <constraint firstItem="mU4-fo-QAN" firstAttribute="width" secondItem="gUS-lf-5h2" secondAttribute="height" multiplier="70:568" id="rfY-Sj-YAl"/>
                             <constraint firstItem="tdb-Dp-rck" firstAttribute="top" secondItem="vdw-Wt-Gpg" secondAttribute="bottom" constant="110" id="rnW-Q8-ou8"/>
+                            <constraint firstAttribute="trailing" secondItem="vdw-Wt-Gpg" secondAttribute="trailing" id="zKH-rk-uty"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -311,18 +310,18 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iUY-AW-2cA" secondAttribute="height" multiplier="1:1" id="hVG-Ym-kbk"/>
                                 </constraints>
-                                <state key="normal" image="ok.png"/>
+                                <state key="normal" image="ok"/>
                                 <connections>
                                     <segue destination="IYK-d3-cPR" kind="unwind" unwindAction="backToTerminateTimer:" id="ghU-dK-t88"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.dead seaweed.png" translatesAutoresizingMaskIntoConstraints="NO" id="wiI-fL-BHJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.dead seaweed" translatesAutoresizingMaskIntoConstraints="NO" id="wiI-fL-BHJ">
                                 <rect key="frame" x="56" y="182" width="208" height="163"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wiI-fL-BHJ" secondAttribute="height" multiplier="208:163" id="PAx-1t-5qP"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.Boooo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BbD-5b-ZTi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.Boooo" translatesAutoresizingMaskIntoConstraints="NO" id="BbD-5b-ZTi">
                                 <rect key="frame" x="89" y="113" width="142" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BbD-5b-ZTi" secondAttribute="height" multiplier="142:23" id="tD9-1X-cmd"/>
@@ -374,7 +373,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1jh-Om-zBT" secondAttribute="height" multiplier="1:1" id="6f9-hF-Glp"/>
                                 </constraints>
-                                <state key="normal" image="ok.png"/>
+                                <state key="normal" image="ok"/>
                                 <connections>
                                     <segue destination="nhy-2g-4Z6" kind="unwind" unwindAction="backToTerminateTimer:" id="fkE-4d-Xja"/>
                                 </connections>
@@ -406,18 +405,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.less.png" width="161" height="153"/>
-        <image name="1.more.png" width="161" height="153"/>
-        <image name="2.quit.png" width="182" height="173"/>
-        <image name="5.Boooo.png" width="304" height="52"/>
-        <image name="5.dead seaweed.png" width="480" height="395"/>
-        <image name="NO.png" width="144" height="144"/>
-        <image name="ok.png" width="128" height="128"/>
-        <image name="quit.png" width="144" height="144"/>
-        <image name="quitCat.png" width="110" height="294"/>
-        <image name="quitFish.png" width="101" height="182"/>
+        <image name="1.aquariumButton" width="111" height="90"/>
+        <image name="1.less" width="80" height="76"/>
+        <image name="1.more" width="80" height="76"/>
+        <image name="2.quit" width="91" height="86"/>
+        <image name="5.Boooo" width="152" height="26"/>
+        <image name="5.dead seaweed" width="240" height="197"/>
+        <image name="NO" width="72" height="72"/>
+        <image name="ok" width="64" height="64"/>
+        <image name="quit" width="72" height="72"/>
+        <image name="quitCat" width="55" height="147"/>
+        <image name="quitFish" width="50" height="91"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YTb-0d-3zF"/>
+        <segue reference="mxC-Ub-8nq"/>
     </inferredMetricsTieBreakers>
 </document>

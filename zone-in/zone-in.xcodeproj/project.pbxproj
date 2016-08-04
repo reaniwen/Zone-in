@@ -12,9 +12,9 @@
 		17053D7E1C630C4100C3B412 /* TutorialSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17053D7D1C630C4100C3B412 /* TutorialSetVC.swift */; };
 		17053D801C630C4F00C3B412 /* TutorialDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17053D7F1C630C4F00C3B412 /* TutorialDemoVC.swift */; };
 		17053D821C630C7300C3B412 /* TutorialLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17053D811C630C7300C3B412 /* TutorialLastVC.swift */; };
+		1734D6631D47E46B002466B4 /* WhateverItTakes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1734D6621D47E465002466B4 /* WhateverItTakes.ttf */; };
 		178245B31C76B78C0028197C /* ToolsSubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178245B21C76B78C0028197C /* ToolsSubVC.swift */; };
 		178245B51C76B8A50028197C /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178245B41C76B8A50028197C /* ContentVC.swift */; };
-		178245B71C76CC0F0028197C /* cleanAquarium.png in Resources */ = {isa = PBXBuildFile; fileRef = 178245B61C76CC0F0028197C /* cleanAquarium.png */; };
 		178B9CFF1C5F0DB60074A077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B9CFE1C5F0DB60074A077 /* AppDelegate.swift */; };
 		178B9D011C5F0DB60074A077 /* SelectTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B9D001C5F0DB60074A077 /* SelectTimeVC.swift */; };
 		178B9D041C5F0DB60074A077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178B9D021C5F0DB60074A077 /* Main.storyboard */; };
@@ -33,12 +33,6 @@
 		17FD28931C75184A00F6471C /* ToolsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD28921C75184A00F6471C /* ToolsVC.swift */; };
 		17FD28951C75185700F6471C /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD28941C75185700F6471C /* StoreVC.swift */; };
 		17FD28971C75186800F6471C /* ConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD28961C75186800F6471C /* ConfirmVC.swift */; };
-		17FD29581C75559900F6471C /* 1.aquariumButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29521C75559900F6471C /* 1.aquariumButton.png */; };
-		17FD29591C75559900F6471C /* 1.less.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29531C75559900F6471C /* 1.less.png */; };
-		17FD295A1C75559900F6471C /* 1.more.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29541C75559900F6471C /* 1.more.png */; };
-		17FD295B1C75559900F6471C /* 1.setTimerCloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29551C75559900F6471C /* 1.setTimerCloud.png */; };
-		17FD295C1C75559900F6471C /* 2.cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29561C75559900F6471C /* 2.cloud.png */; };
-		17FD295D1C75559900F6471C /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29571C75559900F6471C /* ok.png */; };
 		17FD29751C75572A00F6471C /* water0.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD295E1C75572A00F6471C /* water0.png */; };
 		17FD29761C75572A00F6471C /* water1.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD295F1C75572A00F6471C /* water1.png */; };
 		17FD29771C75572A00F6471C /* water2.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29601C75572A00F6471C /* water2.png */; };
@@ -62,43 +56,8 @@
 		17FD29891C75572A00F6471C /* water20.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29721C75572A00F6471C /* water20.png */; };
 		17FD298A1C75572A00F6471C /* water21.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29731C75572A00F6471C /* water21.png */; };
 		17FD298B1C75572A00F6471C /* water22.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29741C75572A00F6471C /* water22.png */; };
-		17FD29A31C75573500F6471C /* fishtank0.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD298C1C75573500F6471C /* fishtank0.png */; };
-		17FD29A41C75573500F6471C /* fishtank1.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD298D1C75573500F6471C /* fishtank1.png */; };
-		17FD29A51C75573500F6471C /* fishtank2.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD298E1C75573500F6471C /* fishtank2.png */; };
-		17FD29A61C75573500F6471C /* fishtank3.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD298F1C75573500F6471C /* fishtank3.png */; };
-		17FD29A71C75573500F6471C /* fishtank4.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29901C75573500F6471C /* fishtank4.png */; };
-		17FD29A81C75573500F6471C /* fishtank5.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29911C75573500F6471C /* fishtank5.png */; };
-		17FD29A91C75573500F6471C /* fishtank6.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29921C75573500F6471C /* fishtank6.png */; };
-		17FD29AA1C75573500F6471C /* fishtank7.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29931C75573500F6471C /* fishtank7.png */; };
-		17FD29AB1C75573500F6471C /* fishtank8.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29941C75573500F6471C /* fishtank8.png */; };
-		17FD29AC1C75573500F6471C /* fishtank9.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29951C75573500F6471C /* fishtank9.png */; };
-		17FD29AD1C75573500F6471C /* fishtank10.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29961C75573500F6471C /* fishtank10.png */; };
-		17FD29AE1C75573500F6471C /* fishtank11.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29971C75573500F6471C /* fishtank11.png */; };
-		17FD29AF1C75573500F6471C /* fishtank12.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29981C75573500F6471C /* fishtank12.png */; };
-		17FD29B01C75573500F6471C /* fishtank13.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29991C75573500F6471C /* fishtank13.png */; };
-		17FD29B11C75573500F6471C /* fishtank14.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD299A1C75573500F6471C /* fishtank14.png */; };
-		17FD29B21C75573500F6471C /* fishtank15.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD299B1C75573500F6471C /* fishtank15.png */; };
-		17FD29B31C75573500F6471C /* fishtank16.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD299C1C75573500F6471C /* fishtank16.png */; };
-		17FD29B41C75573500F6471C /* fishtank17.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD299D1C75573500F6471C /* fishtank17.png */; };
-		17FD29B51C75573500F6471C /* fishtank18.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD299E1C75573500F6471C /* fishtank18.png */; };
-		17FD29B61C75573500F6471C /* fishtank19.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD299F1C75573500F6471C /* fishtank19.png */; };
-		17FD29B71C75573500F6471C /* fishtank20.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29A01C75573500F6471C /* fishtank20.png */; };
-		17FD29B81C75573500F6471C /* fishtank21.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29A11C75573500F6471C /* fishtank21.png */; };
-		17FD29B91C75573500F6471C /* fishtank22.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29A21C75573500F6471C /* fishtank22.png */; };
-		17FD29BB1C7558A300F6471C /* 2.seaWeed.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29BA1C7558A300F6471C /* 2.seaWeed.png */; };
 		17FD29BD1C755AAC00F6471C /* SucceedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD29BC1C755AAC00F6471C /* SucceedVC.swift */; };
 		17FD29BF1C755ACE00F6471C /* FailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD29BE1C755ACE00F6471C /* FailedVC.swift */; };
-		17FD29C21C756CDE00F6471C /* quitCat.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29C01C756CDE00F6471C /* quitCat.png */; };
-		17FD29C31C756CDE00F6471C /* quitFish.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29C11C756CDE00F6471C /* quitFish.png */; };
-		17FD29C61C756DEE00F6471C /* NO.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29C41C756DEE00F6471C /* NO.png */; };
-		17FD29C71C756DEE00F6471C /* quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29C51C756DEE00F6471C /* quit.png */; };
-		17FD29C91C75713E00F6471C /* 4.background_win.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29C81C75713E00F6471C /* 4.background_win.png */; };
-		17FD29CB1C75721200F6471C /* 4.newItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29CA1C75721200F6471C /* 4.newItem.png */; };
-		17FD29CD1C7578F100F6471C /* 4.win.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29CC1C7578F100F6471C /* 4.win.png */; };
-		17FD29D01C757A9A00F6471C /* 5.Boooo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29CE1C757A9A00F6471C /* 5.Boooo.png */; };
-		17FD29D11C757A9A00F6471C /* 5.dead seaweed.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29CF1C757A9A00F6471C /* 5.dead seaweed.png */; };
-		17FD29D31C757C1800F6471C /* 2.quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29D21C757C1800F6471C /* 2.quit.png */; };
-		17FD29D51C757E3400F6471C /* storeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 17FD29D41C757E3400F6471C /* storeBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,9 +83,10 @@
 		17053D7D1C630C4100C3B412 /* TutorialSetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialSetVC.swift; sourceTree = "<group>"; };
 		17053D7F1C630C4F00C3B412 /* TutorialDemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialDemoVC.swift; sourceTree = "<group>"; };
 		17053D811C630C7300C3B412 /* TutorialLastVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialLastVC.swift; sourceTree = "<group>"; };
+		1734D6611D47E465002466B4 /* Bauhaus93.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bauhaus93.ttf; sourceTree = "<group>"; };
+		1734D6621D47E465002466B4 /* WhateverItTakes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WhateverItTakes.ttf; sourceTree = "<group>"; };
 		178245B21C76B78C0028197C /* ToolsSubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsSubVC.swift; sourceTree = "<group>"; };
 		178245B41C76B8A50028197C /* ContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
-		178245B61C76CC0F0028197C /* cleanAquarium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cleanAquarium.png; sourceTree = "<group>"; };
 		178B9CFB1C5F0DB60074A077 /* zone-in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zone-in.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		178B9CFE1C5F0DB60074A077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		178B9D001C5F0DB60074A077 /* SelectTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeVC.swift; sourceTree = "<group>"; };
@@ -151,12 +111,6 @@
 		17FD28921C75184A00F6471C /* ToolsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsVC.swift; sourceTree = "<group>"; };
 		17FD28941C75185700F6471C /* StoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		17FD28961C75186800F6471C /* ConfirmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmVC.swift; sourceTree = "<group>"; };
-		17FD29521C75559900F6471C /* 1.aquariumButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.aquariumButton.png; path = images/1.aquariumButton.png; sourceTree = "<group>"; };
-		17FD29531C75559900F6471C /* 1.less.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.less.png; path = images/1.less.png; sourceTree = "<group>"; };
-		17FD29541C75559900F6471C /* 1.more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.more.png; path = images/1.more.png; sourceTree = "<group>"; };
-		17FD29551C75559900F6471C /* 1.setTimerCloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.setTimerCloud.png; path = images/1.setTimerCloud.png; sourceTree = "<group>"; };
-		17FD29561C75559900F6471C /* 2.cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.cloud.png; path = images/2.cloud.png; sourceTree = "<group>"; };
-		17FD29571C75559900F6471C /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ok.png; path = images/ok.png; sourceTree = "<group>"; };
 		17FD295E1C75572A00F6471C /* water0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water0.png; path = "images/water&tank/water0.png"; sourceTree = "<group>"; };
 		17FD295F1C75572A00F6471C /* water1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water1.png; path = "images/water&tank/water1.png"; sourceTree = "<group>"; };
 		17FD29601C75572A00F6471C /* water2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water2.png; path = "images/water&tank/water2.png"; sourceTree = "<group>"; };
@@ -180,43 +134,8 @@
 		17FD29721C75572A00F6471C /* water20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water20.png; path = "images/water&tank/water20.png"; sourceTree = "<group>"; };
 		17FD29731C75572A00F6471C /* water21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water21.png; path = "images/water&tank/water21.png"; sourceTree = "<group>"; };
 		17FD29741C75572A00F6471C /* water22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = water22.png; path = "images/water&tank/water22.png"; sourceTree = "<group>"; };
-		17FD298C1C75573500F6471C /* fishtank0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank0.png; path = "images/water&tank/fishtank0.png"; sourceTree = "<group>"; };
-		17FD298D1C75573500F6471C /* fishtank1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank1.png; path = "images/water&tank/fishtank1.png"; sourceTree = "<group>"; };
-		17FD298E1C75573500F6471C /* fishtank2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank2.png; path = "images/water&tank/fishtank2.png"; sourceTree = "<group>"; };
-		17FD298F1C75573500F6471C /* fishtank3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank3.png; path = "images/water&tank/fishtank3.png"; sourceTree = "<group>"; };
-		17FD29901C75573500F6471C /* fishtank4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank4.png; path = "images/water&tank/fishtank4.png"; sourceTree = "<group>"; };
-		17FD29911C75573500F6471C /* fishtank5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank5.png; path = "images/water&tank/fishtank5.png"; sourceTree = "<group>"; };
-		17FD29921C75573500F6471C /* fishtank6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank6.png; path = "images/water&tank/fishtank6.png"; sourceTree = "<group>"; };
-		17FD29931C75573500F6471C /* fishtank7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank7.png; path = "images/water&tank/fishtank7.png"; sourceTree = "<group>"; };
-		17FD29941C75573500F6471C /* fishtank8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank8.png; path = "images/water&tank/fishtank8.png"; sourceTree = "<group>"; };
-		17FD29951C75573500F6471C /* fishtank9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank9.png; path = "images/water&tank/fishtank9.png"; sourceTree = "<group>"; };
-		17FD29961C75573500F6471C /* fishtank10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank10.png; path = "images/water&tank/fishtank10.png"; sourceTree = "<group>"; };
-		17FD29971C75573500F6471C /* fishtank11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank11.png; path = "images/water&tank/fishtank11.png"; sourceTree = "<group>"; };
-		17FD29981C75573500F6471C /* fishtank12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank12.png; path = "images/water&tank/fishtank12.png"; sourceTree = "<group>"; };
-		17FD29991C75573500F6471C /* fishtank13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank13.png; path = "images/water&tank/fishtank13.png"; sourceTree = "<group>"; };
-		17FD299A1C75573500F6471C /* fishtank14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank14.png; path = "images/water&tank/fishtank14.png"; sourceTree = "<group>"; };
-		17FD299B1C75573500F6471C /* fishtank15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank15.png; path = "images/water&tank/fishtank15.png"; sourceTree = "<group>"; };
-		17FD299C1C75573500F6471C /* fishtank16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank16.png; path = "images/water&tank/fishtank16.png"; sourceTree = "<group>"; };
-		17FD299D1C75573500F6471C /* fishtank17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank17.png; path = "images/water&tank/fishtank17.png"; sourceTree = "<group>"; };
-		17FD299E1C75573500F6471C /* fishtank18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank18.png; path = "images/water&tank/fishtank18.png"; sourceTree = "<group>"; };
-		17FD299F1C75573500F6471C /* fishtank19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank19.png; path = "images/water&tank/fishtank19.png"; sourceTree = "<group>"; };
-		17FD29A01C75573500F6471C /* fishtank20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank20.png; path = "images/water&tank/fishtank20.png"; sourceTree = "<group>"; };
-		17FD29A11C75573500F6471C /* fishtank21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank21.png; path = "images/water&tank/fishtank21.png"; sourceTree = "<group>"; };
-		17FD29A21C75573500F6471C /* fishtank22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fishtank22.png; path = "images/water&tank/fishtank22.png"; sourceTree = "<group>"; };
-		17FD29BA1C7558A300F6471C /* 2.seaWeed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.seaWeed.png; path = images/2.seaWeed.png; sourceTree = "<group>"; };
 		17FD29BC1C755AAC00F6471C /* SucceedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SucceedVC.swift; sourceTree = "<group>"; };
 		17FD29BE1C755ACE00F6471C /* FailedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailedVC.swift; sourceTree = "<group>"; };
-		17FD29C01C756CDE00F6471C /* quitCat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quitCat.png; path = images/quitCat.png; sourceTree = "<group>"; };
-		17FD29C11C756CDE00F6471C /* quitFish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quitFish.png; path = images/quitFish.png; sourceTree = "<group>"; };
-		17FD29C41C756DEE00F6471C /* NO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NO.png; path = images/NO.png; sourceTree = "<group>"; };
-		17FD29C51C756DEE00F6471C /* quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quit.png; path = images/quit.png; sourceTree = "<group>"; };
-		17FD29C81C75713E00F6471C /* 4.background_win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.background_win.png; path = images/4.background_win.png; sourceTree = "<group>"; };
-		17FD29CA1C75721200F6471C /* 4.newItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.newItem.png; path = images/4.newItem.png; sourceTree = "<group>"; };
-		17FD29CC1C7578F100F6471C /* 4.win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.win.png; path = images/4.win.png; sourceTree = "<group>"; };
-		17FD29CE1C757A9A00F6471C /* 5.Boooo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5.Boooo.png; path = images/5.Boooo.png; sourceTree = "<group>"; };
-		17FD29CF1C757A9A00F6471C /* 5.dead seaweed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5.dead seaweed.png"; path = "images/5.dead seaweed.png"; sourceTree = "<group>"; };
-		17FD29D21C757C1800F6471C /* 2.quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.quit.png; path = images/2.quit.png; sourceTree = "<group>"; };
-		17FD29D41C757E3400F6471C /* storeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = storeBackground.png; path = images/storeBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +221,8 @@
 				178B9D0A1C5F0DB70074A077 /* LaunchScreen.storyboard */,
 				178B9D0D1C5F0DB70074A077 /* Info.plist */,
 				178B9D051C5F0DB60074A077 /* zone_in.xcdatamodeld */,
+				1734D6611D47E465002466B4 /* Bauhaus93.ttf */,
+				1734D6621D47E465002466B4 /* WhateverItTakes.ttf */,
 			);
 			path = "zone-in";
 			sourceTree = "<group>";
@@ -327,27 +248,7 @@
 		17F7E8DE1C692BC0005DE1AB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				17FD28F51C7551EE00F6471C /* tankImages */,
 				17FD28C61C7550DD00F6471C /* waterImages */,
-				17FD29521C75559900F6471C /* 1.aquariumButton.png */,
-				17FD29531C75559900F6471C /* 1.less.png */,
-				17FD29541C75559900F6471C /* 1.more.png */,
-				17FD29551C75559900F6471C /* 1.setTimerCloud.png */,
-				17FD29561C75559900F6471C /* 2.cloud.png */,
-				17FD29BA1C7558A300F6471C /* 2.seaWeed.png */,
-				17FD29D21C757C1800F6471C /* 2.quit.png */,
-				17FD29C01C756CDE00F6471C /* quitCat.png */,
-				17FD29C11C756CDE00F6471C /* quitFish.png */,
-				17FD29C41C756DEE00F6471C /* NO.png */,
-				17FD29C51C756DEE00F6471C /* quit.png */,
-				17FD29C81C75713E00F6471C /* 4.background_win.png */,
-				17FD29CA1C75721200F6471C /* 4.newItem.png */,
-				17FD29CC1C7578F100F6471C /* 4.win.png */,
-				17FD29CE1C757A9A00F6471C /* 5.Boooo.png */,
-				17FD29CF1C757A9A00F6471C /* 5.dead seaweed.png */,
-				17FD29D41C757E3400F6471C /* storeBackground.png */,
-				17FD29571C75559900F6471C /* ok.png */,
-				178245B61C76CC0F0028197C /* cleanAquarium.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -404,36 +305,6 @@
 				17FD29741C75572A00F6471C /* water22.png */,
 			);
 			name = waterImages;
-			sourceTree = "<group>";
-		};
-		17FD28F51C7551EE00F6471C /* tankImages */ = {
-			isa = PBXGroup;
-			children = (
-				17FD298C1C75573500F6471C /* fishtank0.png */,
-				17FD298D1C75573500F6471C /* fishtank1.png */,
-				17FD298E1C75573500F6471C /* fishtank2.png */,
-				17FD298F1C75573500F6471C /* fishtank3.png */,
-				17FD29901C75573500F6471C /* fishtank4.png */,
-				17FD29911C75573500F6471C /* fishtank5.png */,
-				17FD29921C75573500F6471C /* fishtank6.png */,
-				17FD29931C75573500F6471C /* fishtank7.png */,
-				17FD29941C75573500F6471C /* fishtank8.png */,
-				17FD29951C75573500F6471C /* fishtank9.png */,
-				17FD29961C75573500F6471C /* fishtank10.png */,
-				17FD29971C75573500F6471C /* fishtank11.png */,
-				17FD29981C75573500F6471C /* fishtank12.png */,
-				17FD29991C75573500F6471C /* fishtank13.png */,
-				17FD299A1C75573500F6471C /* fishtank14.png */,
-				17FD299B1C75573500F6471C /* fishtank15.png */,
-				17FD299C1C75573500F6471C /* fishtank16.png */,
-				17FD299D1C75573500F6471C /* fishtank17.png */,
-				17FD299E1C75573500F6471C /* fishtank18.png */,
-				17FD299F1C75573500F6471C /* fishtank19.png */,
-				17FD29A01C75573500F6471C /* fishtank20.png */,
-				17FD29A11C75573500F6471C /* fishtank21.png */,
-				17FD29A21C75573500F6471C /* fishtank22.png */,
-			);
-			name = tankImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +375,7 @@
 				TargetAttributes = {
 					178B9CFA1C5F0DB60074A077 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = DE9LVH9PK3;
 					};
 					178B9D111C5F0DB70074A077 = {
 						CreatedOnToolsVersion = 7.2;
@@ -540,76 +412,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17FD29A51C75573500F6471C /* fishtank2.png in Resources */,
-				17FD29C21C756CDE00F6471C /* quitCat.png in Resources */,
-				17FD29C61C756DEE00F6471C /* NO.png in Resources */,
-				17FD29A31C75573500F6471C /* fishtank0.png in Resources */,
+				1734D6631D47E46B002466B4 /* WhateverItTakes.ttf in Resources */,
 				17F7E8E31C69A663005DE1AB /* Bauhaus93.ttf in Resources */,
-				17FD29D51C757E3400F6471C /* storeBackground.png in Resources */,
 				17FD297E1C75572A00F6471C /* water9.png in Resources */,
 				178B9D0C1C5F0DB70074A077 /* LaunchScreen.storyboard in Resources */,
 				17FD297D1C75572A00F6471C /* water8.png in Resources */,
-				17FD29591C75559900F6471C /* 1.less.png in Resources */,
 				17FD297C1C75572A00F6471C /* water7.png in Resources */,
 				17FD29781C75572A00F6471C /* water3.png in Resources */,
-				17FD29B01C75573500F6471C /* fishtank13.png in Resources */,
 				17FD288F1C7516A500F6471C /* Aquarium.storyboard in Resources */,
-				17FD295D1C75559900F6471C /* ok.png in Resources */,
-				17FD29B11C75573500F6471C /* fishtank14.png in Resources */,
 				17FD29821C75572A00F6471C /* water13.png in Resources */,
 				17FD298A1C75572A00F6471C /* water21.png in Resources */,
 				17FD29811C75572A00F6471C /* water12.png in Resources */,
-				178245B71C76CC0F0028197C /* cleanAquarium.png in Resources */,
-				17FD29B21C75573500F6471C /* fishtank15.png in Resources */,
-				17FD29BB1C7558A300F6471C /* 2.seaWeed.png in Resources */,
-				17FD29AD1C75573500F6471C /* fishtank10.png in Resources */,
 				17FD298B1C75572A00F6471C /* water22.png in Resources */,
-				17FD29A61C75573500F6471C /* fishtank3.png in Resources */,
 				17FD29881C75572A00F6471C /* water19.png in Resources */,
 				17FD29751C75572A00F6471C /* water0.png in Resources */,
 				178B9D091C5F0DB70074A077 /* Assets.xcassets in Resources */,
 				17FD29851C75572A00F6471C /* water16.png in Resources */,
-				17FD29AA1C75573500F6471C /* fishtank7.png in Resources */,
 				17FD29791C75572A00F6471C /* water4.png in Resources */,
-				17FD295B1C75559900F6471C /* 1.setTimerCloud.png in Resources */,
 				17FD29871C75572A00F6471C /* water18.png in Resources */,
-				17FD29AB1C75573500F6471C /* fishtank8.png in Resources */,
 				17FD29771C75572A00F6471C /* water2.png in Resources */,
-				17FD29A91C75573500F6471C /* fishtank6.png in Resources */,
-				17FD29CB1C75721200F6471C /* 4.newItem.png in Resources */,
-				17FD29AF1C75573500F6471C /* fishtank12.png in Resources */,
-				17FD29D11C757A9A00F6471C /* 5.dead seaweed.png in Resources */,
-				17FD29A41C75573500F6471C /* fishtank1.png in Resources */,
-				17FD29B91C75573500F6471C /* fishtank22.png in Resources */,
 				17FD297A1C75572A00F6471C /* water5.png in Resources */,
-				17FD29B51C75573500F6471C /* fishtank18.png in Resources */,
 				17053D791C630AD400C3B412 /* Tutorial.storyboard in Resources */,
 				17FD29861C75572A00F6471C /* water17.png in Resources */,
 				17FD29891C75572A00F6471C /* water20.png in Resources */,
 				17FD297B1C75572A00F6471C /* water6.png in Resources */,
-				17FD29AE1C75573500F6471C /* fishtank11.png in Resources */,
 				17FD29761C75572A00F6471C /* water1.png in Resources */,
-				17FD295A1C75559900F6471C /* 1.more.png in Resources */,
-				17FD29D31C757C1800F6471C /* 2.quit.png in Resources */,
 				17FD29801C75572A00F6471C /* water11.png in Resources */,
-				17FD29CD1C7578F100F6471C /* 4.win.png in Resources */,
-				17FD29B71C75573500F6471C /* fishtank20.png in Resources */,
-				17FD29D01C757A9A00F6471C /* 5.Boooo.png in Resources */,
-				17FD29AC1C75573500F6471C /* fishtank9.png in Resources */,
 				178B9D041C5F0DB60074A077 /* Main.storyboard in Resources */,
-				17FD29B31C75573500F6471C /* fishtank16.png in Resources */,
 				17FD297F1C75572A00F6471C /* water10.png in Resources */,
-				17FD29B61C75573500F6471C /* fishtank19.png in Resources */,
-				17FD29C31C756CDE00F6471C /* quitFish.png in Resources */,
-				17FD29C91C75713E00F6471C /* 4.background_win.png in Resources */,
-				17FD29581C75559900F6471C /* 1.aquariumButton.png in Resources */,
-				17FD29A81C75573500F6471C /* fishtank5.png in Resources */,
-				17FD29C71C756DEE00F6471C /* quit.png in Resources */,
-				17FD29B81C75573500F6471C /* fishtank21.png in Resources */,
-				17FD29A71C75573500F6471C /* fishtank4.png in Resources */,
 				17FD29831C75572A00F6471C /* water14.png in Resources */,
-				17FD29B41C75573500F6471C /* fishtank17.png in Resources */,
-				17FD295C1C75559900F6471C /* 2.cloud.png in Resources */,
 				17FD29841C75572A00F6471C /* water15.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -782,7 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -793,10 +624,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "zone-in/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zonein.zone-in";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -804,10 +639,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "zone-in/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zonein.zone-in";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

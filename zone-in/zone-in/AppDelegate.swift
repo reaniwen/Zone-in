@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+let BLUE_COLOR = UIColor(red: 199/255, green: 238/255, blue: 238/255, alpha: 1)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -44,6 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 mySelf.setLock()
             }
             }, "com.apple.springboard.lockcomplete", nil, CFNotificationSuspensionBehavior.DeliverImmediately)
+        
+        initUserDefault()
 
         return true
     }
@@ -76,7 +80,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSLog("Home button is pressed")
             // Send notification about failed
             NSNotificationCenter.defaultCenter().postNotificationName("com.zonein.homeButtonPressed", object: self)
-//            self.isFailed = true
         }
     }
 
@@ -151,6 +154,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 abort()
             }
         }
+    }
+    
+    func initUserDefault() {
+        if NSUserDefaults.standardUserDefaults().boolForKey("com.zonein.inited") == false {
+            let pref = NSUserDefaults.standardUserDefaults()
+            pref.setBool(true, forKey: "com.zonein.inited")
+            pref.setInteger(0, forKey: "com.zonein.continusDays")
+            pref.setObject("", forKey: "com.zonein.lastUseDay")
+            pref.setInteger(0, forKey: "com.zonein.totalLength")
+            pref.setInteger(0, forKey: "com.zonein.totalTimes")
+        }
+        print("inited:", NSUserDefaults.standardUserDefaults().boolForKey("com.zonein.inited"))
     }
 
 }

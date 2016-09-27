@@ -12,7 +12,7 @@ class Singleton: NSObject {
     
     var isFailed: Bool = false
     
-    let dateFormat = NSDateFormatter()
+    let dateFormat = DateFormatter()
     
     class var sharedInstance: Singleton {
         struct Static {

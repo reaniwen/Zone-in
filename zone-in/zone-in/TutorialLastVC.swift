@@ -10,7 +10,7 @@ import UIKit
 
 class TutorialLastVC: UIViewController {
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let userDefaults = UserDefaults.standard
 
     
     
@@ -29,48 +29,48 @@ class TutorialLastVC: UIViewController {
     
     let maskView = UIImageView()
     
-    var timer = NSTimer()
+    var timer = Timer()
     var counter = 0
     
     let singleton = Singleton.sharedInstance
-    let pref = NSUserDefaults.standardUserDefaults()
+    let pref = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let name = userDefaults.stringForKey("com.zonein.userName") {
+        if let name = userDefaults.string(forKey: "com.zonein.userName") {
             gjLabel.text = "Good job, \(name)!"
         } else {
             gjLabel.text = "Good Job!"
         }
         
         maskView.frame = self.view.frame
-        maskView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.4)
+        maskView.backgroundColor = UIColor.white.withAlphaComponent(0.4)
         
         infobackGroundImage.layer.cornerRadius = 20
         
         loadImage()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         showOneFish(babyFish)
         showOneFish(adultFish)
         showOneFish(sharkFish)
     }
     
-    func showOneFish(fishImage: UIImageView){
+    func showOneFish(_ fishImage: UIImageView){
         // randomly create a value between 0.0 and 150.0
         let randomYOffset = CGFloat( arc4random_uniform(150))
         
         let path = UIBezierPath()
-        path.moveToPoint(CGPoint(x: -50,y: 239 + randomYOffset))
-        path.addCurveToPoint(CGPoint(x: 317 + 157, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
+        path.move(to: CGPoint(x: -50,y: 239 + randomYOffset))
+        path.addCurve(to: CGPoint(x: 317 + 157, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
         
         // create a new CAKeyframeAnimation that animates the objects position
         let anim = CAKeyframeAnimation(keyPath: "position")
         
         // set the animations path to our bezier curve
-        anim.path = path.CGPath
+        anim.path = path.cgPath
         
         // set some more parameters for the animation
         // this rotation mode means that our object will rotate so that it's parallel to whatever point it is currently on the curve
@@ -80,7 +80,7 @@ class TutorialLastVC: UIViewController {
         anim.timeOffset = Double(arc4random_uniform(290))
         
         // we add the animation to the squares 'layer' property
-        fishImage.layer.addAnimation(anim, forKey: "animate position along path")
+        fishImage.layer.add(anim, forKey: "animate position along path")
     }
     
     func loadImage() {
@@ -93,16 +93,16 @@ class TutorialLastVC: UIViewController {
         view.addSubview(adultFish)
         view.addSubview(sharkFish)
         view.addSubview(maskView)
-        view.bringSubviewToFront(infobackGroundImage)
-        view.bringSubviewToFront(gjLabel)
-        view.bringSubviewToFront(kLabel)
-        view.bringSubviewToFront(aLabel)
-        view.bringSubviewToFront(okBtn)
+        view.bringSubview(toFront: infobackGroundImage)
+        view.bringSubview(toFront: gjLabel)
+        view.bringSubview(toFront: kLabel)
+        view.bringSubview(toFront: aLabel)
+        view.bringSubview(toFront: okBtn)
     }
 
-    @IBAction func finishAct(sender: AnyObject) {
+    @IBAction func finishAct(_ sender: AnyObject) {
         print("here")
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "com.zonein.oldUser")
+        UserDefaults.standard.set(true, forKey: "com.zonein.oldUser")
     }
     
     

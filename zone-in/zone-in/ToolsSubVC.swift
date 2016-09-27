@@ -7,18 +7,38 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l >= r
+  default:
+    return !(lhs < rhs)
+  }
+}
+
 
 class ToolsSubVC: UIViewController, UIPageViewControllerDataSource {
     
 //    var pageVC = UIPageViewController()
-    var pageVC = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+    var pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     var buttonTitles = ["1", "2", "3", "4", "5", "6", "7"]
     var indexes: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor.clear
         
 //        self.pageVC = self.storyboard?.instantiateViewControllerWithIdentifier("StorePageVC") as! UIPageViewController
         indexes = ((buttonTitles.count + 3) / 4)
@@ -27,21 +47,21 @@ class ToolsSubVC: UIViewController, UIPageViewControllerDataSource {
         let startVC = self.viewControllerAtIndex(0)// as StoreContentViewController
         let viewControllers = NSArray(object: startVC)
         
-        self.pageVC.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+        self.pageVC.setViewControllers(viewControllers as? [UIViewController], direction: .forward, animated: true, completion: nil)
         
-        self.pageVC.view.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.size.height)
+        self.pageVC.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.size.height)
         
         self.addChildViewController(self.pageVC)
         self.view.addSubview(self.pageVC.view)
-        self.pageVC.didMoveToParentViewController(self)
+        self.pageVC.didMove(toParentViewController: self)
     }
     
-    func viewControllerAtIndex(index: Int) -> ContentVC {
+    func viewControllerAtIndex(_ index: Int) -> ContentVC {
         if ((self.buttonTitles.count == 0) || (index >= indexes)) {
             return ContentVC()
         }
         
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("StoreContentVC") as! ContentVC
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "StoreContentVC") as! ContentVC
         
         if index >= 0 && index < (self.indexes! - 1) {
             vc.buttonTextArray = Array(buttonTitles[(index*4)...((index + 1)*4) - 1])
@@ -57,7 +77,7 @@ class ToolsSubVC: UIViewController, UIPageViewControllerDataSource {
         
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let vc = viewController as! ContentVC
         var index = vc.pageIndex as Int
         
@@ -69,7 +89,7 @@ class ToolsSubVC: UIViewController, UIPageViewControllerDataSource {
         return self.viewControllerAtIndex(index)
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let vc = viewController as! ContentVC
         var index = vc.pageIndex as Int
         
@@ -84,11 +104,11 @@ class ToolsSubVC: UIViewController, UIPageViewControllerDataSource {
         return self.viewControllerAtIndex(index)
     }
     
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
     }
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
         print(self.buttonTitles.count / 4)
         return self.indexes!
     }

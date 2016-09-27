@@ -10,7 +10,7 @@ import UIKit
 
 class TutorialDemoVC: UIViewController {
 
-    var timer = NSTimer()
+    var timer = Timer()
     var counter = 5
     
     @IBOutlet weak var secsLabel: UILabel!
@@ -26,10 +26,10 @@ class TutorialDemoVC: UIViewController {
     }
     
     
-    func startDemo(counter: Int) {
-        if !self.timer.valid {
+    func startDemo(_ counter: Int) {
+        if !self.timer.isValid {
             let aSelector: Selector = #selector(runTimerDemo)
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: aSelector, userInfo: nil, repeats: true)
         }
     }
     
@@ -38,7 +38,7 @@ class TutorialDemoVC: UIViewController {
         if counter <= 0{
             timer.invalidate()
             // Todo: add first fish and Jump to next viewcontroller
-            self.performSegueWithIdentifier("ToFinishDemoSegue", sender: self)
+            self.performSegue(withIdentifier: "ToFinishDemoSegue", sender: self)
             
         }
         

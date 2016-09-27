@@ -18,12 +18,12 @@ class MainTimerVC: UIViewController {
     @IBOutlet weak var waterImage: UIImageView!
     
     
-    var timer = NSTimer()
+    var timer = Timer()
     var counter = 30 * 60
     var estCounter: Int?
     
-    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    let pref = NSUserDefaults.standardUserDefaults()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let pref = UserDefaults.standard
     let singleton = Singleton.sharedInstance
     
     var thisTimeLength: Int = 0
@@ -43,7 +43,7 @@ class MainTimerVC: UIViewController {
         }
         startCounting(counter)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(homePressedAct), name: "com.zonein.homeButtonPressed", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(homePressedAct), name: NSNotification.Name(rawValue: "com.zonein.homeButtonPressed"), object: nil)
         
         appDelegate.delegate = self
         
@@ -61,10 +61,10 @@ class MainTimerVC: UIViewController {
     }
 
     
-    func startCounting(counter: Int) {
-        if !self.timer.valid {
+    func startCounting(_ counter: Int) {
+        if !self.timer.isValid {
             let aSelector: Selector = #selector(updateTime)
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: aSelector, userInfo: nil, repeats: true)
         }
     }
     
@@ -76,7 +76,7 @@ class MainTimerVC: UIViewController {
             // Todo: update continus days and last used day
             updateData()
             timer.invalidate()
-            self.performSegueWithIdentifier("toSucceedSegue", sender: self)
+            self.performSegue(withIdentifier: "toSucceedSegue", sender: self)
         }
         
         NSLog(String(self.counter))
@@ -108,7 +108,7 @@ class MainTimerVC: UIViewController {
     func homePressedAct() {
         print("timer received that the home is pressed")
 
-        self.performSegueWithIdentifier("toFailedSegue", sender: self)
+        self.performSegue(withIdentifier: "toFailedSegue", sender: self)
 //        failed()
     }
 
@@ -118,49 +118,49 @@ class MainTimerVC: UIViewController {
         self.timer.invalidate()
         
         // back to main menu
-        self.dismissViewControllerAnimated(false, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     func updateData() {
         // check and update continues days
-        let yesterday = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: -1, toDate: NSDate(), options: NSCalendarOptions.init(rawValue: 0))
-        let yesterdayStr = singleton.dateFormat.stringFromDate(yesterday!)
-        let todayStr = singleton.dateFormat.stringFromDate(NSDate())
-        if let record = pref.stringForKey("com.zonein.lastUseDay") {
+        let yesterday = (Calendar.current as NSCalendar).date(byAdding: NSCalendar.Unit.day, value: -1, to: Date(), options: NSCalendar.Options.init(rawValue: 0))
+        let yesterdayStr = singleton.dateFormat.string(from: yesterday!)
+        let todayStr = singleton.dateFormat.string(from: Date())
+        if let record = pref.string(forKey: "com.zonein.lastUseDay") {
             if record == yesterdayStr {
-                let continuesDays = pref.integerForKey("com.zonein.continusDays") + 1
-                pref.setInteger(continuesDays, forKey: "com.zonein.continusDays")
-                pref.setObject(todayStr, forKey: "com.zonein.lastUseDay")
+                let continuesDays = pref.integer(forKey: "com.zonein.continusDays") + 1
+                pref.set(continuesDays, forKey: "com.zonein.continusDays")
+                pref.set(todayStr, forKey: "com.zonein.lastUseDay")
             } else if record == todayStr {
                 // do nothing
             } else {
-                pref.setInteger(1, forKey: "com.zonein.continusDays")
-                pref.setObject(todayStr, forKey: "com.zonein.lastUseDay")
+                pref.set(1, forKey: "com.zonein.continusDays")
+                pref.set(todayStr, forKey: "com.zonein.lastUseDay")
             }
         } else {
-            pref.setInteger(1, forKey: "com.zonein.continusDays")
-            pref.setObject(todayStr, forKey: "com.zonein.lastUseDay")
+            pref.set(1, forKey: "com.zonein.continusDays")
+            pref.set(todayStr, forKey: "com.zonein.lastUseDay")
         }
-        let totalLength = pref.integerForKey("com.zonein.totalLength") + thisTimeLength
-        pref.setInteger(totalLength, forKey: "com.zonein.totalLength")
+        let totalLength = pref.integer(forKey: "com.zonein.totalLength") + thisTimeLength
+        pref.set(totalLength, forKey: "com.zonein.totalLength")
 //        let continuesDay = String(pref.integerForKey("com.zonein.continusDays"))
         // Update total times
-        let times = pref.integerForKey("com.zone.totalTimes") + 1
-        pref.setInteger(times, forKey: "com.zone.totalTimes")
+        let times = pref.integer(forKey: "com.zone.totalTimes") + 1
+        pref.set(times, forKey: "com.zone.totalTimes")
     }
     
     
     // Back from hesitating
-    @IBAction func backToTimer(segue:UIStoryboardSegue){
+    @IBAction func backToTimer(_ segue:UIStoryboardSegue){
     }
     
     // Use unwind segue to terminate timer and unwind back to selectTimerVC
-    @IBAction func backToTerminateTimer(segue: UIStoryboardSegue) {
+    @IBAction func backToTerminateTimer(_ segue: UIStoryboardSegue) {
         failed()
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
     
@@ -187,7 +187,7 @@ extension MainTimerVC: SyncTimerDelegate {
         return self.counter
     }
     
-    func setNewCount(count: Int) {
+    func setNewCount(_ count: Int) {
         print("change the count to \(count)")
         self.counter = count
     }
@@ -195,5 +195,5 @@ extension MainTimerVC: SyncTimerDelegate {
 
 protocol SyncTimerDelegate{
     func getCurrentCount() -> Int
-    func setNewCount(count: Int)
+    func setNewCount(_ count: Int)
 }

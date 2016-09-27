@@ -15,7 +15,7 @@ class SucceedVC: UIViewController {
     
     var secondImage:UIImage = UIImage(named: "4.newItem")!
     
-    var timer = NSTimer()
+    var timer = Timer()
     var counter: Int = 1
     
     override func viewDidLoad() {
@@ -31,17 +31,17 @@ class SucceedVC: UIViewController {
         winImage.image = UIImage(named: "4.win")
     }
 
-    func startCounting(counter: Int){
-        if !timer.valid{
+    func startCounting(_ counter: Int){
+        if !timer.isValid{
             let aSelector: Selector = #selector(updateTime)
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: aSelector, userInfo: nil, repeats: true)
         }
     }
     
     func updateTime(){
         if counter == 0{
-            UIView.transitionWithView(winImage, duration: 2, options: UIViewAnimationOptions.TransitionFlipFromLeft, animations: {
+            UIView.transition(with: winImage, duration: 2, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: {
                 self.winImage.image = self.secondImage
                 }, completion: nil)
             timer.invalidate()

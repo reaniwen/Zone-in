@@ -10,7 +10,7 @@ import UIKit
 
 class TutorialNameVC: UIViewController {
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let userDefaults = UserDefaults.standard
     
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var okBtn: UIButton!
@@ -25,7 +25,7 @@ class TutorialNameVC: UIViewController {
         view.addGestureRecognizer(tap)
     }
 
-    @IBAction func setNameAct(sender: UIButton) {
+    @IBAction func setNameAct(_ sender: UIButton) {
         
         // Judge if the name is null
         if nameText.text == "" {
@@ -36,7 +36,7 @@ class TutorialNameVC: UIViewController {
             okBtn.shake()
         } else {
             userDefaults.setValue(nameText.text, forKey: "com.zonein.userName")
-            self.performSegueWithIdentifier("setNameSegue", sender: sender)
+            self.performSegue(withIdentifier: "setNameSegue", sender: sender)
         }
     }
     
@@ -62,21 +62,21 @@ class TutorialNameVC: UIViewController {
 }
 
 extension TutorialNameVC: UITextFieldDelegate {
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         textField.layer.cornerRadius = 5
         textField.layer.masksToBounds = true
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = BLUE_COLOR.CGColor
+        textField.layer.borderColor = BLUE_COLOR.cgColor
         return true
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         // pretty lazy way to make it invisiable
         textField.layer.borderWidth = 0
     }
     
     // called when 'return' key pressed. return NO to ignore.
-    func textFieldShouldReturn(textField: UITextField) -> Bool
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         return true;
     }
@@ -88,7 +88,7 @@ extension UIView {
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = 0.5
         animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
-        layer.addAnimation(animation, forKey: "shake")
+        layer.add(animation, forKey: "shake")
     }
     
     // another way to achieve animations
@@ -105,13 +105,13 @@ extension UIView {
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = 6
         animation.values = [-10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, 0]
-        layer.addAnimation(animation, forKey: "move")
+        layer.add(animation, forKey: "move")
     }
     func moveRightLeft() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = 6
         animation.values = [10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 0]
-        layer.addAnimation(animation, forKey: "move")
+        layer.add(animation, forKey: "move")
     }
 }

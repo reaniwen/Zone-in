@@ -10,7 +10,7 @@ import UIKit
 
 class SelectTimeVC: UIViewController {
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let userDefaults = UserDefaults.standard
     var time: Int = 30
     
     
@@ -31,18 +31,18 @@ class SelectTimeVC: UIViewController {
         cloudImage.image = UIImage(named: "1.setTimerCloud")
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         // first launch check, if first launch, jump to tutorial
         jumpToTutorial()
     }
     
     // Todo: delete it after finish the tutorial views
-    @IBAction func jumpToTutorialAct(sender: AnyObject) {
+    @IBAction func jumpToTutorialAct(_ sender: AnyObject) {
         jumpToTutorial()
     }
     
     func jumpToTutorial() {
-        let oldUser: Bool? = userDefaults.boolForKey("com.zonein.oldUser")
+        let oldUser: Bool? = userDefaults.bool(forKey: "com.zonein.oldUser")
         
         if (oldUser == nil || oldUser == false) {
             let sb = UIStoryboard(name: "Tutorial", bundle: nil)
@@ -52,32 +52,32 @@ class SelectTimeVC: UIViewController {
 //            } else {
 //                vc = sb.instantiateViewControllerWithIdentifier("TutorialNameVC")
 //            }
-            vc = sb.instantiateViewControllerWithIdentifier("TutorialNameVC")
+            vc = sb.instantiateViewController(withIdentifier: "TutorialNameVC")
         
             if let vc = vc {
-                self.presentViewController(vc, animated: true, completion: nil)
+                self.present(vc, animated: true, completion: nil)
             }
         }
 
     }
     
-    @IBAction func jumpToAquAct(sender: AnyObject) {
+    @IBAction func jumpToAquAct(_ sender: AnyObject) {
         
         let sb = UIStoryboard(name: "Aquarium", bundle: nil)
         let vc = sb.instantiateInitialViewController()
         if let vc = vc {
-            self.presentViewController(vc, animated: true, completion: nil)
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
-    @IBAction func moreTimeAct(sender: AnyObject) {
+    @IBAction func moreTimeAct(_ sender: AnyObject) {
         if time < 60 {
             time += 10
             updateTime()
         }
     }
     
-    @IBAction func lessTimeAct(sender: AnyObject) {
+    @IBAction func lessTimeAct(_ sender: AnyObject) {
         if time > 10 {
             time -= 10
             updateTime()
@@ -88,15 +88,15 @@ class SelectTimeVC: UIViewController {
         self.timeLabel.text = String(self.time)
     }
     
-    @IBAction func backToMain(segue: UIStoryboardSegue) {
+    @IBAction func backToMain(_ segue: UIStoryboardSegue) {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "toMainTimerSegue" {
-            if let destinationVC = segue.destinationViewController as? MainTimerVC {
+            if let destinationVC = segue.destination as? MainTimerVC {
                 destinationVC.counter = time * 60 // 5 //
             }
         }

@@ -19,7 +19,7 @@ class TutorialSetVC: UIViewController {
     
     var time: Int = 30
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let userDefaults = UserDefaults.standard
 
     @IBOutlet weak var hiLabel: UILabel!
     
@@ -27,7 +27,7 @@ class TutorialSetVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let name = userDefaults.stringForKey("com.zonein.userName") {
+        if let name = userDefaults.string(forKey: "com.zonein.userName") {
             hiLabel.text = "Hi, \(name) !"
         }else {
             hiLabel.text = "Hi!"
@@ -36,7 +36,7 @@ class TutorialSetVC: UIViewController {
         cloudImage.image = UIImage(named: "1.setTimerCloud")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        hiLabel.moveLeftRight()
         moreArrawLabel.moveLeftRight()
@@ -44,14 +44,14 @@ class TutorialSetVC: UIViewController {
         goalArrawLabel.moveRightLeft()
     }
     
-    @IBAction func moreTimeAct(sender: AnyObject) {
+    @IBAction func moreTimeAct(_ sender: AnyObject) {
         if time < 60 {
             time += 10
             updateTime()
         }
     }
     
-    @IBAction func lessTimeAct(sender: AnyObject) {
+    @IBAction func lessTimeAct(_ sender: AnyObject) {
         if time > 10 {
             time -= 10
             updateTime()

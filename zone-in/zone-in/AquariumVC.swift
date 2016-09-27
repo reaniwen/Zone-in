@@ -30,28 +30,28 @@ class AquariumVC: UIViewController {
     
     let maskView = UIImageView()
     
-    var timer = NSTimer()
+    var timer = Timer()
     var counter = 0
     
     let singleton = Singleton.sharedInstance
-    let pref = NSUserDefaults.standardUserDefaults()
+    let pref = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         maskView.frame = self.view.frame
-        maskView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.4)
+        maskView.backgroundColor = UIColor.white.withAlphaComponent(0.4)
         
         infobackGroundImage.layer.cornerRadius = 20
         
 //        startCounting(0)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(viewWillAppear), name: "com.zonein.lockcomplete", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(viewWillAppear), name: "com.zonein.homeButtonPressed", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(viewWillAppear), name: NSNotification.Name(rawValue: "com.zonein.lockcomplete"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(viewWillAppear), name: NSNotification.Name(rawValue: "com.zonein.homeButtonPressed"), object: nil)
 
         loadImage()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         showOneFish(babyFish)
@@ -66,22 +66,22 @@ class AquariumVC: UIViewController {
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
-    func showOneFish(fishImage: UIImageView){
+    func showOneFish(_ fishImage: UIImageView){
         // randomly create a value between 0.0 and 150.0
         let randomYOffset = CGFloat( arc4random_uniform(150))
         
         let path = UIBezierPath()
-        path.moveToPoint(CGPoint(x: -50,y: 239 + randomYOffset))
-        path.addCurveToPoint(CGPoint(x: 317 + 157, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
+        path.move(to: CGPoint(x: -50,y: 239 + randomYOffset))
+        path.addCurve(to: CGPoint(x: 317 + 157, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
         
         // create a new CAKeyframeAnimation that animates the objects position
         let anim = CAKeyframeAnimation(keyPath: "position")
         
         // set the animations path to our bezier curve
-        anim.path = path.CGPath
+        anim.path = path.cgPath
         
         // set some more parameters for the animation
         // this rotation mode means that our object will rotate so that it's parallel to whatever point it is currently on the curve
@@ -91,7 +91,7 @@ class AquariumVC: UIViewController {
         anim.timeOffset = Double(arc4random_uniform(290))
         
         // we add the animation to the squares 'layer' property
-        fishImage.layer.addAnimation(anim, forKey: "animate position along path")
+        fishImage.layer.add(anim, forKey: "animate position along path")
     }
 
     func loadImage() {
@@ -104,23 +104,23 @@ class AquariumVC: UIViewController {
         view.addSubview(adultFish)
         view.addSubview(sharkFish)
         view.addSubview(maskView)
-        view.bringSubviewToFront(infobackGroundImage)
-        view.bringSubviewToFront(totalLengthTitle)
-        view.bringSubviewToFront(totalTimesTitle)
-        view.bringSubviewToFront(continuesDaysTitle)
-        view.bringSubviewToFront(lengthLabel)
-        view.bringSubviewToFront(timesLabel)
-        view.bringSubviewToFront(daysLabel)
-        view.bringSubviewToFront(backBtn)
+        view.bringSubview(toFront: infobackGroundImage)
+        view.bringSubview(toFront: totalLengthTitle)
+        view.bringSubview(toFront: totalTimesTitle)
+        view.bringSubview(toFront: continuesDaysTitle)
+        view.bringSubview(toFront: lengthLabel)
+        view.bringSubview(toFront: timesLabel)
+        view.bringSubview(toFront: daysLabel)
+        view.bringSubview(toFront: backBtn)
     }
     
     func updateSeaweed() {
-        let times = pref.integerForKey("com.zone.totalTimes")
+        let times = pref.integer(forKey: "com.zone.totalTimes")
         amountLabel.text = String(times)
     }
     
     func updateTotalLength() {
-        let length = pref.integerForKey("com.zonein.totalLength")
+        let length = pref.integer(forKey: "com.zonein.totalLength")
         let secs = length % 60
         let totalmins = (length - secs) / 60
         let mins = totalmins % 60
@@ -146,7 +146,7 @@ class AquariumVC: UIViewController {
 //    }
     
     func updateLastUsedDay() {
-        if let lastUsedDay = pref.stringForKey("com.zonein.lastUseDay") where lastUsedDay.characters.count != 0{
+        if let lastUsedDay = pref.string(forKey: "com.zonein.lastUseDay") , lastUsedDay.characters.count != 0{
             print("lastusedday", lastUsedDay)
             timesLabel.text = lastUsedDay
         } else {
@@ -156,22 +156,22 @@ class AquariumVC: UIViewController {
     
     func updateContinues() {
         // check and update continues days
-        let yesterday = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: -1, toDate: NSDate(), options: NSCalendarOptions.init(rawValue: 0))
-        let yesterdayStr = singleton.dateFormat.stringFromDate(yesterday!)
-        let todayStr = singleton.dateFormat.stringFromDate(NSDate())
-        if let record = pref.stringForKey("com.zonein.lastUseDay") {
+        let yesterday = (Calendar.current as NSCalendar).date(byAdding: NSCalendar.Unit.day, value: -1, to: Date(), options: NSCalendar.Options.init(rawValue: 0))
+        let yesterdayStr = singleton.dateFormat.string(from: yesterday!)
+        let todayStr = singleton.dateFormat.string(from: Date())
+        if let record = pref.string(forKey: "com.zonein.lastUseDay") {
             if record == yesterdayStr || record == todayStr {
                 
             } else {
-                pref.setInteger(0, forKey: "com.zonein.continusDays")
+                pref.set(0, forKey: "com.zonein.continusDays")
             }
         }
         
         // update label
-        let continuesDay = String(pref.integerForKey("com.zonein.continusDays"))
+        let continuesDay = String(pref.integer(forKey: "com.zonein.continusDays"))
         daysLabel.text = continuesDay
     }
-    @IBAction func backAct(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backAct(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

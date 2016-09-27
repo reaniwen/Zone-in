@@ -16,7 +16,8 @@ class ContentVC: UIViewController {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var constraintView: UIView!
     
-    var buttonTextArray = []
+//    var buttonTextArray:[UIButton] = []
+    var buttonTextArray:[String] = []
     var pageIndex: Int = 0
     
     override func viewDidLoad() {
@@ -25,13 +26,13 @@ class ContentVC: UIViewController {
         let buttonArray = [button1, button2, button3, button4]
         
         for i in 0..<buttonTextArray.count {
-            let button:UIButton = buttonArray[i]
+            let button:UIButton = buttonArray[i]!
             if let buttonTitle = buttonTextArray[i] as? String {
-                button.setTitle(buttonTitle, forState: .Normal)
+                button.setTitle(buttonTitle, for: UIControlState())
             }
         }
         
-        self.constraintView?.backgroundColor = UIColor.clearColor()
-        self.view.backgroundColor = UIColor.clearColor()
+        self.constraintView?.backgroundColor = UIColor.clear
+        self.view.backgroundColor = UIColor.clear
     }
 }

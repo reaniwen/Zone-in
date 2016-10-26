@@ -46,10 +46,10 @@ class MainTimerVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(homePressedAct), name: NSNotification.Name(rawValue: "com.zonein.homeButtonPressed"), object: nil)
         
         appDelegate.delegate = self
-        
         thisTimeLength = counter
     }
     
+    // to save time to load story board, just set the image programmatically
     func loadImage() {
         cloud.image = UIImage(named: "2.cloud")
         
@@ -142,9 +142,11 @@ class MainTimerVC: UIViewController {
             pref.set(1, forKey: "com.zonein.continusDays")
             pref.set(todayStr, forKey: "com.zonein.lastUseDay")
         }
+        
+        // Update the total length
         let totalLength = pref.integer(forKey: "com.zonein.totalLength") + thisTimeLength
         pref.set(totalLength, forKey: "com.zonein.totalLength")
-//        let continuesDay = String(pref.integerForKey("com.zonein.continusDays"))
+        
         // Update total times
         let times = pref.integer(forKey: "com.zone.totalTimes") + 1
         pref.set(times, forKey: "com.zone.totalTimes")
@@ -164,23 +166,6 @@ class MainTimerVC: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
-    
-/*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "backToMainSegue" {
-            if let selectTimeVC = segue.destinationViewController as? SelectTimeVC {
-                selectTimeVC.time = 60
-                selectTimeVC.updateTime()
-                print("Oops")
-            }
-        }
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-*/
 }
 
 extension MainTimerVC: SyncTimerDelegate {

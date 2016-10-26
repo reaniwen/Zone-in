@@ -27,6 +27,7 @@ class SelectTimeVC: UIViewController {
 
     }
     
+    // to save time to load story board, just set the image programmatically
     func loadImage() {
         cloudImage.image = UIImage(named: "1.setTimerCloud")
     }
@@ -36,25 +37,13 @@ class SelectTimeVC: UIViewController {
         jumpToTutorial()
     }
     
-    // Todo: delete it after finish the tutorial views
-    @IBAction func jumpToTutorialAct(_ sender: AnyObject) {
-        jumpToTutorial()
-    }
     
     func jumpToTutorial() {
         let oldUser: Bool? = userDefaults.bool(forKey: "com.zonein.oldUser")
         
         if (oldUser == nil || oldUser == false) {
             let sb = UIStoryboard(name: "Tutorial", bundle: nil)
-            var vc: UIViewController?
-//            if let _ = userDefaults.stringForKey("com.zonein.userName"){
-//                vc = sb.instantiateViewControllerWithIdentifier("TutorialSetVC")
-//            } else {
-//                vc = sb.instantiateViewControllerWithIdentifier("TutorialNameVC")
-//            }
-            vc = sb.instantiateViewController(withIdentifier: "TutorialNameVC")
-        
-            if let vc = vc {
+            if let vc = sb.instantiateViewController(withIdentifier: "TutorialNameVC") as? TutorialNameVC{
                 self.present(vc, animated: true, completion: nil)
             }
         }
@@ -64,8 +53,7 @@ class SelectTimeVC: UIViewController {
     @IBAction func jumpToAquAct(_ sender: AnyObject) {
         
         let sb = UIStoryboard(name: "Aquarium", bundle: nil)
-        let vc = sb.instantiateInitialViewController()
-        if let vc = vc {
+        if let vc = sb.instantiateViewController(withIdentifier: "AquariumVC") as? AquariumVC {
             self.present(vc, animated: true, completion: nil)
         }
     }
@@ -102,8 +90,9 @@ class SelectTimeVC: UIViewController {
         }
     }
     
-    @IBAction func unwindToMain() {
-        
+    // test the tutorial page
+    @IBAction func jumpToTutorialAct(_ sender: AnyObject) {
+        jumpToTutorial()
     }
 }
 

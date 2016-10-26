@@ -50,58 +50,36 @@ class TutorialLastVC: UIViewController {
         infobackGroundImage.layer.cornerRadius = 20
         
         loadImage()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        showOneFish(babyFish)
-        showOneFish(adultFish)
-        showOneFish(sharkFish)
-    }
-    
-    func showOneFish(_ fishImage: UIImageView){
-        // randomly create a value between 0.0 and 150.0
-        let randomYOffset = CGFloat( arc4random_uniform(150))
-        
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: -50,y: 239 + randomYOffset))
-        path.addCurve(to: CGPoint(x: 317 + 157, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
-        
-        // create a new CAKeyframeAnimation that animates the objects position
-        let anim = CAKeyframeAnimation(keyPath: "position")
-        
-        // set the animations path to our bezier curve
-        anim.path = path.cgPath
-        
-        // set some more parameters for the animation
-        // this rotation mode means that our object will rotate so that it's parallel to whatever point it is currently on the curve
-        anim.rotationMode = kCAAnimationRotateAuto
-        anim.repeatCount = Float.infinity
-        anim.duration = Double(arc4random_uniform(40)+30) / 10
-        anim.timeOffset = Double(arc4random_uniform(290))
-        
-        // we add the animation to the squares 'layer' property
-        fishImage.layer.add(anim, forKey: "animate position along path")
-    }
-    
-    func loadImage() {
-        backgroundImage.image = UIImage(named: "cleanAquarium")
-        babyFish.image = UIImage(named: "f_babyfish1")
-        adultFish.image = UIImage(named: "f_adultfish1")
-        sharkFish.image = UIImage(named: "f_shark1")
         
         view.addSubview(babyFish)
         view.addSubview(adultFish)
         view.addSubview(sharkFish)
         view.addSubview(maskView)
+        
+        // todo: find a way to sort the view
         view.bringSubview(toFront: infobackGroundImage)
         view.bringSubview(toFront: gjLabel)
         view.bringSubview(toFront: kLabel)
         view.bringSubview(toFront: aLabel)
         view.bringSubview(toFront: okBtn)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        babyFish.showOneFish()
+        adultFish.showOneFish()
+        sharkFish.showOneFish()
+    }    
+    
+    // to save time to load story board, just set the image programmatically
+    func loadImage() {
+        backgroundImage.image = UIImage(named: "cleanAquarium")
+        babyFish.image = UIImage(named: "f_babyfish1")
+        adultFish.image = UIImage(named: "f_adultfish1")
+        sharkFish.image = UIImage(named: "f_shark1")
+    }
 
     @IBAction func finishAct(_ sender: AnyObject) {
-        print("here")
+        print("demo timer finished")
         UserDefaults.standard.set(true, forKey: "com.zonein.oldUser")
     }
     

@@ -22,10 +22,9 @@ class SucceedVC: UIViewController {
         super.viewDidLoad()
         
         loadImage()
-        
-//        startCounting(counter)
     }
     
+    // to save time to load story board, just set the image programmatically
     func loadImage() {
         backgroundImage.image = UIImage(named: "4.background_win")
         winImage.image = UIImage(named: "4.win")

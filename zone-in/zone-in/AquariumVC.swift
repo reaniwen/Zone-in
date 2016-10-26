@@ -54,9 +54,9 @@ class AquariumVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        showOneFish(babyFish)
-        showOneFish(adultFish)
-        showOneFish(sharkFish)
+        babyFish.showOneFish()
+        adultFish.showOneFish()
+        sharkFish.showOneFish()
         
         updateSeaweed()
         updateTotalLength()
@@ -69,31 +69,7 @@ class AquariumVC: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func showOneFish(_ fishImage: UIImageView){
-        // randomly create a value between 0.0 and 150.0
-        let randomYOffset = CGFloat( arc4random_uniform(150))
-        
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: -50,y: 239 + randomYOffset))
-        path.addCurve(to: CGPoint(x: 317 + 157, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
-        
-        // create a new CAKeyframeAnimation that animates the objects position
-        let anim = CAKeyframeAnimation(keyPath: "position")
-        
-        // set the animations path to our bezier curve
-        anim.path = path.cgPath
-        
-        // set some more parameters for the animation
-        // this rotation mode means that our object will rotate so that it's parallel to whatever point it is currently on the curve
-        anim.rotationMode = kCAAnimationRotateAuto
-        anim.repeatCount = Float.infinity
-        anim.duration = Double(arc4random_uniform(40)+30) / 10
-        anim.timeOffset = Double(arc4random_uniform(290))
-        
-        // we add the animation to the squares 'layer' property
-        fishImage.layer.add(anim, forKey: "animate position along path")
-    }
-
+    // to save time to load story board, just set the image programmatically
     func loadImage() {
         backgroundImage.image = UIImage(named: "cleanAquarium")
         babyFish.image = UIImage(named: "f_babyfish1")

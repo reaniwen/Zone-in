@@ -79,7 +79,7 @@ class MainTimerVC: UIViewController {
             self.performSegue(withIdentifier: "toSucceedSegue", sender: self)
         }
         
-        NSLog(String(self.counter))
+        print("Seconds remaining: ",String(self.counter))
         self.counter -= 1
     }
     
@@ -94,10 +94,11 @@ class MainTimerVC: UIViewController {
         secsLabel.text = strSeconds
     }
     
+    // todo: optimize this function, not to update image every second
     func updateTankImage() {
         if let estCounter = estCounter {
             let num: Int = counter / estCounter
-            print(estCounter,num)
+//            print(estCounter,num)
             let currTankImage: UIImage = UIImage(named: "fishtank\(num)")!
             let currWaterImage: UIImage = UIImage(named: "water\(num)")!
             tankImage.image = currTankImage

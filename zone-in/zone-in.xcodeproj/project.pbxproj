@@ -13,6 +13,7 @@
 		17053D801C630C4F00C3B412 /* TutorialDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17053D7F1C630C4F00C3B412 /* TutorialDemoVC.swift */; };
 		17053D821C630C7300C3B412 /* TutorialLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17053D811C630C7300C3B412 /* TutorialLastVC.swift */; };
 		1734D6631D47E46B002466B4 /* WhateverItTakes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1734D6621D47E465002466B4 /* WhateverItTakes.ttf */; };
+		175651311D9AB1E60061480C /* LockNotifierCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 175651301D9AB1E60061480C /* LockNotifierCallback.m */; };
 		178245B31C76B78C0028197C /* ToolsSubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178245B21C76B78C0028197C /* ToolsSubVC.swift */; };
 		178245B51C76B8A50028197C /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178245B41C76B8A50028197C /* ContentVC.swift */; };
 		178B9CFF1C5F0DB60074A077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B9CFE1C5F0DB60074A077 /* AppDelegate.swift */; };
@@ -85,6 +86,9 @@
 		17053D811C630C7300C3B412 /* TutorialLastVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialLastVC.swift; sourceTree = "<group>"; };
 		1734D6611D47E465002466B4 /* Bauhaus93.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bauhaus93.ttf; sourceTree = "<group>"; };
 		1734D6621D47E465002466B4 /* WhateverItTakes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WhateverItTakes.ttf; sourceTree = "<group>"; };
+		1756512F1D9AB1E60061480C /* zone-in-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zone-in-Bridging-Header.h"; sourceTree = "<group>"; };
+		175651301D9AB1E60061480C /* LockNotifierCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockNotifierCallback.m; sourceTree = "<group>"; };
+		175651321D9AB2110061480C /* LockNotifierCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockNotifierCallback.h; sourceTree = "<group>"; };
 		178245B21C76B78C0028197C /* ToolsSubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsSubVC.swift; sourceTree = "<group>"; };
 		178245B41C76B8A50028197C /* ContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
 		178B9CFB1C5F0DB60074A077 /* zone-in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zone-in.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +220,8 @@
 				17053D7A1C630AE500C3B412 /* CoreGroup */,
 				17053D831C630C7900C3B412 /* TutorialGroup */,
 				17FD28891C75094800F6471C /* AquariumGroup */,
+				175651321D9AB2110061480C /* LockNotifierCallback.h */,
+				175651301D9AB1E60061480C /* LockNotifierCallback.m */,
 				17F7E8DE1C692BC0005DE1AB /* Images */,
 				178B9D081C5F0DB70074A077 /* Assets.xcassets */,
 				178B9D0A1C5F0DB70074A077 /* LaunchScreen.storyboard */,
@@ -223,6 +229,7 @@
 				178B9D051C5F0DB60074A077 /* zone_in.xcdatamodeld */,
 				1734D6611D47E465002466B4 /* Bauhaus93.ttf */,
 				1734D6621D47E465002466B4 /* WhateverItTakes.ttf */,
+				1756512F1D9AB1E60061480C /* zone-in-Bridging-Header.h */,
 			);
 			path = "zone-in";
 			sourceTree = "<group>";
@@ -475,6 +482,7 @@
 				178245B31C76B78C0028197C /* ToolsSubVC.swift in Sources */,
 				17FD28911C75182B00F6471C /* AquariumVC.swift in Sources */,
 				178B9D011C5F0DB60074A077 /* SelectTimeVC.swift in Sources */,
+				175651311D9AB1E60061480C /* LockNotifierCallback.m in Sources */,
 				17FD288B1C75098800F6471C /* FishManager.swift in Sources */,
 				17053D801C630C4F00C3B412 /* TutorialDemoVC.swift in Sources */,
 				17FD29BF1C755ACE00F6471C /* FailedVC.swift in Sources */,
@@ -632,14 +640,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "zone-in/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zonein.zone-in";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "zone-in/zone-in-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -648,14 +660,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "zone-in/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zonein.zone-in";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "zone-in/zone-in-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

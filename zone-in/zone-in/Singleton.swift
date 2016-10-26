@@ -14,12 +14,13 @@ class Singleton: NSObject {
     
     let dateFormat = DateFormatter()
     
-    class var sharedInstance: Singleton {
-        struct Static {
-            static let instance: Singleton = Singleton()
-        }
-        return Static.instance
-    }
+//    class var sharedInstance: Singleton {
+//        struct Static {
+//            static let instance: Singleton = Singleton()
+//        }
+//        return Static.instance
+//    }
+    static let sharedInstance = Singleton()
     
     override init() {
         super.init()

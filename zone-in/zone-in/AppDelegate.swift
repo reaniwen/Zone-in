@@ -21,35 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var count = 0
     var lockTime = Date()
     
-    
-    func setLock() {
-        self.isLocked = true
-        if let c = delegate?.getCurrentCount(){
-            count = c
-        }
-        lockTime = Date()
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "com.zonein.lockcomplete"), object: self)
-    }
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        // add an observer to detect screen lock
-//        let observer = UnsafeRawPointer(Unmanaged.passUnretained(self).toOpaque())
-//        
-//        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), observer, {(center, observer, name, object, userInfo) -> Void in
-//            let lockState: String = String(describing: name)
-////            NSLog(name as String)
-////            NSLog(name.name)
-//            if lockState.isEqual("com.apple.springboard.lockcomplete") {
-////                NSLog("Screen locked")
-//                let mySelf = Unmanaged<AppDelegate>.fromOpaque(OpaquePointer(observer)!).takeUnretainedValue()
-////                mySelf.setLock()
-////                self.setLock()
-//            }
-//            }, "com.apple.springboard.lockcomplete" as CFString!, nil, CFNotificationSuspensionBehavior.deliverImmediately)
-        
+        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), nil, LockNotifierCallback.notifierProc(), "com.apple.springboard.lockcomplete" as CFString!, nil, CFNotificationSuspensionBehavior.deliverImmediately)
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
         
         initUserDefault()
 
@@ -64,33 +40,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-//        - (void)applicationDidEnterBackground:(UIApplication *)application {
-//            CGFloat screenBrightness = [[UIScreen mainScreen] brightness];
-//            NSLog(@"Screen brightness: %f", screenBrightness);
-//            self.backgroundedToLockScreen = screenBrightness <= 0.0;
-//        }
-        let screenBrightness = UIScreen.main.brightness
-        NSLog("Screen brightness: "+String(describing: screenBrightness))
-
+        if self.isLocked == true {
+            // todo: get the count
+            // schedule a local notification to inform user finish
+            if let c = delegate?.getCurrentCount(){
+                count = c
+                finishCountingNotification(application, count)
+            }
+        } else {
+            // todo: notify user to come back
+//            finishCountingNotification(application, 5)
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         
-        // This part is to check whether screen is locked or home button pressed
+        // if wake from lock, resume timmer if possible
+        // if wake from home, nofity failed
+        application.cancelAllLocalNotifications()
         let state: UIApplicationState = UIApplication.shared.applicationState
-        if self.isLocked == true && state == UIApplicationState.background{
-            // Screen locked
-            NSLog("Screen is locked")
-            self.isLocked = false
-            delegate?.setNewCount(self.count - Int(Date().timeIntervalSince(self.lockTime)))
-            
-        }else if self.isLocked == false && state == UIApplicationState.background{
-            
-            // Home button pressed
-            NSLog("Home button is pressed")
-            // Send notification about failed
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "com.zonein.homeButtonPressed"), object: self)
+        if state == UIApplicationState.background {
+            if self.isLocked == true {
+                // Screen locked
+                print("Screen is locked")
+                self.isLocked = false
+                delegate?.setNewCount(self.count - Int(Date().timeIntervalSince(self.lockTime)))
+            } else {
+                // Home button pressed
+                print("Home button is pressed")
+                // Send notification about failed
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "com.zonein.homeButtonPressed"), object: self)
+            }
         }
     }
 
@@ -177,6 +158,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             pref.set(0, forKey: "com.zonein.totalTimes")
         }
         print("inited:", UserDefaults.standard.bool(forKey: "com.zonein.inited"))
+    }
+    
+    func setLock() {
+        self.isLocked = true
+        if let c = delegate?.getCurrentCount(){
+            count = c
+        }
+        lockTime = Date()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "com.zonein.lockcomplete"), object: self)
+    }
+    
+    func finishCountingNotification(_ application: UIApplication, _ count: Int) {
+        
+        print("scheduling a local notification for completion after: ",count," seconds")
+        let localNotification:UILocalNotification = UILocalNotification()
+        // it seems that the alertaction is not useful, at least on ios 9
+//        localNotification.alertAction = "Testing notifications on iOS8"
+//        localNotification.hasAction = true
+        localNotification.alertBody = "It's time to take some rest! Take a walk around."
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: TimeInterval(count)) as Date
+//        localNotification.soundName = UILocalNotificationDefaultSoundName
+//        localNotification.category = "invite"
+        application.scheduleLocalNotification(localNotification)
     }
 
 }

@@ -10,17 +10,10 @@ import Foundation
 
 class Singleton: NSObject {
     
-    var isFailed: Bool = false
-    
-    let dateFormat = DateFormatter()
-    
-//    class var sharedInstance: Singleton {
-//        struct Static {
-//            static let instance: Singleton = Singleton()
-//        }
-//        return Static.instance
-//    }
     static let sharedInstance = Singleton()
+    
+    var isFailed: Bool = false
+    let dateFormat = DateFormatter()
     
     override init() {
         super.init()

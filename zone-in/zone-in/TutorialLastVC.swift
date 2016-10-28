@@ -56,7 +56,7 @@ class TutorialLastVC: UIViewController {
         view.addSubview(sharkFish)
         view.addSubview(maskView)
         
-        // todo: find a way to sort the view
+        // Todo: find a way to sort the view
         view.bringSubview(toFront: infobackGroundImage)
         view.bringSubview(toFront: gjLabel)
         view.bringSubview(toFront: kLabel)

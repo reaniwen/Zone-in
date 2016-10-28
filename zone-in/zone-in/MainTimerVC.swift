@@ -17,19 +17,18 @@ class MainTimerVC: UIViewController {
     @IBOutlet weak var seaweedImage: UIImageView!
     @IBOutlet weak var waterImage: UIImageView!
     
-    
-    var timer = Timer()
-    var counter = 30 * 60
-    var estCounter: Int?
+    @IBOutlet weak var minsLabel: UILabel!
+    @IBOutlet weak var secsLabel: UILabel!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let pref = UserDefaults.standard
     let singleton = Singleton.sharedInstance
     
-    var thisTimeLength: Int = 0
+    var timer = Timer()
+    var counter = 30 * 60
+    var estCounter: Int?
     
-    @IBOutlet weak var minsLabel: UILabel!
-    @IBOutlet weak var secsLabel: UILabel!
+    var thisTimeLength: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,11 +93,10 @@ class MainTimerVC: UIViewController {
         secsLabel.text = strSeconds
     }
     
-    // todo: optimize this function, not to update image every second
+    // Todo: optimize this function, not to update image every second
     func updateTankImage() {
         if let estCounter = estCounter {
             let num: Int = counter / estCounter
-//            print(estCounter,num)
             let currTankImage: UIImage = UIImage(named: "fishtank\(num)")!
             let currWaterImage: UIImage = UIImage(named: "water\(num)")!
             tankImage.image = currTankImage
@@ -110,7 +108,6 @@ class MainTimerVC: UIViewController {
         print("timer received that the home is pressed")
 
         self.performSegue(withIdentifier: "toFailedSegue", sender: self)
-//        failed()
     }
 
     

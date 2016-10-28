@@ -23,6 +23,8 @@ class AquariumVC: UIViewController {
     
     @IBOutlet weak var amountLabel: UILabel!
     
+    let singleton = Singleton.sharedInstance
+    let pref = UserDefaults.standard
     
     let babyFish = UIImageView(frame: CGRect(x: -50, y: 0, width: 105, height: 78))
     let adultFish = UIImageView(frame: CGRect(x: -50, y: 0, width: 149, height: 81))
@@ -33,9 +35,6 @@ class AquariumVC: UIViewController {
     var timer = Timer()
     var counter = 0
     
-    let singleton = Singleton.sharedInstance
-    let pref = UserDefaults.standard
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +43,6 @@ class AquariumVC: UIViewController {
         
         infobackGroundImage.layer.cornerRadius = 20
         
-//        startCounting(0)
         NotificationCenter.default.addObserver(self, selector: #selector(viewWillAppear), name: NSNotification.Name(rawValue: "com.zonein.lockcomplete"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(viewWillAppear), name: NSNotification.Name(rawValue: "com.zonein.homeButtonPressed"), object: nil)
 
@@ -60,9 +58,13 @@ class AquariumVC: UIViewController {
         
         updateSeaweed()
         updateTotalLength()
-//        updateTotalTimes()
         updateLastUsedDay()
         updateContinues()
+    }
+    
+    
+    @IBAction func backAct(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     deinit {
@@ -116,11 +118,6 @@ class AquariumVC: UIViewController {
         lengthLabel.text = String(hrs) + ":" + minsStr + ":" + secsStr
     }
     
-//    func updateTotalTimes() {
-//        let times = pref.integerForKey("com.zone.totalTimes")
-//        timesLabel.text = String(times)
-//    }
-    
     func updateLastUsedDay() {
         if let lastUsedDay = pref.string(forKey: "com.zonein.lastUseDay") , lastUsedDay.characters.count != 0{
             print("lastusedday", lastUsedDay)
@@ -146,8 +143,5 @@ class AquariumVC: UIViewController {
         // update label
         let continuesDay = String(pref.integer(forKey: "com.zonein.continusDays"))
         daysLabel.text = continuesDay
-    }
-    @IBAction func backAct(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
     }
 }

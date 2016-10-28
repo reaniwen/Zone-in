@@ -41,15 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         if self.isLocked == true {
-            // todo: get the count
+            // get the count
             // schedule a local notification to inform user finish
             if let c = delegate?.getCurrentCount(){
                 count = c
                 finishCountingNotification(application, count)
             }
         } else {
-            // todo: notify user to come back
-//            finishCountingNotification(application, 5)
+            // Todo: notify user to come back
         }
     }
 

@@ -14,6 +14,7 @@
 		17053D821C630C7300C3B412 /* TutorialLastVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17053D811C630C7300C3B412 /* TutorialLastVC.swift */; };
 		1734D6631D47E46B002466B4 /* WhateverItTakes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1734D6621D47E465002466B4 /* WhateverItTakes.ttf */; };
 		175651311D9AB1E60061480C /* LockNotifierCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 175651301D9AB1E60061480C /* LockNotifierCallback.m */; };
+		17769A6D1DC2F7FA00552E20 /* FishManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17769A6C1DC2F7FA00552E20 /* FishManager.swift */; };
 		178B9CFF1C5F0DB60074A077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B9CFE1C5F0DB60074A077 /* AppDelegate.swift */; };
 		178B9D011C5F0DB60074A077 /* SelectTimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178B9D001C5F0DB60074A077 /* SelectTimeVC.swift */; };
 		178B9D041C5F0DB60074A077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178B9D021C5F0DB60074A077 /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 		178DB63D1DC06685006334E1 /* View+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DB63C1DC06685006334E1 /* View+Animation.swift */; };
 		17F26BD11C611FBD009FACFB /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F26BD01C611FBD009FACFB /* Singleton.swift */; };
 		17F7E8E31C69A663005DE1AB /* Bauhaus93.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17F7E8E21C69A408005DE1AB /* Bauhaus93.ttf */; };
-		17FD288B1C75098800F6471C /* FishManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD288A1C75098800F6471C /* FishManager.swift */; };
 		17FD288D1C75099C00F6471C /* ToolsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD288C1C75099C00F6471C /* ToolsManager.swift */; };
 		17FD288F1C7516A500F6471C /* Aquarium.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FD288E1C7516A500F6471C /* Aquarium.storyboard */; };
 		17FD28911C75182B00F6471C /* AquariumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD28901C75182B00F6471C /* AquariumVC.swift */; };
@@ -84,6 +84,7 @@
 		1756512F1D9AB1E60061480C /* zone-in-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zone-in-Bridging-Header.h"; sourceTree = "<group>"; };
 		175651301D9AB1E60061480C /* LockNotifierCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockNotifierCallback.m; sourceTree = "<group>"; };
 		175651321D9AB2110061480C /* LockNotifierCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockNotifierCallback.h; sourceTree = "<group>"; };
+		17769A6C1DC2F7FA00552E20 /* FishManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishManager.swift; sourceTree = "<group>"; };
 		178B9CFB1C5F0DB60074A077 /* zone-in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zone-in.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		178B9CFE1C5F0DB60074A077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		178B9D001C5F0DB60074A077 /* SelectTimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeVC.swift; sourceTree = "<group>"; };
@@ -102,7 +103,6 @@
 		178DB63C1DC06685006334E1 /* View+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Animation.swift"; sourceTree = "<group>"; };
 		17F26BD01C611FBD009FACFB /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		17F7E8E21C69A408005DE1AB /* Bauhaus93.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bauhaus93.ttf; sourceTree = "<group>"; };
-		17FD288A1C75098800F6471C /* FishManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FishManager.swift; path = ../FishManager.swift; sourceTree = "<group>"; };
 		17FD288C1C75099C00F6471C /* ToolsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsManager.swift; sourceTree = "<group>"; };
 		17FD288E1C7516A500F6471C /* Aquarium.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Aquarium.storyboard; sourceTree = "<group>"; };
 		17FD28901C75182B00F6471C /* AquariumVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AquariumVC.swift; sourceTree = "<group>"; };
@@ -180,6 +180,15 @@
 			name = TutorialGroup;
 			sourceTree = "<group>";
 		};
+		17769A6B1DC2F6D500552E20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17769A6C1DC2F7FA00552E20 /* FishManager.swift */,
+				17FD288C1C75099C00F6471C /* ToolsManager.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		178B9CF21C5F0DB60074A077 = {
 			isa = PBXGroup;
 			children = (
@@ -203,9 +212,10 @@
 		178B9CFD1C5F0DB60074A077 /* zone-in */ = {
 			isa = PBXGroup;
 			children = (
+				17769A6B1DC2F6D500552E20 /* Models */,
 				178DB63B1DC06151006334E1 /* Controllers */,
 				178DB63A1DC060F0006334E1 /* Views */,
-				17F7E8E11C69A2E3005DE1AB /* res */,
+				17F7E8E11C69A2E3005DE1AB /* Resources */,
 				178B9CFE1C5F0DB60074A077 /* AppDelegate.swift */,
 				17F26BD01C611FBD009FACFB /* Singleton.swift */,
 				175651321D9AB2110061480C /* LockNotifierCallback.h */,
@@ -241,6 +251,7 @@
 		178DB63A1DC060F0006334E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				178DB63C1DC06685006334E1 /* View+Animation.swift */,
 				178B9D021C5F0DB60074A077 /* Main.storyboard */,
 				17053D781C630AD400C3B412 /* Tutorial.storyboard */,
 				17FD288E1C7516A500F6471C /* Aquarium.storyboard */,
@@ -251,10 +262,9 @@
 		178DB63B1DC06151006334E1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				17053D7A1C630AE500C3B412 /* CoreGroup */,
 				17053D831C630C7900C3B412 /* TutorialGroup */,
+				17053D7A1C630AE500C3B412 /* CoreGroup */,
 				17FD28891C75094800F6471C /* AquariumGroup */,
-				178DB63C1DC06685006334E1 /* View+Animation.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -267,21 +277,19 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		17F7E8E11C69A2E3005DE1AB /* res */ = {
+		17F7E8E11C69A2E3005DE1AB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				17F7E8E21C69A408005DE1AB /* Bauhaus93.ttf */,
 				1734D6621D47E465002466B4 /* WhateverItTakes.ttf */,
 			);
-			name = res;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		17FD28891C75094800F6471C /* AquariumGroup */ = {
 			isa = PBXGroup;
 			children = (
 				17FD28901C75182B00F6471C /* AquariumVC.swift */,
-				17FD288A1C75098800F6471C /* FishManager.swift */,
-				17FD288C1C75099C00F6471C /* ToolsManager.swift */,
 			);
 			name = AquariumGroup;
 			sourceTree = "<group>";
@@ -479,10 +487,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				17FD288D1C75099C00F6471C /* ToolsManager.swift in Sources */,
+				17769A6D1DC2F7FA00552E20 /* FishManager.swift in Sources */,
 				17FD28911C75182B00F6471C /* AquariumVC.swift in Sources */,
 				178B9D011C5F0DB60074A077 /* SelectTimeVC.swift in Sources */,
 				175651311D9AB1E60061480C /* LockNotifierCallback.m in Sources */,
-				17FD288B1C75098800F6471C /* FishManager.swift in Sources */,
 				178DB63D1DC06685006334E1 /* View+Animation.swift in Sources */,
 				17053D801C630C4F00C3B412 /* TutorialDemoVC.swift in Sources */,
 				17FD29BF1C755ACE00F6471C /* FailedVC.swift in Sources */,

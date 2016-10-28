@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import UIKit
+
+// Todo: add tools in the next verison
 class ToolsManager {
     var tools: [Tool] = []
 }

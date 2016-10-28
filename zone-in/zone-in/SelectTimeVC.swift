@@ -10,21 +10,19 @@ import UIKit
 
 class SelectTimeVC: UIViewController {
     
-    let userDefaults = UserDefaults.standard
-    var time: Int = 30
-    
-    
     @IBOutlet weak var cloudImage: UIImageView!
     @IBOutlet weak var moreTimeBtn: UIButton!
     @IBOutlet weak var lessTimeBtn: UIButton!
     
     @IBOutlet weak var timeLabel: UILabel!
     
+    let userDefaults = UserDefaults.standard
+    var time: Int = 30
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadImage()
-
     }
     
     // to save time to load story board, just set the image programmatically
@@ -34,24 +32,20 @@ class SelectTimeVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // first launch check, if first launch, jump to tutorial
-        jumpToTutorial()
+        let oldUser: Bool = userDefaults.bool(forKey: "com.zonein.oldUser")
+        if oldUser == false {
+            jumpToTutorial()
+        }
     }
     
-    
     func jumpToTutorial() {
-        let oldUser: Bool? = userDefaults.bool(forKey: "com.zonein.oldUser")
-        
-        if (oldUser == nil || oldUser == false) {
-            let sb = UIStoryboard(name: "Tutorial", bundle: nil)
-            if let vc = sb.instantiateViewController(withIdentifier: "TutorialNameVC") as? TutorialNameVC{
-                self.present(vc, animated: true, completion: nil)
-            }
+        let sb = UIStoryboard(name: "Tutorial", bundle: nil)
+        if let vc = sb.instantiateViewController(withIdentifier: "TutorialNameVC") as? TutorialNameVC{
+            self.present(vc, animated: true, completion: nil)
         }
-
     }
     
     @IBAction func jumpToAquAct(_ sender: AnyObject) {
-        
         let sb = UIStoryboard(name: "Aquarium", bundle: nil)
         if let vc = sb.instantiateViewController(withIdentifier: "AquariumVC") as? AquariumVC {
             self.present(vc, animated: true, completion: nil)
@@ -76,6 +70,7 @@ class SelectTimeVC: UIViewController {
         self.timeLabel.text = String(self.time)
     }
     
+    // unwind to main page
     @IBAction func backToMain(_ segue: UIStoryboardSegue) {
     }
     
